@@ -1,4 +1,6 @@
-
+import {displayProjects, render} from './domdisplay.js'
+import {saveData} from './datacapture'
+import {projectCapture} from './datacapture.js'
 
 export const modalEvents = (function () {
     const todoModal = document.getElementById('todo-modal');
@@ -17,24 +19,32 @@ export const modalEvents = (function () {
         element.classList.remove('hide');
     };
 
-
-    newTodoButton.addEventListener('click', () => {
-        displayModal(todoModal);
-    });
-
-
-    confirmTodoButton.addEventListener('click', () => {
-        hideModal(todoModal);
-    });
-
+    //bring up new project input
     newProjectButton.addEventListener('click', () => {
         displayModal(projectModal);
     });
 
-
+    //confirm new project
     confirmProjectButton.addEventListener('click', () => {
         hideModal(projectModal);
+        render();
+    });
+
+    //bring up new todo input
+    newTodoButton.addEventListener('click', () => {
+        displayModal(todoModal);
+    });
+
+    //confirm new todo
+    confirmTodoButton.addEventListener('click', () => {
+        hideModal(todoModal);
+        render();
+        
+
     });
 
 })();
+
+
+
 
