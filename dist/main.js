@@ -401,7 +401,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 const ProjectInstance = (name, dueDate, moreInfo, todos) => {
     todos = [];
-    return {name, dueDate, moreInfo, todos}
+    return {name, dueDate, moreInfo, todos
+    }
 };
 
 
@@ -413,209 +414,15 @@ const TodoInstance = (name, dueDate, priority, checkBox, moreInfo) => {
 
 
 /***/ }),
-/* 6 */,
-/* 7 */
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "projectCapture": () => (/* binding */ projectCapture),
-/* harmony export */   "todoCapture": () => (/* binding */ todoCapture)
-/* harmony export */ });
-/* harmony import */ var _constructors_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(5);
-/* harmony import */ var _domdisplay_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(8);
-/* harmony import */ var _domevents__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(9);
-
-
-
-
-
-const projectCapture = (function () {
-    const confirmProjectButton = document.getElementById('confirm-project')
-
-
-    let houseWork = (0,_constructors_js__WEBPACK_IMPORTED_MODULE_0__.ProjectInstance)('House Work', '06/12/22', 'Need to clean the whole house');
-
-    let myProjects = [houseWork];
-
-    //Create new project and add to array
-    confirmProjectButton.addEventListener('click', () => {
-        const projectName = document.getElementById('project-name').value
-        const projectDueDate = document.getElementById('project-due-date').value
-        const projectDescription = document.getElementById('project-description').value
-        let newProject = (0,_constructors_js__WEBPACK_IMPORTED_MODULE_0__.ProjectInstance)(projectName, projectDueDate, projectDescription);
-        myProjects.push(newProject);
-        saveProjects();
-        (0,_domdisplay_js__WEBPACK_IMPORTED_MODULE_1__.render)();
-
-    })
-
-
-    //Saves project array
-    function saveProjects() {
-        localStorage.setItem('myProjects', JSON.stringify(myProjects));
-    }
-
-    if (!localStorage.myProjects) {
-        return
-    } else {
-        myProjects = JSON.parse(window.localStorage.getItem('myProjects'));
-    }
-
-
-    return {
-        myProjects,
-        saveProjects
-    }
-
-})();
-
-const todoCapture = (function () {
-    const confirmTodoButton = document.getElementById('confirm-todo');
-
-    
-
-    confirmTodoButton.addEventListener('click', () => {
-        const todoName = document.getElementById('todo-name').value;
-        const todoDueDate = document.getElementById('todo-due-date').value;
-        const todoPriority = document.getElementById('priority-select').value;
-        const todoDescription = document.getElementById('todo-info').value;
-        let newTodo = (0,_constructors_js__WEBPACK_IMPORTED_MODULE_0__.TodoInstance)(todoName, todoDueDate, todoPriority, todoDescription)
-        _domevents__WEBPACK_IMPORTED_MODULE_2__.projectSelect.currentProject.todos.push(newTodo);
-        console.log(_domevents__WEBPACK_IMPORTED_MODULE_2__.projectSelect.currentProject.todos)
-        projectCapture.saveProjects();
-    })
-
-    
-
-    return {
-        
-    }
-    
-})();
-
-
-
-/***/ }),
-/* 8 */
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "displayProjects": () => (/* binding */ displayProjects),
-/* harmony export */   "projectSelect": () => (/* binding */ projectSelect),
-/* harmony export */   "render": () => (/* binding */ render)
-/* harmony export */ });
-/* harmony import */ var _datacapture_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7);
-
-
-
-
-const displayProjects = (function () {
-    const projectParent = document.getElementById('project-parent');
-    
-    
-    //Display projects in project container
-
-    function addToDom() {
-        for (let i = 0; i < _datacapture_js__WEBPACK_IMPORTED_MODULE_0__.projectCapture.myProjects.length; i++) {
-            const newDiv = document.createElement('div');
-            const newSpan = document.createElement('span');
-            const deleteBtn = document.createElement('button');
-
-            projectParent.appendChild(newDiv);
-            newDiv.setAttribute('id', 'project' + i);
-            newDiv.classList.add('project-instance');
-            newDiv.textContent = _datacapture_js__WEBPACK_IMPORTED_MODULE_0__.projectCapture.myProjects[i].name + ' ';
-
-            newDiv.appendChild(newSpan);
-            newSpan.classList.add('project-name');
-            newSpan.textContent = _datacapture_js__WEBPACK_IMPORTED_MODULE_0__.projectCapture.myProjects[i].dueDate;
-
-            newSpan.appendChild(deleteBtn);
-            deleteBtn.setAttribute('id', 'delete' + i);
-            deleteBtn.innerHTML = '-'
-            
-            deleteBtn.addEventListener('click', () => {
-                _datacapture_js__WEBPACK_IMPORTED_MODULE_0__.projectCapture.myProjects.splice(i, 1);
-                render();
-                _datacapture_js__WEBPACK_IMPORTED_MODULE_0__.projectCapture.saveProjects();
-            })
-            
-        }
-
-        
-    }
-    
-    
-
-    return {
-        addToDom,
-        projectParent
-    }
-
-})();
-
-
-//Selecting Current Project
-const projectSelect = (function() {
-    const projects = document.querySelectorAll('project-instance')
-    const todoParent = document.getElementById('todo-parent')
-
-    let currentProject = _datacapture_js__WEBPACK_IMPORTED_MODULE_0__.projectCapture.myProjects[1];
-
-    // projectCapture.myProjects.forEach(project => {
-    //     project.addEventListener('click', () => {
-    //         project
-
-
-    //     })
-    // });
-
-    console.log(currentProject.todos)
-
-    return {
-        currentProject
-    }
-})();
-
-//display todos
-const displayTodos = (function () {
-
-    const todoParent = document.getElementById('todo-parent');
-    let currentTodoList = projectSelect.currentProject.todos;
-    
-    
-    function addTodoDom () {
-        for (let i = 0; i < currentTodoList.length; i++) {
-            const newDiv = document.createElement('div');
-            todoParent.appendChild(newDiv);
-            newDiv.textContent = 'hurray'
-        }
-    }
-    addTodoDom();
-    
-
-})();
-
-function render() {
-    displayProjects.projectParent.innerHTML = '';
-    displayProjects.addToDom();
-    
-    
-}
-
-/***/ }),
-/* 9 */
+/* 6 */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "modalEvents": () => (/* binding */ modalEvents)
 /* harmony export */ });
-/* harmony import */ var _domdisplay_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(8);
-/* harmony import */ var _datacapture__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(7);
-
+/* harmony import */ var _domdisplay_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7);
+/* harmony import */ var _datacapture_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(8);
 
 
 
@@ -644,7 +451,6 @@ const modalEvents = (function () {
     //confirm new project
     confirmProjectButton.addEventListener('click', () => {
         hideModal(projectModal);
-        (0,_domdisplay_js__WEBPACK_IMPORTED_MODULE_0__.render)();
     });
 
     //bring up new todo input
@@ -655,14 +461,218 @@ const modalEvents = (function () {
     //confirm new todo
     confirmTodoButton.addEventListener('click', () => {
         hideModal(todoModal);
-        (0,_domdisplay_js__WEBPACK_IMPORTED_MODULE_0__.render)();
-        
+        (0,_datacapture_js__WEBPACK_IMPORTED_MODULE_1__.todoCapture)();   
+        (0,_domdisplay_js__WEBPACK_IMPORTED_MODULE_0__.render)();   
 
     });
 
 })();
 
 
+
+
+/***/ }),
+/* 7 */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "displayProjects": () => (/* binding */ displayProjects),
+/* harmony export */   "render": () => (/* binding */ render)
+/* harmony export */ });
+/* harmony import */ var _datacapture_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(8);
+
+
+
+
+
+const displayProjects = (function () {
+    const projectParent = document.getElementById('project-parent');
+
+
+    //Display projects in project container
+
+    function addToDom() {
+        
+        projectParent.innerHTML = ''
+
+        for (let i = 0; i < _datacapture_js__WEBPACK_IMPORTED_MODULE_0__.projectCapture.myProjects.length; i++) {
+            const newDiv = document.createElement('div');
+            const newSpan = document.createElement('span');
+            const deleteBtn = document.createElement('button');
+
+            projectParent.appendChild(newDiv);
+            newDiv.setAttribute('id', 'project' + i);
+            newDiv.classList.add('project-instance');
+            newDiv.textContent = _datacapture_js__WEBPACK_IMPORTED_MODULE_0__.projectCapture.myProjects[i].name + ' ';
+
+            newDiv.appendChild(newSpan);
+            newSpan.classList.add('project-name');
+            newSpan.textContent = _datacapture_js__WEBPACK_IMPORTED_MODULE_0__.projectCapture.myProjects[i].dueDate;
+
+            newSpan.appendChild(deleteBtn);
+            deleteBtn.setAttribute('id', 'delete' + i);
+            deleteBtn.innerHTML = '-'
+
+            deleteBtn.addEventListener('click', () => {
+                _datacapture_js__WEBPACK_IMPORTED_MODULE_0__.projectCapture.myProjects.splice(i, 1);
+                render();
+                _datacapture_js__WEBPACK_IMPORTED_MODULE_0__.selectCurrentProject.currentProject = [];
+                _datacapture_js__WEBPACK_IMPORTED_MODULE_0__.projectCapture.saveProjects();
+            })
+
+
+            newDiv.addEventListener('click', () => {
+                _datacapture_js__WEBPACK_IMPORTED_MODULE_0__.selectCurrentProject.currentProject = _datacapture_js__WEBPACK_IMPORTED_MODULE_0__.projectCapture.myProjects[i];
+                console.log(_datacapture_js__WEBPACK_IMPORTED_MODULE_0__.selectCurrentProject.currentProject)
+            })
+
+
+
+        }
+
+
+    }
+
+    const todoParent = document.getElementById('todo-parent');
+
+    function displayTodos() {
+
+        todoParent.innerHTML = '';
+
+        for (let i = 0; i < _datacapture_js__WEBPACK_IMPORTED_MODULE_0__.selectCurrentProject.currentProject.todos; i++) {
+
+            const newTodo = document.createElement('div');
+            todoParent.appendChild(newTodo);
+            newTodo.innerHTML = 'success';
+
+
+        }
+        //console.log(todos)
+
+
+    }
+
+
+    return {
+        addToDom,
+        projectParent,
+        todoParent,
+        displayTodos
+
+
+    }
+
+})();
+
+
+function render() {
+    displayProjects.todoParent.innerHTML = '';
+    displayProjects.projectParent.innerHTML = '';
+    displayProjects.addToDom();
+    displayProjects.displayTodos();
+    
+
+
+}
+
+/***/ }),
+/* 8 */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "projectCapture": () => (/* binding */ projectCapture),
+/* harmony export */   "selectCurrentProject": () => (/* binding */ selectCurrentProject),
+/* harmony export */   "todoCapture": () => (/* binding */ todoCapture)
+/* harmony export */ });
+/* harmony import */ var _constructors_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(5);
+/* harmony import */ var _domdisplay_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(7);
+/* harmony import */ var _domevents__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(6);
+
+
+
+
+
+const projectCapture = (function () {
+    
+    const confirmProjectButton = document.getElementById('confirm-project')
+
+    let houseWork = (0,_constructors_js__WEBPACK_IMPORTED_MODULE_0__.ProjectInstance)('House Work', '06/12/22', 'Need to clean the whole house');
+
+    let myProjects = [houseWork];
+
+    //Create new project and add to array
+    confirmProjectButton.addEventListener('click', () => {
+        const projectName = document.getElementById('project-name').value
+        const projectDueDate = document.getElementById('project-due-date').value
+        const projectDescription = document.getElementById('project-description').value
+        let newProject = (0,_constructors_js__WEBPACK_IMPORTED_MODULE_0__.ProjectInstance)(projectName, projectDueDate, projectDescription);
+        myProjects.push(newProject);
+        selectCurrentProject.currentProject = newProject;
+        console.log(selectCurrentProject.currentProject)
+        saveProjects();
+        (0,_domdisplay_js__WEBPACK_IMPORTED_MODULE_1__.render)();
+
+    })
+
+
+
+    //Saves project array
+    function saveProjects() {
+        localStorage.setItem('myProjects', JSON.stringify(myProjects));
+    }
+
+    if (!localStorage.myProjects) {
+        return
+    } else {
+        myProjects = JSON.parse(window.localStorage.getItem('myProjects'));
+    }
+
+
+    return {
+        myProjects,
+        saveProjects
+    }
+
+})();
+
+
+
+
+const selectCurrentProject = (function () {
+
+    let currentProject;
+
+    return {
+        currentProject
+    }
+
+})();
+
+
+
+
+
+
+
+
+function todoCapture() {
+
+    const todoName = document.getElementById('todo-name').value
+    const todoDueDate = document.getElementById('todo-due-date').value
+    const todoPriority = document.getElementById('priority-select').value
+    const todoCheckbox = false;
+    const todoDescription = document.getElementById('todo-info').value
+
+    let newTodo = (0,_constructors_js__WEBPACK_IMPORTED_MODULE_0__.TodoInstance)(todoName, todoDueDate, todoPriority, todoCheckbox, todoDescription)
+    selectCurrentProject.currentProject.todos.push(newTodo);
+
+    projectCapture.saveProjects();
+    
+
+
+}
 
 
 
@@ -741,10 +751,10 @@ var __webpack_exports__ = {};
 (() => {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
-/* harmony import */ var _modules_constructors_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(5);
-/* harmony import */ var _modules_domevents_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(9);
-/* harmony import */ var _modules_datacapture_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(7);
-/* harmony import */ var _modules_domdisplay_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(8);
+/* harmony import */ var _modules_domdisplay_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(7);
+/* harmony import */ var _modules_constructors_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(5);
+/* harmony import */ var _modules_domevents_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(6);
+/* harmony import */ var _modules_datacapture_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(8);
 
 
 
@@ -753,13 +763,14 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-let hooverStairs = (0,_modules_constructors_js__WEBPACK_IMPORTED_MODULE_1__.TodoInstance)('Hoover the stairs', '11/12/22', 'High', false, 'Get right in those corners');
 
-_modules_domdisplay_js__WEBPACK_IMPORTED_MODULE_4__.displayProjects.addToDom();
+let hooverStairs = (0,_modules_constructors_js__WEBPACK_IMPORTED_MODULE_2__.TodoInstance)('Hoover the stairs', '11/12/22', 'High', false, 'Get right in those corners');
+_modules_datacapture_js__WEBPACK_IMPORTED_MODULE_4__.selectCurrentProject.currentProject = [];
+(0,_modules_domdisplay_js__WEBPACK_IMPORTED_MODULE_1__.render)();
 
-//console.log(projectCapture.projectName)
 
-//console.log(projectCapture.myProjects)
+
+
 
 
 

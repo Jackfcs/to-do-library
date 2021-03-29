@@ -1,6 +1,5 @@
 import {displayProjects, render} from './domdisplay.js'
-import {saveData} from './datacapture'
-import {projectCapture} from './datacapture.js'
+import {projectCapture, todoCapture, saveData, selectCurrentProject} from './datacapture.js'
 
 export const modalEvents = (function () {
     const todoModal = document.getElementById('todo-modal');
@@ -27,7 +26,6 @@ export const modalEvents = (function () {
     //confirm new project
     confirmProjectButton.addEventListener('click', () => {
         hideModal(projectModal);
-        render();
     });
 
     //bring up new todo input
@@ -38,13 +36,11 @@ export const modalEvents = (function () {
     //confirm new todo
     confirmTodoButton.addEventListener('click', () => {
         hideModal(todoModal);
-        render();
-        
+        todoCapture();   
+        render();   
 
     });
 
 })();
-
-
 
 

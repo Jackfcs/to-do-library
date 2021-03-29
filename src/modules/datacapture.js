@@ -1,11 +1,11 @@
 import { ProjectInstance, TodoInstance } from './constructors.js';
-import { render } from './domdisplay.js';
-import { projectSelect } from './domevents'
+import { render, projectSelect, displayProjects } from './domdisplay.js';
+import { } from './domevents'
 
 
 export const projectCapture = (function () {
+    
     const confirmProjectButton = document.getElementById('confirm-project')
-
 
     let houseWork = ProjectInstance('House Work', '06/12/22', 'Need to clean the whole house');
 
@@ -18,10 +18,13 @@ export const projectCapture = (function () {
         const projectDescription = document.getElementById('project-description').value
         let newProject = ProjectInstance(projectName, projectDueDate, projectDescription);
         myProjects.push(newProject);
+        selectCurrentProject.currentProject = newProject;
+        console.log(selectCurrentProject.currentProject)
         saveProjects();
         render();
 
     })
+
 
 
     //Saves project array
@@ -43,27 +46,41 @@ export const projectCapture = (function () {
 
 })();
 
-export const todoCapture = (function () {
-    const confirmTodoButton = document.getElementById('confirm-todo');
 
-    
 
-    confirmTodoButton.addEventListener('click', () => {
-        const todoName = document.getElementById('todo-name').value;
-        const todoDueDate = document.getElementById('todo-due-date').value;
-        const todoPriority = document.getElementById('priority-select').value;
-        const todoDescription = document.getElementById('todo-info').value;
-        let newTodo = TodoInstance(todoName, todoDueDate, todoPriority, todoDescription)
-        projectSelect.currentProject.todos.push(newTodo);
-        console.log(projectSelect.currentProject.todos)
-        projectCapture.saveProjects();
-    })
 
-    
+export const selectCurrentProject = (function () {
+
+    let currentProject;
 
     return {
-        
+        currentProject
     }
-    
+
 })();
+
+
+
+
+
+
+
+
+export function todoCapture() {
+
+    const todoName = document.getElementById('todo-name').value
+    const todoDueDate = document.getElementById('todo-due-date').value
+    const todoPriority = document.getElementById('priority-select').value
+    const todoCheckbox = false;
+    const todoDescription = document.getElementById('todo-info').value
+
+    let newTodo = TodoInstance(todoName, todoDueDate, todoPriority, todoCheckbox, todoDescription)
+    selectCurrentProject.currentProject.todos.push(newTodo);
+
+    projectCapture.saveProjects();
+    
+
+
+}
+
 

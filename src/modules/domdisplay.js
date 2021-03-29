@@ -1,14 +1,18 @@
 
-import { projectCapture} from './datacapture.js'
+import { projectCapture, todoCapture, selectCurrentProject } from './datacapture.js'
+
 
 
 export const displayProjects = (function () {
     const projectParent = document.getElementById('project-parent');
-    
-    
+
+
     //Display projects in project container
 
     function addToDom() {
+        
+        projectParent.innerHTML = ''
+
         for (let i = 0; i < projectCapture.myProjects.length; i++) {
             const newDiv = document.createElement('div');
             const newSpan = document.createElement('span');
@@ -26,72 +30,65 @@ export const displayProjects = (function () {
             newSpan.appendChild(deleteBtn);
             deleteBtn.setAttribute('id', 'delete' + i);
             deleteBtn.innerHTML = '-'
-            
+
             deleteBtn.addEventListener('click', () => {
                 projectCapture.myProjects.splice(i, 1);
                 render();
+                selectCurrentProject.currentProject = [];
                 projectCapture.saveProjects();
             })
-            
+
+
+            newDiv.addEventListener('click', () => {
+                selectCurrentProject.currentProject = projectCapture.myProjects[i];
+                console.log(selectCurrentProject.currentProject)
+            })
+
+
+
         }
 
-        
+
     }
-    
-    
+
+    const todoParent = document.getElementById('todo-parent');
+
+    function displayTodos() {
+
+        todoParent.innerHTML = '';
+
+        for (let i = 0; i < selectCurrentProject.currentProject.todos; i++) {
+
+            const newTodo = document.createElement('div');
+            todoParent.appendChild(newTodo);
+            newTodo.innerHTML = 'success';
+
+
+        }
+        //console.log(todos)
+
+
+    }
+
 
     return {
         addToDom,
-        projectParent
+        projectParent,
+        todoParent,
+        displayTodos
+
+
     }
 
 })();
 
-
-//Selecting Current Project
-export const projectSelect = (function() {
-    const projects = document.querySelectorAll('project-instance')
-    const todoParent = document.getElementById('todo-parent')
-
-    let currentProject = projectCapture.myProjects[1];
-
-    // projectCapture.myProjects.forEach(project => {
-    //     project.addEventListener('click', () => {
-    //         project
-
-
-    //     })
-    // });
-
-    console.log(currentProject.todos)
-
-    return {
-        currentProject
-    }
-})();
-
-//display todos
-const displayTodos = (function () {
-
-    const todoParent = document.getElementById('todo-parent');
-    let currentTodoList = projectSelect.currentProject.todos;
-    
-    
-    function addTodoDom () {
-        for (let i = 0; i < currentTodoList.length; i++) {
-            const newDiv = document.createElement('div');
-            todoParent.appendChild(newDiv);
-            newDiv.textContent = 'hurray'
-        }
-    }
-    addTodoDom();
-    
-
-})();
 
 export function render() {
+    displayProjects.todoParent.innerHTML = '';
     displayProjects.projectParent.innerHTML = '';
     displayProjects.addToDom();
+    displayProjects.displayTodos();
     
-    
+
+
 }

@@ -1,6 +1,7 @@
 const ProjectInstance = (name, dueDate, moreInfo, todos) => {
     todos = [];
-    return {name, dueDate, moreInfo, todos}
+    return {name, dueDate, moreInfo, todos
+    }
 };
 
 
