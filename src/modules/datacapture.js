@@ -1,11 +1,10 @@
 import { ProjectInstance, TodoInstance } from './constructors.js';
-import { render, projectSelect, displayProjects } from './domdisplay.js';
-import { } from './domevents'
+import { render } from './domdisplay.js';
 
 
 export const projectCapture = (function () {
-    
-    const confirmProjectButton = document.getElementById('confirm-project')
+
+    const confirmProjectButton = document.getElementById('confirm-project');
 
     let houseWork = ProjectInstance('House Work', '06/12/22', 'Need to clean the whole house');
 
@@ -13,17 +12,17 @@ export const projectCapture = (function () {
 
     //Create new project and add to array
     confirmProjectButton.addEventListener('click', () => {
-        const projectName = document.getElementById('project-name').value
-        const projectDueDate = document.getElementById('project-due-date').value
-        const projectDescription = document.getElementById('project-description').value
+        const projectName = document.getElementById('project-name').value;
+        const projectDueDate = document.getElementById('project-due-date').value;
+        const projectDescription = document.getElementById('project-description').value;
+
         let newProject = ProjectInstance(projectName, projectDueDate, projectDescription);
         myProjects.push(newProject);
         selectCurrentProject.currentProject = newProject;
-        console.log(selectCurrentProject.currentProject)
         saveProjects();
         render();
 
-    })
+    });
 
 
 
@@ -48,21 +47,15 @@ export const projectCapture = (function () {
 
 
 
-
 export const selectCurrentProject = (function () {
 
-    let currentProject;
+    let currentProject = projectCapture.myProjects[0];
 
     return {
         currentProject
     }
 
 })();
-
-
-
-
-
 
 
 
@@ -78,7 +71,7 @@ export function todoCapture() {
     selectCurrentProject.currentProject.todos.push(newTodo);
 
     projectCapture.saveProjects();
-    
+
 
 
 }

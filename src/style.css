@@ -33,6 +33,8 @@ body {
     grid-column: 1 / 1;
     border: solid rgb(187, 187, 187);
     padding: 5px;
+    display: flex;
+    flex-direction: column;
 }
 
 
@@ -46,7 +48,8 @@ body {
 }
 
 .project-instance {
-    
+    display: flex;
+    justify-content: space-between;
 }
 
 .todo-instance {
@@ -68,6 +71,10 @@ button {
 
 #add-todo-button {
     grid-column: 2 / 2;
+}
+
+.projectdelete {
+    width: 10px;
 }
 
 .modal {
