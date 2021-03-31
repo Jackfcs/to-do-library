@@ -37,10 +37,10 @@
 
         <div id="todo-container">
             <button id="add-todo-button">Add Todo</button>
-            <h3>'Current-Project' To-dos</h3>
+            <h3 id="todo-header">'Current-Project' To-dos</h3>
 
             <div id="todo-parent">
-                <div class="todo-instance">
+                <!-- <div class="todo-instance">
                     <span class="project-name">Get Bananas</span> <br>
 
                     <span class="duedate">Due Date - 14/11/21</span>
@@ -57,14 +57,14 @@
                         <label for="completed">Complete</label>
                         <input type="checkbox" name="completed">
                     </div>
-                </div>
+                </div> -->
             </div>
 
         </div>
 
         <div id="project-modal" class="modal hide">
             <span>Add new Project</span>
-            <form class="modal-form" onsubmit="return false">
+            <form class="modal-form" id="project-form" onsubmit="return false">
                 <label for="project-name">Project Name</label>
                 <input type="text" id="project-name" name="todo-name" required>
                 <label for="due-date">Due Date</label>
@@ -79,7 +79,7 @@
 
         <div id="todo-modal" class="modal hide">
             <span>Add new to-do</span>
-            <form class="modal-form" onsubmit="return false">
+            <form class="modal-form" id="todo-form" onsubmit="return false">
                 <label for="todo-name">Task</label>
                 <input type="text" id="todo-name" name="todo-name" required>
                 <label for="due-date">Due Date</label>
