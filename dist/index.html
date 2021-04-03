@@ -37,8 +37,11 @@
 
         <div id="todo-container">
             <button id="add-todo-button">Add Todo</button>
-            <h3 id="todo-header">'Current-Project' To-dos</h3>
-
+            <div id="todo-nav">
+                <h3 id="todo-header"></h3>
+                <h3 id="todo-header-priority">Priority</h3>
+                <h3 id="todo-title-duedate">Due Date</h3>
+            </div>
             <div id="todo-parent">
                 <!-- <div class="todo-instance">
                     <span class="project-name">Get Bananas</span> <br>
@@ -59,6 +62,7 @@
                     </div>
                 </div> -->
             </div>
+            <div id="completed-todo"></div>
 
         </div>
 
@@ -66,11 +70,11 @@
             <span>Add new Project</span>
             <form class="modal-form" id="project-form" onsubmit="return false">
                 <label for="project-name">Project Name</label>
-                <input type="text" id="project-name" name="todo-name" required>
+                <input type="text" id="project-name" name="todo-name">
                 <label for="due-date">Due Date</label>
-                <input type="date" id="project-due-date" name="project-due-date" required>
+                <input type="date" id="project-due-date" name="project-due-date">
                 <label for="project-info">Description</label>
-                <input type="text" id="project-description" name="project-description" required>
+                <input type="text" id="project-description" name="project-description">
 
                 <input id="confirm-project" type="submit" value="Add">
             </form>
@@ -81,17 +85,17 @@
             <span>Add new to-do</span>
             <form class="modal-form" id="todo-form" onsubmit="return false">
                 <label for="todo-name">Task</label>
-                <input type="text" id="todo-name" name="todo-name" required>
+                <input type="text" id="todo-name" name="todo-name">
                 <label for="due-date">Due Date</label>
-                <input type="date" id="todo-due-date" name="todo-due-date" required>
+                <input type="date" id="todo-due-date" name="todo-due-date">
                 <label for="priority">Priority</label>
-                <select name="priority" id="priority-select">
+                <select name="priority-select" id="priority-select">
                     <option value="low">Low</option>
                     <option value="medium">Medium</option>
-                    <option value="high">~High</option>
+                    <option value="high">High</option>
                 </select>
                 <label for="todo-info">Description</label>
-                <input type="text" id="todo-info" name="todo-info" required>
+                <input type="text" id="todo-info" name="todo-info">
 
                 <input id="confirm-todo" type="submit" value="Add">
             </form>

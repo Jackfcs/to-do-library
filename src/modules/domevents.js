@@ -1,5 +1,5 @@
-import {displayProjects, render} from './domdisplay.js'
-import {projectCapture, todoCapture, selectCurrentProject} from './datacapture.js'
+import { displayProjects, render } from './domdisplay.js'
+import { projectCapture, todoCapture, selectCurrentProject } from './datacapture.js'
 
 export const modalEvents = (function () {
     const todoModal = document.getElementById('todo-modal');
@@ -29,25 +29,32 @@ export const modalEvents = (function () {
 
     //confirm new project
     confirmProjectButton.addEventListener('click', () => {
-        hideModal(projectModal);
-        displayProjects.addToDom();
+        const projectName = document.getElementById('project-name').value;
+        if (projectName === '') {
+            alert('Select Project Name')
+        } else {
+            hideModal(projectModal);
+            displayProjects.addToDom();
+        }
     });
 
     //Display new todo input
     newTodoButton.addEventListener('click', () => {
-        selectCurrentProject.currentProject = projectCapture.myProjects[0];
         displayModal(todoModal);
         todoForm.reset();
     });
-    
+
     //confirm new todo
     confirmTodoButton.addEventListener('click', () => {
-        hideModal(todoModal);
-        todoCapture();   
-        displayProjects.displayTodos();
-
+        const todoName = document.getElementById('todo-name').value;
+        if (todoName === '') {
+            alert('Select Todo Name')
+        } else {
+            hideModal(todoModal);
+            todoCapture();
+            displayProjects.displayTodos();
+        }
     });
 
 })();
-
 

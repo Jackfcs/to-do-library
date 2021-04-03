@@ -32,7 +32,7 @@ export const projectCapture = (function () {
     }
 
     if (!localStorage.myProjects) {
-        return
+        console.log('hi')
     } else {
         myProjects = JSON.parse(window.localStorage.getItem('myProjects'));
     }
@@ -43,9 +43,11 @@ export const projectCapture = (function () {
         saveProjects
     }
 
+
+
 })();
 
-
+//localStorage.clear()
 
 export const selectCurrentProject = (function () {
 
@@ -58,22 +60,38 @@ export const selectCurrentProject = (function () {
 })();
 
 
+//Capture Priority Select value 
+const todoPriorityValue = (function () {
+    const todoPriority = document.getElementById('priority-select')
+    todoPriority.addEventListener('change', () => {
+        console.log(todoPriority.value)
+        
+
+    })
+    return todoPriority.value
+})();
+
 
 export function todoCapture() {
 
-    const todoName = document.getElementById('todo-name').value
-    const todoDueDate = document.getElementById('todo-due-date').value
-    const todoPriority = document.getElementById('priority-select').value
+    const todoName = document.getElementById('todo-name').value;
+    const todoDueDate = document.getElementById('todo-due-date').value;
+    const todoPriority =  todoPriorityValue;
     const todoCheckbox = false;
-    const todoDescription = document.getElementById('todo-info').value
+    const todoDescription = document.getElementById('todo-info').text
 
     let newTodo = TodoInstance(todoName, todoDueDate, todoPriority, todoCheckbox, todoDescription)
     selectCurrentProject.currentProject.todos.push(newTodo);
-
     projectCapture.saveProjects();
 
 
+    console.log(todoName)
+    console.log('todoPriority ' + todoPriority);
+    console.log(selectCurrentProject.currentProject.todoPriority)
+    //console.log(selectedPriority)
+
+    return {
+        todoName
+    }
 
 }
-
-

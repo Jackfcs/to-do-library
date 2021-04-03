@@ -1,6 +1,7 @@
-const ProjectInstance = (name, dueDate, moreInfo, todos) => {
+const ProjectInstance = (name, dueDate, moreInfo, todos, completedTodos) => {
     todos = [];
-    return {name, dueDate, moreInfo, todos
+    completedTodos = [];
+    return {name, dueDate, moreInfo, todos, completedTodos
     }
 };
 

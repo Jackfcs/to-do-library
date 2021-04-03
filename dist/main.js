@@ -314,7 +314,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "#header {\n    position: fixed;\n    overflow: hidden;\n    top: 0;\n    left: 0;\n    width: 100%;\n    background-color:  rgb(128, 183, 255);\n    color: rgb(0, 0, 0);\n    height: 50px;\n    display: flex;\n    align-items: center;\n}\n\nbody {\n    background: rgb(255, 0, 0);\n    color: rgb(26, 26, 26);\n    margin: 0;\n    padding: 0;\n    overflow: hidden;\n}\n\n#app-container {\n    display: grid;\n    grid-template-columns: 30% 70%;\n    width: 100vw;\n    height: 100vh;\n    max-width: 100%;\n    margin-top: 50px;\n}\n\n#project-container {\n    background-color: rgb(236, 236, 236);\n    grid-column: 1 / 1;\n    border: solid rgb(187, 187, 187);\n    padding: 5px;\n    display: flex;\n    flex-direction: column;\n}\n\n\n#todo-container {\n    display: flex;\n    flex-direction: column;\n    grid-column: 2 / 2;\n    background-color: rgb(255, 255, 255);\n    border: solid rgb(187, 187, 187);\n    padding: 5px;\n}\n\n.project-instance {\n    display: flex;\n    justify-content: space-between;\n}\n\n.todo-instance {\n    border-bottom: 1px solid rgb(182, 182, 182);\n    display: flex;\n    flex-direction: row;\n    justify-content: space-between;\n}\n\nbutton {\n    color: red;\n    width: 150px;\n    \n}\n\n#add-project-button {\n    grid-column: 1 / 1;\n}\n\n#add-todo-button {\n    grid-column: 2 / 2;\n}\n\n.projectdelete {\n    width: 10px;\n}\n\n.modal {\n    display: flex;\n    flex-direction: column;\n    justify-content: space-around;\n    align-items: center;\n    color: white;\n    background-color: rgb(0, 41, 41);\n    position: fixed;\n    top: 50%;\n    left: 50%;\n    transform: translate(-50%, -50%);\n    \n}\n\n.modal-form {\n    display: flex;\n    flex-direction: column;\n    justify-content: space-around;\n    align-items: center;\n    padding: 10px;\n}\n\n.hide {\n    transform: scale(0%);\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "#header {\n    position: fixed;\n    overflow: hidden;\n    top: 0;\n    left: 0;\n    width: 100%;\n    background-color:  rgb(128, 183, 255);\n    color: rgb(0, 0, 0);\n    height: 50px;\n    display: flex;\n    align-items: center;\n}\n\nbody {\n    background: rgb(255, 0, 0);\n    color: rgb(26, 26, 26);\n    margin: 0;\n    padding: 0;\n    overflow: hidden;\n}\n\n#app-container {\n    display: grid;\n    grid-template-columns: 300px auto;\n    width: 100vw;\n    height: 100vh;\n    max-width: 100%;\n    margin-top: 50px;\n}\n\n#project-container {\n    background-color: rgb(236, 236, 236);\n    grid-column: 1 / 1;\n    border: solid rgb(187, 187, 187);\n    padding: 5px;\n    display: flex;\n    flex-direction: column;\n}\n\n#todo-container {\n    display: flex;\n    flex-direction: column;\n    grid-column: 2 / 2;\n    background-color: rgb(255, 255, 255);\n    border: solid rgb(187, 187, 187);\n    padding: 10px;\n}\n\n#todo-nav{\n    display: grid;\n    grid-template-columns: auto 100px 150px;\n    grid-template-areas: \"name priority date\";\n}\n\n#todo-header-priority {\n    grid-area: priority;\n    justify-self: end;\n}\n\n#todo-title-duedate {\n    grid-area: date;\n    justify-self: end;\n}\n\n#todo-duedate {\n    grid-area: date;\n    justify-self: end;\n}\n\n#completed-todo {\n    background-color: grey;\n}\n\n.project-instance {\n    display: flex;\n    justify-content: space-between;\n    flex-wrap: wrap;\n    background-color: rgb(212, 212, 212);\n    border: solid rgb(187, 187, 187);\n    margin-bottom: 5px;\n    \n}\n\n.project-instance:hover {\n    cursor: pointer;\n    background-color:  rgb(163, 163, 163);\n}\n\n.todo-instance {\n    border-bottom: 1px solid rgb(182, 182, 182);\n    width: 100%;\n    display: grid;\n    grid-template-columns: 40px auto 100px 150px;\n    grid-template-areas: \"check name priority date\";\n}\n\n#checkbox {\n    grid-area: check;\n}\n\n#priority-select {\n    grid-area: priority;\n    justify-self: end;\n}\n\n#todo-duedate {\n    grid-area: date;\n    justify-self: end;\n}\n\nbutton {\n    color: red;\n    width: 150px;\n    \n}\n\n#add-project-button {\n    grid-column: 1 / 1;\n}\n\n#add-todo-button {\n    grid-column: 2 / 2;\n}\n\n.projectdelete {\n    width: 10px;\n}\n\n.modal {\n    display: flex;\n    flex-direction: column;\n    justify-content: space-around;\n    align-items: center;\n    color: white;\n    background-color: rgb(0, 41, 41);\n    position: fixed;\n    top: 50%;\n    left: 50%;\n    transform: translate(-50%, -50%);\n    \n}\n\n.modal-form {\n    display: flex;\n    flex-direction: column;\n    justify-content: space-around;\n    align-items: center;\n    padding: 10px;\n}\n\n.hide {\n    transform: scale(0%);\n}\n\n#project-info-button {\n    width: 80px;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -415,9 +415,10 @@ const displayProjects = (function () {
 
         projectParent.innerHTML = ''
 
-
+        //Create Project Instances
 
         for (let i = 0; i < _datacapture_js__WEBPACK_IMPORTED_MODULE_0__.projectCapture.myProjects.length; i++) {
+
             const newDiv = document.createElement('div');
             const newSpan = document.createElement('span');
             const deleteBtn = document.createElement('button');
@@ -430,8 +431,12 @@ const displayProjects = (function () {
             newDiv.appendChild(newSpan);
             newSpan.classList.add('project-name');
             let newDate = _datacapture_js__WEBPACK_IMPORTED_MODULE_0__.projectCapture.myProjects[i].dueDate;
-            newSpan.textContent = (0,date_fns__WEBPACK_IMPORTED_MODULE_1__.default)(new Date(newDate), 'PPP');
 
+            if (newDate === '') {
+                newSpan.textContent = newDate;
+            } else {
+                newSpan.textContent = (0,date_fns__WEBPACK_IMPORTED_MODULE_1__.default)(new Date(newDate), 'PPP');
+            }
             newDiv.appendChild(deleteBtn);
             deleteBtn.setAttribute('id', 'delete' + i);
             deleteBtn.setAttribute('class', 'projectdelete')
@@ -453,64 +458,189 @@ const displayProjects = (function () {
                 console.log(_datacapture_js__WEBPACK_IMPORTED_MODULE_0__.selectCurrentProject.currentProject)
             })
 
+            const info = document.createElement('button');
+            newDiv.appendChild(info);
+            info.textContent = 'Show Details';
+            info.setAttribute('id', 'project-info-button')
+            info.addEventListener('click', () => {
+                const description = document.createElement('div');
+                alert(_datacapture_js__WEBPACK_IMPORTED_MODULE_0__.projectCapture.myProjects[i].moreInfo)
+
+            })
 
         }
 
     }
 
-
+    //Create todo instances
 
     const todoParent = document.getElementById('todo-parent');
+    const completedParent = document.getElementById('completed-todo');
 
     function displayTodos() {
 
         todoParent.innerHTML = '';
+        completedParent.innerHTML = '';
 
         if (_datacapture_js__WEBPACK_IMPORTED_MODULE_0__.selectCurrentProject.currentProject === undefined) {
             _datacapture_js__WEBPACK_IMPORTED_MODULE_0__.selectCurrentProject.currentProject = _datacapture_js__WEBPACK_IMPORTED_MODULE_0__.projectCapture.myProjects[0]
         }
-        let todos = _datacapture_js__WEBPACK_IMPORTED_MODULE_0__.selectCurrentProject.currentProject.todos
+
+
+
+
+        //Generate todo header
 
         const todoHeader = document.getElementById('todo-header');
-        todoHeader.innerHTML = '';
+
+        //Todo title
         todoHeader.textContent = `${_datacapture_js__WEBPACK_IMPORTED_MODULE_0__.selectCurrentProject.currentProject.name} To-dos`
+
+
+
+        let todos = _datacapture_js__WEBPACK_IMPORTED_MODULE_0__.selectCurrentProject.currentProject.todos
 
         for (let i = 0; i < todos.length; i++) {
 
-            const todoHeader = document.getElementById('todo-header');
-
-            //Todo title
-            todoHeader.textContent = `${_datacapture_js__WEBPACK_IMPORTED_MODULE_0__.selectCurrentProject.currentProject.name} To-dos`
-            
             let todoDate = todos[i].dueDate;
-            let newDate = (0,date_fns__WEBPACK_IMPORTED_MODULE_1__.default)(new Date(todoDate), 'PPP')
+            let newDate;
+            if (todoDate === '') {
+                newDate = '';
+            } else {
+                newDate = (0,date_fns__WEBPACK_IMPORTED_MODULE_1__.default)(new Date(todoDate), 'P')
+            }
+
+
 
             const newTodo = document.createElement('div');
             todoParent.appendChild(newTodo);
-            newTodo.innerHTML = `
-            <div class="todo-instance">
-                    <span class="project-name">${todos[i].name}</span> <br>
+            newTodo.classList.add('todo-instance');
 
-                    <span class="duedate">Due Date - ${newDate}</span>
+            //CheckBox
+            const checkParent = document.createElement('div');
+            newTodo.appendChild(checkParent);
+            const check = document.createElement('INPUT');
+            check.setAttribute('type', 'checkbox');
+            check.setAttribute('name', 'checkbox');
+            check.setAttribute('id', 'checkbox');
+            checkParent.appendChild(check);
+            check.addEventListener('change', () => {
+                _datacapture_js__WEBPACK_IMPORTED_MODULE_0__.selectCurrentProject.currentProject.completedTodos.push(todos[i]);
+                todos.splice(i, 1);
+                render();
+                _datacapture_js__WEBPACK_IMPORTED_MODULE_0__.projectCapture.saveProjects();
+                
+            })
 
-                    <form>
-                        <label for="priority">Priority</label>
-                        <select name="priority" id="priority-select">
-                            <option value="low">Low</option>
-                            <option value="medium">Medium</option>
-                            <option value="high">High</option>
-                        </select>
-                    </form>
-                    <div>
-                        <label for="completed">Complete</label>
-                        <input type="checkbox" name="completed">
-                    </div>
-                </div>`;
+            //todo Name
+            const todoName = document.createElement('span');
+            todoName.textContent = todos[i].name;
+            newTodo.appendChild(todoName);
+
+            //Priority Select
+            const select = document.createElement('select');
+            select.setAttribute('name', 'priority');
+            select.setAttribute('id', 'priority-select')
+            newTodo.appendChild(select);
+            const low = document.createElement('option');
+            const medium = document.createElement('option');
+            const high = document.createElement('option');
+            low.innerHTML = 'low';
+            low.setAttribute('value', 'low');
+            select.appendChild(low);
+            medium.innerHTML = 'medium';
+            medium.setAttribute('value', 'medium');
+            select.appendChild(medium);
+            high.innerHTML = 'high';
+            high.setAttribute('value', 'high');
+            select.appendChild(high);
+
+
+            // display priority colour
+            select.value = todos[i].priority;
+            if (select.value == 'low') {
+                select.style.background = 'green'
+            }
+            if (select.value == 'medium') {
+                select.style.background = 'orange'
+            }
+            if (select.value == 'high') {
+                select.style.background = 'red'
+            }
+            select.addEventListener('change', (event) => {
+                todos[i].priority = select.value;
+                if (select.value == 'low') {
+                    event.target.style.background = 'green'
+                }
+                if (select.value == 'medium') {
+                    event.target.style.background = 'orange'
+                }
+                if (select.value == 'high') {
+                    event.target.style.background = 'red'
+                }
+                _datacapture_js__WEBPACK_IMPORTED_MODULE_0__.projectCapture.saveProjects();
+            });
+
+
+            //Due Date
+            const dueDate = document.createElement('span');
+            dueDate.setAttribute('id', 'todo-duedate')
+            dueDate.textContent = newDate;
+            newTodo.appendChild(dueDate);
+
+
+
+
 
         }
 
+        //display completed todos
+        if (_datacapture_js__WEBPACK_IMPORTED_MODULE_0__.selectCurrentProject.currentProject.completedTodos != undefined) {
+
+            let compTodos = _datacapture_js__WEBPACK_IMPORTED_MODULE_0__.selectCurrentProject.currentProject.completedTodos
+
+            for (let i = 0; i < compTodos.length; i++) {
+
+                let todoDate = compTodos[i].dueDate;
+                let newDate;
+                if (todoDate === '') {
+                    newDate = '';
+                } else {
+                    newDate = (0,date_fns__WEBPACK_IMPORTED_MODULE_1__.default)(new Date(todoDate), 'P')
+                }
 
 
+                const newTodo = document.createElement('div');
+                completedParent.appendChild(newTodo);
+                newTodo.classList.add('todo-instance');
+
+                //CheckBox
+                const checkParent = document.createElement('div');
+                newTodo.appendChild(checkParent);
+                const check = document.createElement('INPUT');
+                check.setAttribute('type', 'checkbox');
+                check.setAttribute('name', 'checkbox');
+                check.setAttribute('id', 'checkbox');
+                check.setAttribute('checked', 'true');
+                checkParent.appendChild(check);
+                check.addEventListener('change', () => {
+
+                
+                    _datacapture_js__WEBPACK_IMPORTED_MODULE_0__.selectCurrentProject.currentProject.todos.push(compTodos[i]);
+                    compTodos.splice(i, 1);
+                    render();
+                    _datacapture_js__WEBPACK_IMPORTED_MODULE_0__.projectCapture.saveProjects();
+                    
+                })
+                //Name
+                const todoName = document.createElement('span');
+                todoName.textContent = compTodos[i].name;
+                newTodo.appendChild(todoName);
+
+                
+            }
+
+        }
     }
 
     return {
@@ -582,7 +712,7 @@ const projectCapture = (function () {
     }
 
     if (!localStorage.myProjects) {
-        return
+        console.log('hi')
     } else {
         myProjects = JSON.parse(window.localStorage.getItem('myProjects'));
     }
@@ -593,9 +723,11 @@ const projectCapture = (function () {
         saveProjects
     }
 
+
+
 })();
 
-
+//localStorage.clear()
 
 const selectCurrentProject = (function () {
 
@@ -608,25 +740,41 @@ const selectCurrentProject = (function () {
 })();
 
 
+//Capture Priority Select value 
+const todoPriorityValue = (function () {
+    const todoPriority = document.getElementById('priority-select')
+    todoPriority.addEventListener('change', () => {
+        console.log(todoPriority.value)
+        
+
+    })
+    return todoPriority.value
+})();
+
 
 function todoCapture() {
 
-    const todoName = document.getElementById('todo-name').value
-    const todoDueDate = document.getElementById('todo-due-date').value
-    const todoPriority = document.getElementById('priority-select').value
+    const todoName = document.getElementById('todo-name').value;
+    const todoDueDate = document.getElementById('todo-due-date').value;
+    const todoPriority =  todoPriorityValue;
     const todoCheckbox = false;
-    const todoDescription = document.getElementById('todo-info').value
+    const todoDescription = document.getElementById('todo-info').text
 
     let newTodo = (0,_constructors_js__WEBPACK_IMPORTED_MODULE_0__.TodoInstance)(todoName, todoDueDate, todoPriority, todoCheckbox, todoDescription)
     selectCurrentProject.currentProject.todos.push(newTodo);
-
     projectCapture.saveProjects();
 
 
+    console.log(todoName)
+    console.log('todoPriority ' + todoPriority);
+    console.log(selectCurrentProject.currentProject.todoPriority)
+    //console.log(selectedPriority)
+
+    return {
+        todoName
+    }
 
 }
-
-
 
 
 /***/ }),
@@ -638,9 +786,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "ProjectInstance": () => (/* binding */ ProjectInstance),
 /* harmony export */   "TodoInstance": () => (/* binding */ TodoInstance)
 /* harmony export */ });
-const ProjectInstance = (name, dueDate, moreInfo, todos) => {
+const ProjectInstance = (name, dueDate, moreInfo, todos, completedTodos) => {
     todos = [];
-    return {name, dueDate, moreInfo, todos
+    completedTodos = [];
+    return {name, dueDate, moreInfo, todos, completedTodos
     }
 };
 
@@ -3464,27 +3613,34 @@ const modalEvents = (function () {
 
     //confirm new project
     confirmProjectButton.addEventListener('click', () => {
-        hideModal(projectModal);
-        _domdisplay_js__WEBPACK_IMPORTED_MODULE_0__.displayProjects.addToDom();
+        const projectName = document.getElementById('project-name').value;
+        if (projectName === '') {
+            alert('Select Project Name')
+        } else {
+            hideModal(projectModal);
+            _domdisplay_js__WEBPACK_IMPORTED_MODULE_0__.displayProjects.addToDom();
+        }
     });
 
     //Display new todo input
     newTodoButton.addEventListener('click', () => {
-        _datacapture_js__WEBPACK_IMPORTED_MODULE_1__.selectCurrentProject.currentProject = _datacapture_js__WEBPACK_IMPORTED_MODULE_1__.projectCapture.myProjects[0];
         displayModal(todoModal);
         todoForm.reset();
     });
-    
+
     //confirm new todo
     confirmTodoButton.addEventListener('click', () => {
-        hideModal(todoModal);
-        (0,_datacapture_js__WEBPACK_IMPORTED_MODULE_1__.todoCapture)();   
-        _domdisplay_js__WEBPACK_IMPORTED_MODULE_0__.displayProjects.displayTodos();
-
+        const todoName = document.getElementById('todo-name').value;
+        if (todoName === '') {
+            alert('Select Todo Name')
+        } else {
+            hideModal(todoModal);
+            (0,_datacapture_js__WEBPACK_IMPORTED_MODULE_1__.todoCapture)();
+            _domdisplay_js__WEBPACK_IMPORTED_MODULE_0__.displayProjects.displayTodos();
+        }
     });
 
 })();
-
 
 
 
