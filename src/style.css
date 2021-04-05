@@ -32,6 +32,7 @@ body {
     background-color: rgb(236, 236, 236);
     grid-column: 1 / 1;
     border: solid rgb(187, 187, 187);
+    height: 100vh;
     padding: 5px;
     display: flex;
     flex-direction: column;
@@ -44,6 +45,7 @@ body {
     background-color: rgb(255, 255, 255);
     border: solid rgb(187, 187, 187);
     padding: 10px;
+    height: 100vh;
 }
 
 #todo-nav{
@@ -62,14 +64,13 @@ body {
     justify-self: end;
 }
 
-#todo-duedate {
-    grid-area: date;
-    justify-self: end;
-}
+
 
 #completed-todo {
     background-color: grey;
 }
+
+
 
 .project-instance {
     display: flex;
@@ -91,11 +92,15 @@ body {
     width: 100%;
     display: grid;
     grid-template-columns: 40px auto 100px 150px;
-    grid-template-areas: "check name priority date";
+    grid-template-areas: "check name priority date"
 }
 
 #checkbox {
     grid-area: check;
+}
+
+#todo-name {
+    grid-area: name;
 }
 
 #priority-select {
@@ -106,6 +111,26 @@ body {
 #todo-duedate {
     grid-area: date;
     justify-self: end;
+
+}
+
+#due-date-text {
+    grid-area: date;
+    justify-self: end;
+    position: fixed;
+    right: 40px;
+}
+
+#edit-date-button {
+    grid-area: date;
+    justify-self: end;
+}
+
+#edit-date-input {
+    grid-area: date;
+    position: fixed;
+    right: 40px;
+    
 }
 
 button {

@@ -1,5 +1,6 @@
 
-import { projectCapture, selectCurrentProject } from './datacapture.js'
+import { projectCapture, selectCurrentProject, todoCapture } from './datacapture.js'
+import { modalEvents } from './domevents.js'
 import { format } from 'date-fns'
 
 
@@ -32,7 +33,8 @@ export const displayProjects = (function () {
             if (newDate === '') {
                 newSpan.textContent = newDate;
             } else {
-                newSpan.textContent = format(new Date(newDate), 'PPP');
+                //newSpan.textContent = format(new Date(newDate), 'PPP');
+                newSpan.textContent = newDate;
             }
             newDiv.appendChild(deleteBtn);
             deleteBtn.setAttribute('id', 'delete' + i);
@@ -104,7 +106,7 @@ export const displayProjects = (function () {
             if (todoDate === '') {
                 newDate = '';
             } else {
-                newDate = format(new Date(todoDate), 'P')
+                newDate = todoDate;
             }
 
 
@@ -126,13 +128,20 @@ export const displayProjects = (function () {
                 todos.splice(i, 1);
                 render();
                 projectCapture.saveProjects();
-                
+
             })
 
             //todo Name
             const todoName = document.createElement('span');
             todoName.textContent = todos[i].name;
             newTodo.appendChild(todoName);
+            todoName.setAttribute('id', 'todo-name')
+            todoName.setAttribute('contentEditable', 'true');
+            todoName.addEventListener('input', () => {
+                console.log('hey')
+                todos[i].name = todoName.textContent;
+                projectCapture.saveProjects();
+            });
 
             //Priority Select
             const select = document.createElement('select');
@@ -180,16 +189,168 @@ export const displayProjects = (function () {
 
 
             //Due Date
-            const dueDate = document.createElement('span');
+            const dueDate = document.createElement('div');
+            dueDate.setAttribute('type', 'date')
             dueDate.setAttribute('id', 'todo-duedate')
-            dueDate.textContent = newDate;
+            //dueDate.textContent = newDate;
             newTodo.appendChild(dueDate);
+
+            const dueDateText = document.createElement('div');
+            dueDateText.setAttribute('id', 'due-date-text');
+            dueDateText.textContent = newDate;
+            
+            dueDate.appendChild(dueDateText);
+
+            const editDateButton = document.createElement('IMG');
+            editDateButton.setAttribute('src', './icons/googlecalendar.png')
+            editDateButton.setAttribute('id', 'edit-date-button')
+            dueDate.appendChild(editDateButton)
+           
+
+            const editDate = document.createElement('INPUT');
+            editDate.setAttribute('id', 'edit-date-input')
+            editDate.classList.add('hide');
+            dueDate.appendChild(editDate);
+            editDate.setAttribute('type', 'date');
+            editDateButton.addEventListener('click', () => {
+                editDate.classList.toggle('hide');
+                dueDateText.classList.toggle('hide');
+             
+            })
+            editDate.addEventListener('input', () => {
+                todos[i].dueDate = format(new Date(editDate.value), 'P');
+                editDate.classList.add('hide');
+                render();
+                projectCapture.saveProjects();
+            })
+
+
+            // todoName.setAttribute('contentEditable', 'true');
+            // todoName.addEventListener('input', () => {
+            //     console.log('hey')
+            //     todos[i].name = todoName.textContent;
+            //     projectCapture.saveProjects();
+            // });
+
+            
+
+
+
+        //     //Edit Button
+
+        //     //Edit button on todo instance
+        //     const editButton = document.createElement('span');
+        //     editButton.setAttribute('id', 'todo-editbtn')
+        //     editButton.textContent = 'edit'
+        //     newTodo.appendChild(editButton);
+
+
+        //     //Edit todo Modal
+        //     const modalParent = document.getElementById('app-container');
+        //     const editTodoModal = document.createElement('div');
+        //     editTodoModal.innerHTML =
+        //         `<div id="edit-todo-modal" class="modal">
+        //     <span>Edit to-do</span>
+        //     <form class="modal-form" id="edit-todo-form" onsubmit="return false">
+        //         <label for="edit-todo-name">Task</label>
+        //         <input type="text" id="edit-todo-name" name="edit-todo-name" value="${todos[i].name}">
+        //         <label for="due-date">Due Date</label>
+        //         <input type="date" id="edit-todo-due-date" name="todo-due-date">
+        //         <!-- <label for="priority">Priority</label>
+        //         <select name="priority-select" id="priority-select">
+        //             <option value="low">Low</option>
+        //             <option value="medium">Medium</option>
+        //             <option value="high">High</option>
+        //         </select> -->
+        //         <label for="todo-info">Description</label>
+        //         <input type="text" id="edit-todo-info" name="todo-info">
+
+        //         <input id="confirm-edit-todo" type="submit" value="Confirm">
+        //     </form>
+        // </div>`
+        //     editTodoModal.classList.add('hide')
+
+        //     modalParent.appendChild(editTodoModal);
+
+        //     const editTodoForm = document.getElementById('edit-todo-form');
+        //     const confirmEditBtn = document.getElementById('confirm-edit-todo');
+          
+
+
+
+
+
+
+        //     editButton.addEventListener('click', () => {
+        //         editTodoModal.classList.remove('hide');
+        //         //editNameVal.value = todos[i].name;
+        //         // document.getElementById('edit-todo-name').value = currentTodo.dueDate;
+        //         // document.getElementById('edit-todo-info').value = currentTodo.moreInfo;
+        //         editTodoForm.reset();
+        //         console.log(todos[i]);
+
+
+
+        //     });
+
+
+
+
+        //     confirmEditBtn.addEventListener('click', () => {
+
+        //         todos[i].name = document.getElementById('edit-todo-name').value;
+        //         //todos[i].dueDate = document.getElementById('edit-todo-due-date').value;
+        //         //todos[i].moreInfo = document.getElementById('edit-todo-info').value;
+
+        //         editTodoModal.classList.add('hide');
+        //         projectCapture.saveProjects();
+        //         render();
+        //         console.log(todos[i]);
+        //         //console.log(event)
+        //     });
+
+
+
+
+
+
+
+
+
+
+
+
+
+            // const editCapture = (function () {
+            //     for (let j = 0; j < todos.length; j++) {
+            //     confirmEditBtn.addEventListener('click', () => {
+            //         todos[j].name = document.getElementById('edit-todo-name').value;
+            //         //todos[i].dueDate = document.getElementById('edit-todo-due-date').value;
+            //         //todos[i].moreInfo = document.getElementById('edit-todo-info').value;
+            //         editTodoModal.classList.add('hide');
+            //         projectCapture.saveProjects();
+            //         render();
+            //         console.log(todos[j]);
+            //         //console.log(event)
+            //     });
+            // }
+            // })();
+
+
+
+
+
 
 
 
 
 
         }
+
+
+
+
+
 
         //display completed todos
         if (selectCurrentProject.currentProject.completedTodos != undefined) {
@@ -222,19 +383,19 @@ export const displayProjects = (function () {
                 checkParent.appendChild(check);
                 check.addEventListener('change', () => {
 
-                
+
                     selectCurrentProject.currentProject.todos.push(compTodos[i]);
                     compTodos.splice(i, 1);
                     render();
                     projectCapture.saveProjects();
-                    
+
                 })
                 //Name
                 const todoName = document.createElement('span');
                 todoName.textContent = compTodos[i].name;
                 newTodo.appendChild(todoName);
 
-                
+
             }
 
         }

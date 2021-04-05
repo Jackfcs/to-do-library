@@ -7,11 +7,13 @@ export const modalEvents = (function () {
 
     const projectForm = document.getElementById('project-form');
     const todoForm = document.getElementById('todo-form');
+    const editTodoForm = document.getElementById('edit-todo-form');
 
     const newTodoButton = document.getElementById('add-todo-button');
     const confirmTodoButton = document.getElementById('confirm-todo');
     const newProjectButton = document.getElementById('add-project-button');
-    const confirmProjectButton = document.getElementById('confirm-project')
+    const confirmProjectButton = document.getElementById('confirm-project');
+    const editTodoButton = document.getElementById('confirm-edit-todo');
 
     function hideModal(element) {
         element.classList.add('hide');
@@ -55,6 +57,8 @@ export const modalEvents = (function () {
             displayProjects.displayTodos();
         }
     });
+
+    
 
 })();
 

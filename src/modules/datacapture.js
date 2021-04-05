@@ -1,5 +1,6 @@
 import { ProjectInstance, TodoInstance } from './constructors.js';
 import { render } from './domdisplay.js';
+import { format } from 'date-fns';
 
 
 export const projectCapture = (function () {
@@ -13,7 +14,12 @@ export const projectCapture = (function () {
     //Create new project and add to array
     confirmProjectButton.addEventListener('click', () => {
         const projectName = document.getElementById('project-name').value;
-        const projectDueDate = document.getElementById('project-due-date').value;
+        let projectDueDate
+        if (document.getElementById('project-due-date').value === '') {
+            projectDueDate = '';
+        } else {
+            projectDueDate = format(new Date(document.getElementById('project-due-date').value), 'P');
+        }
         const projectDescription = document.getElementById('project-description').value;
 
         let newProject = ProjectInstance(projectName, projectDueDate, projectDescription);
@@ -47,7 +53,7 @@ export const projectCapture = (function () {
 
 })();
 
-//localStorage.clear()
+
 
 export const selectCurrentProject = (function () {
 
@@ -63,35 +69,35 @@ export const selectCurrentProject = (function () {
 //Capture Priority Select value 
 const todoPriorityValue = (function () {
     const todoPriority = document.getElementById('priority-select')
-    todoPriority.addEventListener('change', () => {
-        console.log(todoPriority.value)
-        
+    // todoPriority.addEventListener('change', () => {
+    //     console.log('.value ' + todoPriority.value)
 
-    })
-    return todoPriority.value
+
+    // })
+    return todoPriority
 })();
 
 
 export function todoCapture() {
 
     const todoName = document.getElementById('todo-name').value;
-    const todoDueDate = document.getElementById('todo-due-date').value;
-    const todoPriority =  todoPriorityValue;
+    let todoDueDate;
+    if (document.getElementById('todo-due-date').value === '') {
+        todoDueDate = ''
+    } else {
+        todoDueDate = format(new Date(document.getElementById('todo-due-date').value), 'P');
+    }
+    const todoPriority = todoPriorityValue.value;
     const todoCheckbox = false;
     const todoDescription = document.getElementById('todo-info').text
 
     let newTodo = TodoInstance(todoName, todoDueDate, todoPriority, todoCheckbox, todoDescription)
     selectCurrentProject.currentProject.todos.push(newTodo);
     projectCapture.saveProjects();
-
-
-    console.log(todoName)
-    console.log('todoPriority ' + todoPriority);
-    console.log(selectCurrentProject.currentProject.todoPriority)
-    //console.log(selectedPriority)
+    console.log(todoPriority);
 
     return {
         todoName
     }
 
-}
+};
