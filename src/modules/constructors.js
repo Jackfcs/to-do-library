@@ -6,8 +6,8 @@ const ProjectInstance = (name, dueDate, moreInfo, todos, completedTodos) => {
 };
 
 
-const TodoInstance = (name, dueDate, priority, checkBox, moreInfo) => {
-    return {name, dueDate, priority, checkBox, moreInfo}
+const TodoInstance = (name, dueDate, priority, checkBox) => {
+    return {name, dueDate, priority, checkBox}
 };
 
 

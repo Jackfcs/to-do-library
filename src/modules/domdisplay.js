@@ -2,7 +2,11 @@
 import { projectCapture, selectCurrentProject, todoCapture } from './datacapture.js'
 import { modalEvents } from './domevents.js'
 import { format } from 'date-fns'
-
+import Calendar from '../icons/calendar.png'
+import Trash from '../icons/trash.png'
+import Trash1 from '../icons/trash1.svg'
+import { ProjectInstance } from './constructors.js'
+import { intlFormat } from 'date-fns/esm'
 
 export const displayProjects = (function () {
     const projectParent = document.getElementById('project-parent');
@@ -17,29 +21,110 @@ export const displayProjects = (function () {
 
         for (let i = 0; i < projectCapture.myProjects.length; i++) {
 
-            const newDiv = document.createElement('div');
-            const newSpan = document.createElement('span');
-            const deleteBtn = document.createElement('button');
+            const projectInstance = document.createElement('div');
+            const projectName = document.createElement('span');
+            const projectDate = document.createElement('span');
+            const deleteBtn = document.createElement('IMG');
 
-            projectParent.appendChild(newDiv);
-            newDiv.setAttribute('id', 'project' + i);
-            newDiv.classList.add('project-instance');
-            newDiv.textContent = projectCapture.myProjects[i].name + ' ';
 
-            newDiv.appendChild(newSpan);
-            newSpan.classList.add('project-name');
-            let newDate = projectCapture.myProjects[i].dueDate;
 
-            if (newDate === '') {
-                newSpan.textContent = newDate;
+            projectParent.appendChild(projectInstance);
+            projectInstance.setAttribute('id', 'project' + i);
+            projectInstance.classList.add('project-instance');
+
+            //Project Name
+            projectInstance.appendChild(projectName);
+            projectName.textContent = projectCapture.myProjects[i].name + ' ';
+
+
+            projectName.addEventListener('dblclick', () => {
+                projectName.setAttribute('contentEditable', 'true')
+            })
+
+            projectName.setAttribute('id', 'project-name')
+            projectName.addEventListener('input', () => {
+                projectCapture.myProjects[i].name = projectName.textContent;
+                projectCapture.saveProjects();
+            })
+
+            //Project date
+            projectInstance.appendChild(projectDate);
+            //projectDate.classList.add('project-name');
+            projectDate.setAttribute('id', 'project-date')
+            const editDateButton = document.createElement('IMG');
+            editDateButton.src = Calendar;
+            editDateButton.width = '15'
+            editDateButton.setAttribute('id', 'edit-date-button');
+            editDateButton.classList.add('hide')
+           
+
+            const editDate = document.createElement('INPUT');
+            editDate.setAttribute('id', 'project-date-input')
+            editDate.classList.add('hide');
+            projectInstance.appendChild(editDateButton);
+            projectInstance.appendChild(editDate);
+            editDate.setAttribute('type', 'date');
+            editDateButton.addEventListener('click', () => {
+                editDate.classList.toggle('hide');
+                projectDate.classList.toggle('hide');
+
+            })
+
+            if (projectCapture.myProjects[i].dueDate === '') {
+                projectDate.textContent = projectCapture.myProjects[i].dueDate;
             } else {
-                //newSpan.textContent = format(new Date(newDate), 'PPP');
-                newSpan.textContent = newDate;
+                projectDate.textContent = 'Due: ' + projectCapture.myProjects[i].dueDate;
+                
             }
-            newDiv.appendChild(deleteBtn);
+
+            editDate.addEventListener('input', () => {
+                projectCapture.myProjects[i].dueDate = format(new Date(editDate.value), 'dd/MM/yyyy');
+                projectDate.textContent = 'Due: ' + projectCapture.myProjects[i].dueDate;
+                editDate.classList.add('hide');
+                projectCapture.saveProjects();
+                render();
+                
+            })
+            
+            projectInstance.addEventListener('mouseover', () => {
+                
+                editDateButton.classList.remove('hide')
+            })
+            projectInstance.addEventListener('mouseleave', () => {
+                
+                editDateButton.classList.add('hide')
+            })
+          
+
+
+            //More info button
+            const info = document.createElement('button');
+            projectInstance.appendChild(info);
+            info.innerHTML = 'Details';
+            info.setAttribute('id', 'project-info-button')
+
+            const infoDiv = document.createElement('div');
+            infoDiv.textContent = projectCapture.myProjects[i].moreInfo;
+            projectParent.appendChild(infoDiv);
+            infoDiv.classList.add('hide');
+
+            info.addEventListener('click', () => {
+                infoDiv.classList.toggle('hide')
+                if (info.innerHTML === 'Details') {
+                    info.innerHTML = 'Hide'
+                } else {
+                    info.innerHTML = 'Details'
+                }
+
+            })
+
+            //Delete icon
+            projectInstance.appendChild(deleteBtn);
             deleteBtn.setAttribute('id', 'delete' + i);
-            deleteBtn.setAttribute('class', 'projectdelete')
-            deleteBtn.innerHTML = '-'
+            deleteBtn.setAttribute('class', 'projectdelete');
+            deleteBtn.classList.add('hide');
+            deleteBtn.src = Trash1;
+            deleteBtn.width = '30'
 
             deleteBtn.addEventListener('click', () => {
 
@@ -51,21 +136,24 @@ export const displayProjects = (function () {
 
             })
 
-            newDiv.addEventListener('click', () => {
+            projectInstance.addEventListener('mouseover', () => {
+                
+                deleteBtn.classList.remove('hide')
+            })
+            projectInstance.addEventListener('mouseleave', () => {
+                
+                deleteBtn.classList.add('hide')
+            })
+
+            
+
+            //Select current project
+            projectInstance.addEventListener('click', () => {
                 selectCurrentProject.currentProject = projectCapture.myProjects[i];
                 displayProjects.displayTodos();
-                console.log(selectCurrentProject.currentProject)
             })
 
-            const info = document.createElement('button');
-            newDiv.appendChild(info);
-            info.textContent = 'Show Details';
-            info.setAttribute('id', 'project-info-button')
-            info.addEventListener('click', () => {
-                const description = document.createElement('div');
-                alert(projectCapture.myProjects[i].moreInfo)
 
-            })
 
         }
 
@@ -138,7 +226,6 @@ export const displayProjects = (function () {
             todoName.setAttribute('id', 'todo-name')
             todoName.setAttribute('contentEditable', 'true');
             todoName.addEventListener('input', () => {
-                console.log('hey')
                 todos[i].name = todoName.textContent;
                 projectCapture.saveProjects();
             });
@@ -190,22 +277,23 @@ export const displayProjects = (function () {
 
             //Due Date
             const dueDate = document.createElement('div');
-            dueDate.setAttribute('type', 'date')
-            dueDate.setAttribute('id', 'todo-duedate')
-            //dueDate.textContent = newDate;
+            dueDate.setAttribute('type', 'date');
+            dueDate.setAttribute('id', 'todo-duedate');
             newTodo.appendChild(dueDate);
 
             const dueDateText = document.createElement('div');
             dueDateText.setAttribute('id', 'due-date-text');
             dueDateText.textContent = newDate;
-            
+
             dueDate.appendChild(dueDateText);
 
             const editDateButton = document.createElement('IMG');
-            editDateButton.setAttribute('src', './icons/googlecalendar.png')
-            editDateButton.setAttribute('id', 'edit-date-button')
-            dueDate.appendChild(editDateButton)
-           
+            editDateButton.src = Calendar;
+            editDateButton.width = '15'
+            editDateButton.classList.add('hide');
+            editDateButton.setAttribute('id', 'todo-edit-date-button');
+            dueDate.appendChild(editDateButton);
+
 
             const editDate = document.createElement('INPUT');
             editDate.setAttribute('id', 'edit-date-input')
@@ -215,141 +303,25 @@ export const displayProjects = (function () {
             editDateButton.addEventListener('click', () => {
                 editDate.classList.toggle('hide');
                 dueDateText.classList.toggle('hide');
-             
+
             })
             editDate.addEventListener('input', () => {
-                todos[i].dueDate = format(new Date(editDate.value), 'P');
+                todos[i].dueDate = format(new Date(editDate.value), 'dd/MM/yyyy');
                 editDate.classList.add('hide');
                 render();
                 projectCapture.saveProjects();
             })
 
-
-            // todoName.setAttribute('contentEditable', 'true');
-            // todoName.addEventListener('input', () => {
-            //     console.log('hey')
-            //     todos[i].name = todoName.textContent;
-            //     projectCapture.saveProjects();
-            // });
-
-            
-
-
-
-        //     //Edit Button
-
-        //     //Edit button on todo instance
-        //     const editButton = document.createElement('span');
-        //     editButton.setAttribute('id', 'todo-editbtn')
-        //     editButton.textContent = 'edit'
-        //     newTodo.appendChild(editButton);
-
-
-        //     //Edit todo Modal
-        //     const modalParent = document.getElementById('app-container');
-        //     const editTodoModal = document.createElement('div');
-        //     editTodoModal.innerHTML =
-        //         `<div id="edit-todo-modal" class="modal">
-        //     <span>Edit to-do</span>
-        //     <form class="modal-form" id="edit-todo-form" onsubmit="return false">
-        //         <label for="edit-todo-name">Task</label>
-        //         <input type="text" id="edit-todo-name" name="edit-todo-name" value="${todos[i].name}">
-        //         <label for="due-date">Due Date</label>
-        //         <input type="date" id="edit-todo-due-date" name="todo-due-date">
-        //         <!-- <label for="priority">Priority</label>
-        //         <select name="priority-select" id="priority-select">
-        //             <option value="low">Low</option>
-        //             <option value="medium">Medium</option>
-        //             <option value="high">High</option>
-        //         </select> -->
-        //         <label for="todo-info">Description</label>
-        //         <input type="text" id="edit-todo-info" name="todo-info">
-
-        //         <input id="confirm-edit-todo" type="submit" value="Confirm">
-        //     </form>
-        // </div>`
-        //     editTodoModal.classList.add('hide')
-
-        //     modalParent.appendChild(editTodoModal);
-
-        //     const editTodoForm = document.getElementById('edit-todo-form');
-        //     const confirmEditBtn = document.getElementById('confirm-edit-todo');
-          
-
-
-
-
-
-
-        //     editButton.addEventListener('click', () => {
-        //         editTodoModal.classList.remove('hide');
-        //         //editNameVal.value = todos[i].name;
-        //         // document.getElementById('edit-todo-name').value = currentTodo.dueDate;
-        //         // document.getElementById('edit-todo-info').value = currentTodo.moreInfo;
-        //         editTodoForm.reset();
-        //         console.log(todos[i]);
-
-
-
-        //     });
-
-
-
-
-        //     confirmEditBtn.addEventListener('click', () => {
-
-        //         todos[i].name = document.getElementById('edit-todo-name').value;
-        //         //todos[i].dueDate = document.getElementById('edit-todo-due-date').value;
-        //         //todos[i].moreInfo = document.getElementById('edit-todo-info').value;
-
-        //         editTodoModal.classList.add('hide');
-        //         projectCapture.saveProjects();
-        //         render();
-        //         console.log(todos[i]);
-        //         //console.log(event)
-        //     });
-
-
-
-
-
-
-
-
-
-
-
-
-
-            // const editCapture = (function () {
-            //     for (let j = 0; j < todos.length; j++) {
-            //     confirmEditBtn.addEventListener('click', () => {
-            //         todos[j].name = document.getElementById('edit-todo-name').value;
-            //         //todos[i].dueDate = document.getElementById('edit-todo-due-date').value;
-            //         //todos[i].moreInfo = document.getElementById('edit-todo-info').value;
-            //         editTodoModal.classList.add('hide');
-            //         projectCapture.saveProjects();
-            //         render();
-            //         console.log(todos[j]);
-            //         //console.log(event)
-            //     });
-            // }
-            // })();
-
-
-
-
-
-
-
-
-
+            newTodo.addEventListener('mouseover', () => {
+                
+                editDateButton.classList.remove('hide')
+            })
+            newTodo.addEventListener('mouseleave', () => {
+                
+                editDateButton.classList.add('hide')
+            })
 
         }
-
-
-
-
 
 
         //display completed todos

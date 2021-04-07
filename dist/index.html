@@ -18,17 +18,15 @@
 
 
 
+
+
         <div id="project-container">
+            <div id="project-nav">
             <button id="add-project-button">Add Project</button>
             <h3>Project List</h3>
+            </div>
             <div id="project-parent">
-                <!-- <div class="project-instance" id="project1">
-                    <span class="project-name">Go Shopping</span>
-                    <span class="duedate">14/11/21</span>
-                    <button id="delete1">+</button>
-
-
-                </div> -->
+                
             </div>
         </div>
 
@@ -36,30 +34,22 @@
 
         <div id="todo-container">
             <button id="add-todo-button">Add Todo</button>
+            <form>
+                <label for="todo-filter">Filter</label>
+                <select name="todo-filter" id="todo-filter">
+                    <option value="name">Name</option>
+                    <option value="date">Due Date</option>
+                    <option value="priority">Priority</option>
+                    
+                </select>
+            </form>
             <div id="todo-nav">
                 <h3 id="todo-header"></h3>
                 <h3 id="todo-header-priority">Priority</h3>
                 <h3 id="todo-title-duedate">Due Date</h3>
             </div>
             <div id="todo-parent">
-                <!-- <div class="todo-instance">
-                    <span class="project-name">Get Bananas</span> <br>
-
-                    <span class="duedate">Due Date - 14/11/21</span>
-
-                    <form>
-                        <label for="priority">Priority</label>
-                        <select name="priority" id="priority-select">
-                            <option value="low">Low</option>
-                            <option value="medium">Medium</option>
-                            <option value="high">High</option>
-                        </select>
-                    </form>
-                    <div>
-                        <label for="completed">Complete</label>
-                        <input type="checkbox" name="completed">
-                    </div>
-                </div> -->
+               
             </div>
             <div id="completed-todo"></div>
 
@@ -69,7 +59,7 @@
             <span>Add new Project</span>
             <form class="modal-form" id="project-form" onsubmit="return false">
                 <label for="project-name">Project Name</label>
-                <input type="text" id="project-name" name="todo-name">
+                <input type="text" id="project-name-input" name="todo-name">
                 <label for="due-date">Due Date</label>
                 <input type="date" id="project-due-date" name="project-due-date">
                 <label for="project-info">Description</label>
@@ -84,7 +74,7 @@
             <span>Add new to-do</span>
             <form class="modal-form" id="todo-form" onsubmit="return false">
                 <label for="todo-name">Task</label>
-                <input type="text" id="todo-name" name="todo-name">
+                <input type="text" id="todo-name-input" name="todo-name">
                 <label for="due-date">Due Date</label>
                 <input type="date" id="todo-due-date" name="todo-due-date">
                 <label for="priority">Priority</label>
@@ -93,32 +83,12 @@
                     <option value="medium">Medium</option>
                     <option value="high">High</option>
                 </select>
-                <label for="todo-info">Description</label>
-                <input type="text" id="todo-info" name="todo-info">
-
+               
                 <input id="confirm-todo" type="submit" value="Add">
             </form>
         </div>
 
-        <!-- <div id="edit-todo-modal" class="modal hide">
-            <span>Edit to-do</span>
-            <form class="modal-form" id="edit-todo-form" onsubmit="return false">
-                <label for="edit-todo-name">Task</label>
-                <input type="text" id="edit-todo-name" name="edit-todo-name">
-                <label for="due-date">Due Date</label>
-                <input type="date" id="edit-todo-due-date" name="todo-due-date">
-                <label for="priority">Priority</label>
-                <select name="priority-select" id="priority-select">
-                    <option value="low">Low</option>
-                    <option value="medium">Medium</option>
-                    <option value="high">High</option>
-                </select>
-                <label for="todo-info">Description</label>
-                <input type="text" id="edit-todo-info" name="todo-info">
-
-                <input id="confirm-edit-todo" type="submit" value="Confrim">
-            </form>
-        </div> -->
+        
 
         <script src="main.js"></script>
 

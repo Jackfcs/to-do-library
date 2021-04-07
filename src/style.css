@@ -28,14 +28,24 @@ body {
     margin-top: 50px;
 }
 
+#project-nav {
+    background-color: rgb(236, 236, 236);
+    
+}
+
 #project-container {
     background-color: rgb(236, 236, 236);
     grid-column: 1 / 1;
-    border: solid rgb(187, 187, 187);
     height: 100vh;
     padding: 5px;
     display: flex;
     flex-direction: column;
+    overflow: auto;
+}
+
+#project-parent {
+    overflow: auto;
+    padding-bottom: 200px;
 }
 
 #todo-container {
@@ -50,8 +60,8 @@ body {
 
 #todo-nav{
     display: grid;
-    grid-template-columns: auto 100px 150px;
-    grid-template-areas: "name priority date";
+    grid-template-columns: auto 100px 130px 20px;
+    grid-template-areas: "name priority date icons";
 }
 
 #todo-header-priority {
@@ -73,13 +83,58 @@ body {
 
 
 .project-instance {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 200px 80px;
+    grid-template-rows: 40px 20px;
+    grid-template-areas: 
+        "name info"
+        "date delete";
+
     background-color: rgb(212, 212, 212);
     border: solid rgb(187, 187, 187);
     margin-bottom: 5px;
+    border-radius: 5px;
+    padding: 5px;
     
+}
+
+#project-name {
+    grid-area: name;
+}
+
+#project-info-button {
+    grid-area: info;
+    justify-self: end;
+}
+
+#project-date {
+    grid-area: date;
+    font-size: 12px;
+    position: relative;
+    top: 5px;
+}
+
+#project-date-input {
+    grid-area: date;
+    position: relative;
+    bottom: px;
+    left: 0px;
+    width: 100px;
+    height: 10px;
+    font-size: 8px;
+}
+
+#edit-date-button {
+    position: relative;
+    right: 70px;
+    top: 3px;
+}
+
+.projectdelete {
+    grid-area: delete;
+    justify-self: end;
+    align-self: end;
+    width: 20px;
 }
 
 .project-instance:hover {
@@ -118,7 +173,7 @@ body {
     grid-area: date;
     justify-self: end;
     position: fixed;
-    right: 40px;
+    right: 35px;
 }
 
 #edit-date-button {
@@ -147,9 +202,7 @@ button {
     grid-column: 2 / 2;
 }
 
-.projectdelete {
-    width: 10px;
-}
+
 
 .modal {
     display: flex;
@@ -175,6 +228,7 @@ button {
 
 .hide {
     transform: scale(0%);
+    display: none;
 }
 
 #project-info-button {
