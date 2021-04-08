@@ -1,5 +1,8 @@
 import { displayProjects, render } from './domdisplay.js'
 import { projectCapture, todoCapture, selectCurrentProject } from './datacapture.js'
+import { format } from 'date-fns'
+import add from 'date-fns/add'
+import { ProjectInstance, TodoInstance } from './constructors.js';
 
 export const modalEvents = (function () {
     const todoModal = document.getElementById('todo-modal');
@@ -25,10 +28,12 @@ export const modalEvents = (function () {
 
     //Display new project input
     newProjectButton.addEventListener('click', () => {
+
         displayModal(projectModal);
         projectForm.reset();
-    });
 
+    });
+    
     //confirm new project
     confirmProjectButton.addEventListener('click', () => {
         const projectName = document.getElementById('project-name-input').value;
@@ -43,8 +48,13 @@ export const modalEvents = (function () {
 
     //Display new todo input
     newTodoButton.addEventListener('click', () => {
-        displayModal(todoModal);
-        todoForm.reset();
+        if (selectCurrentProject.currentProject.name == '') {
+            alert('Select a project to add new to-do.')
+        } else {
+
+            displayModal(todoModal);
+            todoForm.reset();
+        }
     });
 
     //confirm new todo
@@ -67,11 +77,11 @@ export const modalEvents = (function () {
 })();
 
 
-
 export const filterTasks = (function () {
     const todoFilter = document.getElementById('todo-filter');
 
     todoFilter.addEventListener('change', () => {
+        //Filter by Name
         if (todoFilter.value == 'name') {
             selectCurrentProject.currentProject.todos.sort(function (a, b) {
                 let nameA = a.name.toUpperCase();
@@ -85,17 +95,21 @@ export const filterTasks = (function () {
                 return 0;
             })
         }
+
+        //Filter by Date
         if (todoFilter.value == 'date') {
 
             selectCurrentProject.currentProject.todos.sort(function (a, b) {
                 if (a.dueDate == '') {
                     return 1
                 } else {
-                return parseFloat(a.dueDate) - parseFloat(b.dueDate);
+                    return parseFloat(a.dueDate) - parseFloat(b.dueDate);
                 }
             })
 
         }
+
+        //Filter by priority
         if (todoFilter.value == 'priority') {
             const sortOrder = ['low', 'medium', 'high'];
             const sortObject = data => data.reduce((obj, item, index) => {
@@ -123,15 +137,53 @@ export const filterTasks = (function () {
 
 
 
+})();
+
+const filterTodos = (function () {
+    const todayBtn = document.getElementById('today');
+    const fiveDayBtn = document.getElementById('next-week');
+    
+
+    todayBtn.addEventListener('click', () => {
+        let todayFilter = []
+
+        for (let parent of projectCapture.myProjects) {
+            for (let todos of parent.todos) {
+                if (todos.dueDate === format(new Date(), 'dd/MM/yyyy'))
+                    todayFilter.push(todos)
+            }
+        }
+
+        let filteredProject = ProjectInstance('', '', '')
+        filteredProject.todos = todayFilter;
+        selectCurrentProject.currentProject = filteredProject;
+        render();
+    })
 
 
 
+    fiveDayBtn.addEventListener('click', () => {
+        let daysFilter = []
+        let futureTime = add(new Date(), {
+            weeks:1
+        })
+
+        for (let parent of projectCapture.myProjects) {
+            for (let todos of parent.todos) {
+                if (todos.dueDate != '' && todos.dueDate < format(new Date(futureTime), 'dd/MM/yyyy'))
+                
+                    daysFilter.push(todos)
+            }
+        }
 
 
-
-
-
+        let filteredProject = ProjectInstance('', '', '')
+        filteredProject.todos = daysFilter;
+        selectCurrentProject.currentProject = filteredProject;
+        render();
+    })
 
 
 
 })();
+

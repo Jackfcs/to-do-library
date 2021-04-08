@@ -77,6 +77,8 @@ export const displayProjects = (function () {
                 
             }
 
+            
+
             editDate.addEventListener('input', () => {
                 projectCapture.myProjects[i].dueDate = format(new Date(editDate.value), 'dd/MM/yyyy');
                 projectDate.textContent = 'Due: ' + projectCapture.myProjects[i].dueDate;
@@ -284,6 +286,9 @@ export const displayProjects = (function () {
             const dueDateText = document.createElement('div');
             dueDateText.setAttribute('id', 'due-date-text');
             dueDateText.textContent = newDate;
+            if (newDate <= format(new Date(), 'dd/MM/yyyy')) {
+                dueDate.style.background = 'red';
+            }
 
             dueDate.appendChild(dueDateText);
 
@@ -292,9 +297,9 @@ export const displayProjects = (function () {
             editDateButton.width = '15'
             editDateButton.classList.add('hide');
             editDateButton.setAttribute('id', 'todo-edit-date-button');
-            dueDate.appendChild(editDateButton);
+            newTodo.appendChild(editDateButton);
 
-
+            //Create input for date and clickable calendar icon
             const editDate = document.createElement('INPUT');
             editDate.setAttribute('id', 'edit-date-input')
             editDate.classList.add('hide');
@@ -305,12 +310,16 @@ export const displayProjects = (function () {
                 dueDateText.classList.toggle('hide');
 
             })
+
+            
             editDate.addEventListener('input', () => {
                 todos[i].dueDate = format(new Date(editDate.value), 'dd/MM/yyyy');
                 editDate.classList.add('hide');
                 render();
                 projectCapture.saveProjects();
             })
+
+
 
             newTodo.addEventListener('mouseover', () => {
                 
@@ -320,6 +329,7 @@ export const displayProjects = (function () {
                 
                 editDateButton.classList.add('hide')
             })
+
 
         }
 

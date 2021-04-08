@@ -314,7 +314,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "#header {\n    position: fixed;\n    overflow: hidden;\n    top: 0;\n    left: 0;\n    width: 100%;\n    background-color:  rgb(128, 183, 255);\n    color: rgb(0, 0, 0);\n    height: 50px;\n    display: flex;\n    align-items: center;\n}\n\nbody {\n    background: rgb(255, 0, 0);\n    color: rgb(26, 26, 26);\n    margin: 0;\n    padding: 0;\n    overflow: hidden;\n}\n\n#app-container {\n    display: grid;\n    grid-template-columns: 300px auto;\n    width: 100vw;\n    height: 100vh;\n    max-width: 100%;\n    margin-top: 50px;\n}\n\n#project-nav {\n    background-color: rgb(236, 236, 236);\n    \n}\n\n#project-container {\n    background-color: rgb(236, 236, 236);\n    grid-column: 1 / 1;\n    height: 100vh;\n    padding: 5px;\n    display: flex;\n    flex-direction: column;\n    overflow: auto;\n}\n\n#project-parent {\n    overflow: auto;\n    padding-bottom: 200px;\n}\n\n#todo-container {\n    display: flex;\n    flex-direction: column;\n    grid-column: 2 / 2;\n    background-color: rgb(255, 255, 255);\n    border: solid rgb(187, 187, 187);\n    padding: 10px;\n    height: 100vh;\n}\n\n#todo-nav{\n    display: grid;\n    grid-template-columns: auto 100px 130px 20px;\n    grid-template-areas: \"name priority date icons\";\n}\n\n#todo-header-priority {\n    grid-area: priority;\n    justify-self: end;\n}\n\n#todo-title-duedate {\n    grid-area: date;\n    justify-self: end;\n}\n\n\n\n#completed-todo {\n    background-color: grey;\n}\n\n\n\n.project-instance {\n    display: grid;\n    grid-template-columns: 200px 80px;\n    grid-template-rows: 40px 20px;\n    grid-template-areas: \n        \"name info\"\n        \"date delete\";\n\n    background-color: rgb(212, 212, 212);\n    border: solid rgb(187, 187, 187);\n    margin-bottom: 5px;\n    border-radius: 5px;\n    padding: 5px;\n    \n}\n\n#project-name {\n    grid-area: name;\n}\n\n#project-info-button {\n    grid-area: info;\n    justify-self: end;\n}\n\n#project-date {\n    grid-area: date;\n    font-size: 12px;\n    position: relative;\n    top: 5px;\n}\n\n#project-date-input {\n    grid-area: date;\n    position: relative;\n    bottom: px;\n    left: 0px;\n    width: 100px;\n    height: 10px;\n    font-size: 8px;\n}\n\n#edit-date-button {\n    position: relative;\n    right: 70px;\n    top: 3px;\n}\n\n.projectdelete {\n    grid-area: delete;\n    justify-self: end;\n    align-self: end;\n    width: 20px;\n}\n\n.project-instance:hover {\n    cursor: pointer;\n    background-color:  rgb(163, 163, 163);\n}\n\n.todo-instance {\n    border-bottom: 1px solid rgb(182, 182, 182);\n    width: 100%;\n    display: grid;\n    grid-template-columns: 40px auto 100px 150px;\n    grid-template-areas: \"check name priority date\"\n}\n\n#checkbox {\n    grid-area: check;\n}\n\n#todo-name {\n    grid-area: name;\n}\n\n#priority-select {\n    grid-area: priority;\n    justify-self: end;\n}\n\n#todo-duedate {\n    grid-area: date;\n    justify-self: end;\n\n}\n\n#due-date-text {\n    grid-area: date;\n    justify-self: end;\n    position: fixed;\n    right: 35px;\n}\n\n#edit-date-button {\n    grid-area: date;\n    justify-self: end;\n}\n\n#edit-date-input {\n    grid-area: date;\n    position: fixed;\n    right: 40px;\n    \n}\n\nbutton {\n    color: red;\n    width: 150px;\n    \n}\n\n#add-project-button {\n    grid-column: 1 / 1;\n}\n\n#add-todo-button {\n    grid-column: 2 / 2;\n}\n\n\n\n.modal {\n    display: flex;\n    flex-direction: column;\n    justify-content: space-around;\n    align-items: center;\n    color: white;\n    background-color: rgb(0, 41, 41);\n    position: fixed;\n    top: 50%;\n    left: 50%;\n    transform: translate(-50%, -50%);\n    \n}\n\n.modal-form {\n    display: flex;\n    flex-direction: column;\n    justify-content: space-around;\n    align-items: center;\n    padding: 10px;\n}\n\n.hide {\n    transform: scale(0%);\n    display: none;\n}\n\n#project-info-button {\n    width: 80px;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "#header {\n    position: fixed;\n    overflow: hidden;\n    top: 0;\n    left: 0;\n    width: 100%;\n    background-color:  rgb(128, 183, 255);\n    color: rgb(0, 0, 0);\n    height: 50px;\n    display: flex;\n    align-items: center;\n}\n\nbody {\n    background: rgb(255, 0, 0);\n    color: rgb(26, 26, 26);\n    margin: 0;\n    padding: 0;\n    overflow: hidden;\n}\n\n#app-container {\n    display: grid;\n    grid-template-columns: 300px auto;\n    width: 100vw;\n    height: 100vh;\n    max-width: 100%;\n    margin-top: 50px;\n}\n\n#project-nav {\n    background-color: rgb(236, 236, 236);\n    \n}\n\n#project-container {\n    background-color: rgb(236, 236, 236);\n    grid-column: 1 / 1;\n    height: 100vh;\n    padding: 5px;\n    display: flex;\n    flex-direction: column;\n    overflow: auto;\n}\n\n#project-parent {\n    overflow: auto;\n    padding-bottom: 200px;\n}\n\n#todo-container {\n    display: flex;\n    flex-direction: column;\n    grid-column: 2 / 2;\n    background-color: rgb(255, 255, 255);\n    border: solid rgb(187, 187, 187);\n    padding: 10px;\n    height: 100vh;\n}\n\n#todo-interactions {\n    display: flex;\n    flex-direction: row;\n    justify-content: space-between;\n}\n\n#todo-nav{\n    display: grid;\n    grid-template-columns: auto 100px 150px 30px;\n    grid-template-areas: \"name priority date icons\";\n}\n\n#todo-header-priority {\n    grid-area: priority;\n    justify-self: end;\n}\n\n#todo-title-duedate {\n    grid-area: date;\n    justify-self: end;\n}\n\n\n\n#completed-todo {\n    background-color: grey;\n}\n\n\n\n.project-instance {\n    display: grid;\n    grid-template-columns: 200px 80px;\n    grid-template-rows: 40px 20px;\n    grid-template-areas: \n        \"name info\"\n        \"date delete\";\n\n    background-color: rgb(212, 212, 212);\n    border: solid rgb(187, 187, 187);\n    margin-bottom: 5px;\n    border-radius: 5px;\n    padding: 5px;\n    \n}\n\n#project-name {\n    grid-area: name;\n}\n\n#project-info-button {\n    grid-area: info;\n    justify-self: end;\n}\n\n#project-date {\n    grid-area: date;\n    font-size: 12px;\n    position: relative;\n    top: 5px;\n}\n\n#project-date-input {\n    grid-area: date;\n    position: relative;\n    left: 0px;\n    width: 100px;\n    height: 10px;\n    font-size: 8px;\n}\n\n#edit-date-button {\n    position: relative;\n    left: 110px;\n    bottom: 15px;\n}\n\n.projectdelete {\n    grid-area: delete;\n    justify-self: end;\n    align-self: end;\n    width: 20px;\n}\n\n.project-instance:hover {\n    cursor: pointer;\n    background-color:  rgb(163, 163, 163);\n}\n\n.todo-instance {\n    border-bottom: 1px solid rgb(182, 182, 182);\n    width: 100%;\n    display: grid;\n    grid-template-columns: 40px auto 100px 150px 30px;\n    grid-template-areas: \"check name priority date calendar\"\n}\n\n#checkbox {\n    grid-area: check;\n}\n\n#todo-name {\n    grid-area: name;\n}\n\n#priority-select {\n    grid-area: priority;\n    justify-self: end;\n}\n\n#todo-duedate {\n    grid-area: date;\n    justify-self: end;\n\n}\n\n#due-date-text {\n    grid-area: date;\n    justify-self: center;\n    align-self: center;\n    position: relative;\n    top: 2px;\n}\n\n#todo-edit-date-button {\n    grid-area: calendar;\n    justify-self: center;\n    align-self: center;\n}\n\n#todo-edit-date-input {\n    grid-area: date;\n    position: fixed;\n    right: 30px;\n    font-size: 5px;\n    \n}\n\nbutton {\n    color: red;\n    width: 150px;\n    \n}\n\n#add-project-button {\n    grid-column: 1 / 1;\n}\n\n#add-todo-button {\n    grid-column: 2 / 2;\n}\n\n\n\n.modal {\n    display: flex;\n    flex-direction: column;\n    justify-content: space-around;\n    align-items: center;\n    color: white;\n    background-color: rgb(0, 41, 41);\n    position: fixed;\n    top: 50%;\n    left: 50%;\n    transform: translate(-50%, -50%);\n    \n}\n\n.modal-form {\n    display: flex;\n    flex-direction: column;\n    justify-content: space-around;\n    align-items: center;\n    padding: 10px;\n}\n\n.hide {\n    transform: scale(0%);\n    display: none;\n}\n\n#project-info-button {\n    width: 80px;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -484,6 +484,8 @@ const displayProjects = (function () {
                 projectDate.textContent = 'Due: ' + _datacapture_js__WEBPACK_IMPORTED_MODULE_0__.projectCapture.myProjects[i].dueDate;
                 
             }
+
+            
 
             editDate.addEventListener('input', () => {
                 _datacapture_js__WEBPACK_IMPORTED_MODULE_0__.projectCapture.myProjects[i].dueDate = (0,date_fns__WEBPACK_IMPORTED_MODULE_6__.default)(new Date(editDate.value), 'dd/MM/yyyy');
@@ -692,6 +694,9 @@ const displayProjects = (function () {
             const dueDateText = document.createElement('div');
             dueDateText.setAttribute('id', 'due-date-text');
             dueDateText.textContent = newDate;
+            if (newDate <= (0,date_fns__WEBPACK_IMPORTED_MODULE_6__.default)(new Date(), 'dd/MM/yyyy')) {
+                dueDate.style.background = 'red';
+            }
 
             dueDate.appendChild(dueDateText);
 
@@ -700,9 +705,9 @@ const displayProjects = (function () {
             editDateButton.width = '15'
             editDateButton.classList.add('hide');
             editDateButton.setAttribute('id', 'todo-edit-date-button');
-            dueDate.appendChild(editDateButton);
+            newTodo.appendChild(editDateButton);
 
-
+            //Create input for date and clickable calendar icon
             const editDate = document.createElement('INPUT');
             editDate.setAttribute('id', 'edit-date-input')
             editDate.classList.add('hide');
@@ -713,12 +718,16 @@ const displayProjects = (function () {
                 dueDateText.classList.toggle('hide');
 
             })
+
+            
             editDate.addEventListener('input', () => {
                 todos[i].dueDate = (0,date_fns__WEBPACK_IMPORTED_MODULE_6__.default)(new Date(editDate.value), 'dd/MM/yyyy');
                 editDate.classList.add('hide');
                 render();
                 _datacapture_js__WEBPACK_IMPORTED_MODULE_0__.projectCapture.saveProjects();
             })
+
+
 
             newTodo.addEventListener('mouseover', () => {
                 
@@ -728,6 +737,7 @@ const displayProjects = (function () {
                 
                 editDateButton.classList.add('hide')
             })
+
 
         }
 
@@ -855,7 +865,7 @@ const projectCapture = (function () {
         (0,_domdisplay_js__WEBPACK_IMPORTED_MODULE_1__.render)();
 
     });
-
+''
 
 
     //Saves project array
@@ -3735,6 +3745,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _domdisplay_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(5);
 /* harmony import */ var _datacapture_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(6);
+/* harmony import */ var date_fns__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(8);
+/* harmony import */ var date_fns_add__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(44);
+/* harmony import */ var date_fns_add__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(date_fns_add__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _constructors_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(7);
+
+
+
 
 
 
@@ -3762,10 +3779,12 @@ const modalEvents = (function () {
 
     //Display new project input
     newProjectButton.addEventListener('click', () => {
+
         displayModal(projectModal);
         projectForm.reset();
-    });
 
+    });
+    
     //confirm new project
     confirmProjectButton.addEventListener('click', () => {
         const projectName = document.getElementById('project-name-input').value;
@@ -3780,8 +3799,13 @@ const modalEvents = (function () {
 
     //Display new todo input
     newTodoButton.addEventListener('click', () => {
-        displayModal(todoModal);
-        todoForm.reset();
+        if (_datacapture_js__WEBPACK_IMPORTED_MODULE_1__.selectCurrentProject.currentProject.name == '') {
+            alert('Select a project to add new to-do.')
+        } else {
+
+            displayModal(todoModal);
+            todoForm.reset();
+        }
     });
 
     //confirm new todo
@@ -3804,11 +3828,11 @@ const modalEvents = (function () {
 })();
 
 
-
 const filterTasks = (function () {
     const todoFilter = document.getElementById('todo-filter');
 
     todoFilter.addEventListener('change', () => {
+        //Filter by Name
         if (todoFilter.value == 'name') {
             _datacapture_js__WEBPACK_IMPORTED_MODULE_1__.selectCurrentProject.currentProject.todos.sort(function (a, b) {
                 let nameA = a.name.toUpperCase();
@@ -3822,17 +3846,21 @@ const filterTasks = (function () {
                 return 0;
             })
         }
+
+        //Filter by Date
         if (todoFilter.value == 'date') {
 
             _datacapture_js__WEBPACK_IMPORTED_MODULE_1__.selectCurrentProject.currentProject.todos.sort(function (a, b) {
                 if (a.dueDate == '') {
                     return 1
                 } else {
-                return parseFloat(a.dueDate) - parseFloat(b.dueDate);
+                    return parseFloat(a.dueDate) - parseFloat(b.dueDate);
                 }
             })
 
         }
+
+        //Filter by priority
         if (todoFilter.value == 'priority') {
             const sortOrder = ['low', 'medium', 'high'];
             const sortObject = data => data.reduce((obj, item, index) => {
@@ -3860,18 +3888,56 @@ const filterTasks = (function () {
 
 
 
+})();
+
+const filterTodos = (function () {
+    const todayBtn = document.getElementById('today');
+    const fiveDayBtn = document.getElementById('next-week');
+    
+
+    todayBtn.addEventListener('click', () => {
+        let todayFilter = []
+
+        for (let parent of _datacapture_js__WEBPACK_IMPORTED_MODULE_1__.projectCapture.myProjects) {
+            for (let todos of parent.todos) {
+                if (todos.dueDate === (0,date_fns__WEBPACK_IMPORTED_MODULE_3__.default)(new Date(), 'dd/MM/yyyy'))
+                    todayFilter.push(todos)
+            }
+        }
+
+        let filteredProject = (0,_constructors_js__WEBPACK_IMPORTED_MODULE_2__.ProjectInstance)('', '', '')
+        filteredProject.todos = todayFilter;
+        _datacapture_js__WEBPACK_IMPORTED_MODULE_1__.selectCurrentProject.currentProject = filteredProject;
+        (0,_domdisplay_js__WEBPACK_IMPORTED_MODULE_0__.render)();
+    })
 
 
 
+    fiveDayBtn.addEventListener('click', () => {
+        let daysFilter = []
+        let futureTime = date_fns_add__WEBPACK_IMPORTED_MODULE_4___default()(new Date(), {
+            weeks:1
+        })
+
+        for (let parent of _datacapture_js__WEBPACK_IMPORTED_MODULE_1__.projectCapture.myProjects) {
+            for (let todos of parent.todos) {
+                if (todos.dueDate != '' && todos.dueDate < (0,date_fns__WEBPACK_IMPORTED_MODULE_3__.default)(new Date(futureTime), 'dd/MM/yyyy'))
+                
+                    daysFilter.push(todos)
+            }
+        }
 
 
-
-
-
+        let filteredProject = (0,_constructors_js__WEBPACK_IMPORTED_MODULE_2__.ProjectInstance)('', '', '')
+        filteredProject.todos = daysFilter;
+        _datacapture_js__WEBPACK_IMPORTED_MODULE_1__.selectCurrentProject.currentProject = filteredProject;
+        (0,_domdisplay_js__WEBPACK_IMPORTED_MODULE_0__.render)();
+    })
 
 
 
 })();
+
 
 
 /***/ }),
@@ -3891,6 +3957,355 @@ module.exports = __webpack_require__.p + "74fe181d458e882d235d.png";
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 module.exports = __webpack_require__.p + "308643b513ad18d39bff.svg";
+
+/***/ }),
+/* 44 */
+/***/ ((module, exports, __webpack_require__) => {
+
+
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports.default = add;
+
+var _index = _interopRequireDefault(__webpack_require__(45));
+
+var _index2 = _interopRequireDefault(__webpack_require__(49));
+
+var _index3 = _interopRequireDefault(__webpack_require__(47));
+
+var _index4 = _interopRequireDefault(__webpack_require__(48));
+
+var _index5 = _interopRequireDefault(__webpack_require__(46));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/**
+ * @name add
+ * @category Common Helpers
+ * @summary Add the specified years, months, weeks, days, hours, minutes and seconds to the given date.
+ *
+ * @description
+ * Add the specified years, months, weeks, days, hours, minutes and seconds to the given date.
+ *
+ * @param {Date|Number} date - the date to be changed
+ * @param {Duration} duration - the object with years, months, weeks, days, hours, minutes and seconds to be added. Positive decimals will be rounded using `Math.floor`, decimals less than zero will be rounded using `Math.ceil`.
+ *
+ * | Key            | Description                        |
+ * |----------------|------------------------------------|
+ * | years          | Amount of years to be added        |
+ * | months         | Amount of months to be added       |
+ * | weeks          | Amount of weeks to be added       |
+ * | days           | Amount of days to be added         |
+ * | hours          | Amount of hours to be added        |
+ * | minutes        | Amount of minutes to be added      |
+ * | seconds        | Amount of seconds to be added      |
+ *
+ * All values default to 0
+ *
+ * @returns {Date} the new date with the seconds added
+ * @throws {TypeError} 2 arguments required
+ *
+ * @example
+ * // Add the following duration to 1 September 2014, 10:19:50
+ * const result = add(new Date(2014, 8, 1, 10, 19, 50), {
+ *   years: 2,
+ *   months: 9,
+ *   weeks: 1,
+ *   days: 7,
+ *   hours: 5,
+ *   minutes: 9,
+ *   seconds: 30,
+ * })
+ * //=> Thu Jun 15 2017 15:29:20
+ */
+function add(dirtyDate, duration) {
+  (0, _index4.default)(2, arguments);
+  if (!duration || typeof duration !== 'object') return new Date(NaN);
+  var years = 'years' in duration ? (0, _index5.default)(duration.years) : 0;
+  var months = 'months' in duration ? (0, _index5.default)(duration.months) : 0;
+  var weeks = 'weeks' in duration ? (0, _index5.default)(duration.weeks) : 0;
+  var days = 'days' in duration ? (0, _index5.default)(duration.days) : 0;
+  var hours = 'hours' in duration ? (0, _index5.default)(duration.hours) : 0;
+  var minutes = 'minutes' in duration ? (0, _index5.default)(duration.minutes) : 0;
+  var seconds = 'seconds' in duration ? (0, _index5.default)(duration.seconds) : 0; // Add years and months
+
+  var date = (0, _index3.default)(dirtyDate);
+  var dateWithMonths = months || years ? (0, _index2.default)(date, months + years * 12) : date; // Add weeks and days
+
+  var dateWithDays = days || weeks ? (0, _index.default)(dateWithMonths, days + weeks * 7) : dateWithMonths; // Add days, hours, minutes and seconds
+
+  var minutesToAdd = minutes + hours * 60;
+  var secondsToAdd = seconds + minutesToAdd * 60;
+  var msToAdd = secondsToAdd * 1000;
+  var finalDate = new Date(dateWithDays.getTime() + msToAdd);
+  return finalDate;
+}
+
+module.exports = exports.default;
+
+/***/ }),
+/* 45 */
+/***/ ((module, exports, __webpack_require__) => {
+
+
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports.default = addDays;
+
+var _index = _interopRequireDefault(__webpack_require__(46));
+
+var _index2 = _interopRequireDefault(__webpack_require__(47));
+
+var _index3 = _interopRequireDefault(__webpack_require__(48));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/**
+ * @name addDays
+ * @category Day Helpers
+ * @summary Add the specified number of days to the given date.
+ *
+ * @description
+ * Add the specified number of days to the given date.
+ *
+ * ### v2.0.0 breaking changes:
+ *
+ * - [Changes that are common for the whole library](https://github.com/date-fns/date-fns/blob/master/docs/upgradeGuide.md#Common-Changes).
+ *
+ * @param {Date|Number} date - the date to be changed
+ * @param {Number} amount - the amount of days to be added. Positive decimals will be rounded using `Math.floor`, decimals less than zero will be rounded using `Math.ceil`.
+ * @returns {Date} the new date with the days added
+ * @throws {TypeError} 2 arguments required
+ *
+ * @example
+ * // Add 10 days to 1 September 2014:
+ * const result = addDays(new Date(2014, 8, 1), 10)
+ * //=> Thu Sep 11 2014 00:00:00
+ */
+function addDays(dirtyDate, dirtyAmount) {
+  (0, _index3.default)(2, arguments);
+  var date = (0, _index2.default)(dirtyDate);
+  var amount = (0, _index.default)(dirtyAmount);
+
+  if (isNaN(amount)) {
+    return new Date(NaN);
+  }
+
+  if (!amount) {
+    // If 0 days, no-op to avoid changing times in the hour before end of DST
+    return date;
+  }
+
+  date.setDate(date.getDate() + amount);
+  return date;
+}
+
+module.exports = exports.default;
+
+/***/ }),
+/* 46 */
+/***/ ((module, exports) => {
+
+
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports.default = toInteger;
+
+function toInteger(dirtyNumber) {
+  if (dirtyNumber === null || dirtyNumber === true || dirtyNumber === false) {
+    return NaN;
+  }
+
+  var number = Number(dirtyNumber);
+
+  if (isNaN(number)) {
+    return number;
+  }
+
+  return number < 0 ? Math.ceil(number) : Math.floor(number);
+}
+
+module.exports = exports.default;
+
+/***/ }),
+/* 47 */
+/***/ ((module, exports, __webpack_require__) => {
+
+
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports.default = toDate;
+
+var _index = _interopRequireDefault(__webpack_require__(48));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/**
+ * @name toDate
+ * @category Common Helpers
+ * @summary Convert the given argument to an instance of Date.
+ *
+ * @description
+ * Convert the given argument to an instance of Date.
+ *
+ * If the argument is an instance of Date, the function returns its clone.
+ *
+ * If the argument is a number, it is treated as a timestamp.
+ *
+ * If the argument is none of the above, the function returns Invalid Date.
+ *
+ * **Note**: *all* Date arguments passed to any *date-fns* function is processed by `toDate`.
+ *
+ * @param {Date|Number} argument - the value to convert
+ * @returns {Date} the parsed date in the local time zone
+ * @throws {TypeError} 1 argument required
+ *
+ * @example
+ * // Clone the date:
+ * const result = toDate(new Date(2014, 1, 11, 11, 30, 30))
+ * //=> Tue Feb 11 2014 11:30:30
+ *
+ * @example
+ * // Convert the timestamp to date:
+ * const result = toDate(1392098430000)
+ * //=> Tue Feb 11 2014 11:30:30
+ */
+function toDate(argument) {
+  (0, _index.default)(1, arguments);
+  var argStr = Object.prototype.toString.call(argument); // Clone the date
+
+  if (argument instanceof Date || typeof argument === 'object' && argStr === '[object Date]') {
+    // Prevent the date to lose the milliseconds when passed to new Date() in IE10
+    return new Date(argument.getTime());
+  } else if (typeof argument === 'number' || argStr === '[object Number]') {
+    return new Date(argument);
+  } else {
+    if ((typeof argument === 'string' || argStr === '[object String]') && typeof console !== 'undefined') {
+      // eslint-disable-next-line no-console
+      console.warn("Starting with v2.0.0-beta.1 date-fns doesn't accept strings as date arguments. Please use `parseISO` to parse strings. See: https://git.io/fjule"); // eslint-disable-next-line no-console
+
+      console.warn(new Error().stack);
+    }
+
+    return new Date(NaN);
+  }
+}
+
+module.exports = exports.default;
+
+/***/ }),
+/* 48 */
+/***/ ((module, exports) => {
+
+
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports.default = requiredArgs;
+
+function requiredArgs(required, args) {
+  if (args.length < required) {
+    throw new TypeError(required + ' argument' + (required > 1 ? 's' : '') + ' required, but only ' + args.length + ' present');
+  }
+}
+
+module.exports = exports.default;
+
+/***/ }),
+/* 49 */
+/***/ ((module, exports, __webpack_require__) => {
+
+
+
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports.default = addMonths;
+
+var _index = _interopRequireDefault(__webpack_require__(46));
+
+var _index2 = _interopRequireDefault(__webpack_require__(47));
+
+var _index3 = _interopRequireDefault(__webpack_require__(48));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/**
+ * @name addMonths
+ * @category Month Helpers
+ * @summary Add the specified number of months to the given date.
+ *
+ * @description
+ * Add the specified number of months to the given date.
+ *
+ * ### v2.0.0 breaking changes:
+ *
+ * - [Changes that are common for the whole library](https://github.com/date-fns/date-fns/blob/master/docs/upgradeGuide.md#Common-Changes).
+ *
+ * @param {Date|Number} date - the date to be changed
+ * @param {Number} amount - the amount of months to be added. Positive decimals will be rounded using `Math.floor`, decimals less than zero will be rounded using `Math.ceil`.
+ * @returns {Date} the new date with the months added
+ * @throws {TypeError} 2 arguments required
+ *
+ * @example
+ * // Add 5 months to 1 September 2014:
+ * const result = addMonths(new Date(2014, 8, 1), 5)
+ * //=> Sun Feb 01 2015 00:00:00
+ */
+function addMonths(dirtyDate, dirtyAmount) {
+  (0, _index3.default)(2, arguments);
+  var date = (0, _index2.default)(dirtyDate);
+  var amount = (0, _index.default)(dirtyAmount);
+
+  if (isNaN(amount)) {
+    return new Date(NaN);
+  }
+
+  if (!amount) {
+    // If 0 months, no-op to avoid changing times in the hour before end of DST
+    return date;
+  }
+
+  var dayOfMonth = date.getDate(); // The JS Date object supports date math by accepting out-of-bounds values for
+  // month, day, etc. For example, new Date(2020, 1, 0) returns 31 Dec 2019 and
+  // new Date(2020, 13, 1) returns 1 Feb 2021.  This is *almost* the behavior we
+  // want except that dates will wrap around the end of a month, meaning that
+  // new Date(2020, 13, 31) will return 3 Mar 2021 not 28 Feb 2021 as desired. So
+  // we'll default to the end of the desired month by adding 1 to the desired
+  // month and using a date of 0 to back up one day to the end of the desired
+  // month.
+
+  var endOfDesiredMonth = new Date(date.getTime());
+  endOfDesiredMonth.setMonth(date.getMonth() + amount + 1, 0);
+  var daysInMonth = endOfDesiredMonth.getDate();
+
+  if (dayOfMonth >= daysInMonth) {
+    // If we're already at the end of the month, then this is the correct date
+    // and we're done.
+    return endOfDesiredMonth;
+  } else {
+    // Otherwise, we now know that setting the original day-of-month value won't
+    // cause an overflow, so set the desired day-of-month. Note that we can't
+    // just set the date of `endOfDesiredMonth` because that object may have had
+    // its time changed in the unusual case where where a DST transition was on
+    // the last day of the month and its local time was in the hour skipped or
+    // repeated next to a DST transition.  So we use `date` instead which is
+    // guaranteed to still have the original time.
+    date.setFullYear(endOfDesiredMonth.getFullYear(), endOfDesiredMonth.getMonth(), dayOfMonth);
+    return date;
+  }
+}
+
+module.exports = exports.default;
 
 /***/ })
 /******/ 	]);

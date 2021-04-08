@@ -36,7 +36,7 @@ export const projectCapture = (function () {
         render();
 
     });
-
+''
 
 
     //Saves project array

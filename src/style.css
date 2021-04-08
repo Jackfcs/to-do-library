@@ -58,9 +58,15 @@ body {
     height: 100vh;
 }
 
+#todo-interactions {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
 #todo-nav{
     display: grid;
-    grid-template-columns: auto 100px 130px 20px;
+    grid-template-columns: auto 100px 150px 30px;
     grid-template-areas: "name priority date icons";
 }
 
@@ -117,7 +123,6 @@ body {
 #project-date-input {
     grid-area: date;
     position: relative;
-    bottom: px;
     left: 0px;
     width: 100px;
     height: 10px;
@@ -126,8 +131,8 @@ body {
 
 #edit-date-button {
     position: relative;
-    right: 70px;
-    top: 3px;
+    left: 110px;
+    bottom: 15px;
 }
 
 .projectdelete {
@@ -146,8 +151,8 @@ body {
     border-bottom: 1px solid rgb(182, 182, 182);
     width: 100%;
     display: grid;
-    grid-template-columns: 40px auto 100px 150px;
-    grid-template-areas: "check name priority date"
+    grid-template-columns: 40px auto 100px 150px 30px;
+    grid-template-areas: "check name priority date calendar"
 }
 
 #checkbox {
@@ -171,20 +176,23 @@ body {
 
 #due-date-text {
     grid-area: date;
-    justify-self: end;
-    position: fixed;
-    right: 35px;
+    justify-self: center;
+    align-self: center;
+    position: relative;
+    top: 2px;
 }
 
-#edit-date-button {
-    grid-area: date;
-    justify-self: end;
+#todo-edit-date-button {
+    grid-area: calendar;
+    justify-self: center;
+    align-self: center;
 }
 
-#edit-date-input {
+#todo-edit-date-input {
     grid-area: date;
     position: fixed;
-    right: 40px;
+    right: 30px;
+    font-size: 5px;
     
 }
 
