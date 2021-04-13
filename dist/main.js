@@ -320,7 +320,7 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_1___default()(_icons_filter_png__WEBPACK_IMPORTED_MODULE_2__);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "body {\n    color: rgb(26, 26, 26);\n    margin: 0;\n    padding: 0;\n    overflow: hidden;\n    font-family: 'Arial';\n    font-size: 20px;\n}\n\n#header {\n    position: fixed;\n    overflow: hidden;\n    top: 0;\n    left: 0;\n    width: 100%;\n    background-color: #406ff1;\n    color: #ffffff;\n    height: 50px;\n    display: flex;\n    align-items: center;\n    padding-left: 10px;\n    padding: 2px;\n    z-index: 3;\n}\n\n#hamburger {\n    opacity: 0%;\n    padding: 1px;\n    margin-right: 5px;\n    transition: 0.3s;\n}\n\n#app-container {\n    display: grid;\n    grid-template-columns: 300px auto;\n    width: 100vw;\n    height: 100vh;\n    max-width: 100%;\n    margin-top: 50px;\n}\n\n\n#project-container {\n    grid-column: 1 / 1;\n    height: 100vh;\n    padding: 15px;\n    display: block;\n    display: flex;\n    flex-direction: column;\n    overflow: auto;\n    color: black;\n    background-color: rgb(168, 206, 255);\n    z-index: 2;\n}\n\n#project-interaction {\n    display: flex;\n    justify-content: space-between;\n    padding-bottom: 5px;\n    align-items: end;\n}\n\n.form-format {\n    font-size: 15px;\n    position: relative;\n    text-align: end;\n}\n\n.form-dropdown-format {\n    border: none;\n    padding: 10px;\n    padding-left: 20px;\n    -webkit-appearance: none;\n    -moz-appearance: none;\n    appearance: none;\n    background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\n    background-repeat: no-repeat;\n    background-size: 2em;\n    background-position: left center;\n}\n\n#project-filter{\n    background-color: rgb(168, 206, 255);\n}\n\n#todo-filter{\n    background-color: rgb(238, 242, 255);\n}\n\nlabel.wrap:after{\n    background-color: aqua;\n}\n\n\n.form-dropdown-format:hover {\n    cursor: pointer;\n}\n\n#project-parent {\n    overflow: auto;\n    padding-bottom: 200px;\n}\n\n#today, #next-week, #project-list-title {\n    padding: 5px 5px 5px 5px;\n    border-radius: 10px;\n    margin: 10px 10px 10px 0px;\n    \n}\n\n#today:hover, #next-week:hover {\n    cursor: pointer;\n    background-color:  rgb(211, 230, 255);\n}\n\n\n\n#todo-container {\n    display: flex;\n    flex-direction: column;\n    grid-column: 2 / 2;\n    background-color: rgb(238, 242, 255);\n    padding: 10px;\n    height: 100vh;\n}\n\n#todo-interactions {\n    display: flex;\n    flex-direction: row;\n    justify-content: space-between;\n    align-items: end;\n}\n\n#todo-nav{\n    display: grid;\n    grid-template-columns: auto 100px 150px 30px;\n    grid-template-areas: \"name priority date icons\";\n    \n    font-size: 15px;\n}\n\n#todo-header-priority {\n    grid-area: priority;\n    justify-self: end;\n    align-self: end;\n}\n\n#todo-title-duedate {\n    grid-area: date;\n    justify-self: end;\n    align-self: end;\n    position: relative;\n    right: 9px;\n}\n\n\n\n#completed-todo {\n    background-color: grey;\n    opacity: 50%;\n}\n\n\n\n.project-instance {\n    height: 50px;\n    display: grid;\n    grid-template-columns: 20px 40px 80px 30px;\n    grid-template-rows: 35px 15px;\n    grid-template-areas: \n        \"space bullet name name name\"\n        \"space date date info delete\";\n\n    /* border: solid rgb(187, 187, 187); */\n    \n    padding: 10px 10px 20px 0px;\n   \n    \n}\n\n.project-instance:hover {\n    cursor: pointer;\n    background-color:  rgb(211, 230, 255);\n    border-radius: 5px;\n    \n}\n\n#todo-bullet {\n    grid-area: bullet;\n    background-color: rgb(0, 27, 61);\n    color: white;\n    width: 30px;\n    height: 30px;\n    border-radius: 50%;\n    line-height: 30px;\n    text-align: center;\n    vertical-align: middle;\n}\n\n\n\n#project-name {\n    grid-area: name;\n    line-height: 30px;\n    \n    \n}\n\n#project-info-button {\n    grid-area: info;\n    max-width: 40px;\n    max-height: 20px;\n    align-self: start;\n    height: 10px;\n    border: none;\n    border-radius: 10%;\n    position: relative;\n    top: 2px;\n    left: 40px;\n    background-color: #406ff1;\n    color: white;\n    \n}\n#project-info-button:hover {\n    cursor: pointer;\n}\n\n#project-date {\n    grid-area: date;\n    font-size: 14px;\n    position: relative;\n    top: 5px;\n    width: 110px;\n    border-radius: 5px;\n}\n\n#project-date-input {\n    grid-area: date;\n    position: relative;\n    right: 5px;\n    width: 100px;\n    height: 10px;\n    font-size: 8px;\n    \n}\n\n#edit-date-button {\n    position: relative;\n    left: 130px;\n    top: 41px;\n}\n\n.projectdelete {\n    grid-area: delete;\n    justify-self: end;\n    align-self: end;\n    width: 20px;\n    position: relative;\n    top: 11px;\n    left: 10px;\n    padding: 5px;\n}\n\n#info-div{\n    max-width: 200px;\n    text-align: center;\n    position: relative;\n    left: 25px;\n    bottom: 0px;\n    border: solid rgb(59, 85, 201);\n    border-radius: 0 0 15px 15px;\n    padding: 5px;\n    border-top: none;\n    font-size: 15px;\n}\n.todo-instance {\n    border-bottom: 1px solid rgb(192, 207, 255);\n    width: 100%;\n    display: grid;\n    grid-template-columns: 40px auto 100px 150px 30px;\n    grid-template-areas: \"check name priority date calendar\";\n    padding: 2px 0px;\n    font-size: 18px;\n    line-height: 25px;\n}\n\n#checkbox {\n    grid-area: check;\n}\n\n#checkbox:hover {\n    cursor: pointer;\n}\n\n#todo-name {\n    grid-area: name;\n}\n\n#priority-select {\n    grid-area: priority;\n    justify-self: end;\n    text-align: center;\n    border: none;\n    border-radius: 5px;\n}\n\n\n#priority-select:hover {\n    cursor: pointer;\n}\n\n#modal-priority-select {\n    width: 100px;\n    text-align: center;\n}\n\n#todo-duedate {\n    grid-area: date;\n    justify-self: end;\n    position: relative;\n\n}\n\n#due-date-text {\n    grid-area: date;\n    justify-self: center;\n    align-self: center;\n    position: relative;\n    top: 3px;\n    \n}\n\n#todo-edit-date-button {\n    grid-area: calendar;\n    justify-self: center;\n    align-self: center;\n}\n\n#todo-edit-date-button:hover {\n    cursor: pointer;\n}\n\n#todo-edit-date-input {\n    grid-area: date;\n    position: fixed;\n    right: 30px;\n    font-size: 5px;\n    \n}\n\n\n.add-button {\n    background-color: #123efd;\n  border: none;\n  color: white;\n  padding: 10px;\n  text-align: center;\n  font-size: 16px;\n  opacity: 0.6;\n  display: inline-block;\n  text-decoration: none;\n  cursor: pointer;\n  border-radius: 10px;\n}\n\n.add-button:hover {\n    opacity: 1;\n    transition: 0.3s;\n}\n\n\n\n.project-modal {\n    display: flex;\n    flex-direction: column;\n    justify-content: space-between;\n    align-items: center;\n    color: black;\n    background-color: rgb(168, 206, 255);\n    position: fixed;\n    top: 50%;\n    left: 50%;\n    transform: translate(-50%, -50%);\n    padding: 10px;\n    height: 350px;\n    width: 300px;\n    border-radius: 20px;\n    z-index: 4;\n    \n    \n}\n\n.todo-modal {\n    display: flex;\n    flex-direction: column;\n    justify-content: space-between;\n    align-items: center;\n    color: black;\n    background-color: rgb(168, 206, 255);\n    position: fixed;\n    top: 50%;\n    left: 50%;\n    transform: translate(-50%, -50%);\n    padding: 10px;\n    height: 300px;\n    width: 300px;\n    border-radius: 20px;\n    z-index: 4;\n}\n\n.modal-form {\n    display: flex;\n    flex-direction: column;\n    justify-content: space-between;\n    align-items: center;\n    position: relative;\n    bottom: 30px;\n}\n\ninput[type=text] {\n    width: 200px;\n    \n}\n\nlabel{\n    margin-top: 10px;\n    margin-bottom: 2px;\n}\n\n#project-modal-title {\n    position: relative;\n    bottom: 20px;\n}\n\n#todo-modal-title {\n    position: relative;\n    bottom: 20px;\n}\n\n.modal-confirm {\n    margin-top: 10px;\n    padding: 0 10px;\n   \n}\n\n#confirm-todo {\n    margin-top: 18px;\n}\n\n#project-modal-close {\n    cursor: pointer;\n    border: none;\n    outline: none;\n    background: none;\n    font-weight: bold;\n    font-size: 1.5rem;\n    color: black;\n    padding-left: 10px;\n    position: absolute;\n    left: 280px;\n    bottom: 330px;\n}\n\n#todo-modal-close {\n    cursor: pointer;\n    border: none;\n    outline: none;\n    background: none;\n    font-weight: bold;\n    font-size: 1.5rem;\n    color: black;\n    padding-left: 10px;\n    position: absolute;\n    left: 280px;\n    bottom: 280px;\n}\n\n#project-description {\n    width: 200px;\n    padding-bottom: 30px;\n}\n\n.hide {\n    transform: scale(0%);\n    display: none;\n}\n\n#project-info-button {\n    width: 80px;\n    height: 30px;\n}\n\n#warning-text {\n    position: absolute;\n    z-index: 1;\n    background-color: rgba(0, 0, 0, 0.6);\n    visibility: hidden;\n    width: 130px;\n    text-align: center;\n    padding: 2px;\n    border-radius: 5px;\n    top: 20px;\n    color: white;\n}\n\n#todo-warning {\n    position: absolute;\n    z-index: 1;\n    background-color: rgba(0, 0, 0, 0.6);\n    visibility: hidden;\n    width: 130px;\n    text-align: center;\n    border-radius: 5px;\n    right: 100px;\n    font-size: 15px;\n    color: white;\n}\n\n#project-date:hover #warning-text {\n    visibility: visible;\n} \n\n#todo-duedate:hover #todo-warning {\n    visibility: visible;\n}\n\n#background {\n    position: fixed;\n    opacity: 0;\n    transition: 150ms ease-in-out;\n    top: 0;\n    left: 0;\n    right: 0;\n    bottom: 0;\n    background-color: rgba(0, 0, 0, .5);\n    pointer-events: none;\n    z-index: 2;\n  }\n\n  #background.active {\n    opacity: 1;\n    pointer-events: all;\n  }\n\n\n@media (max-width: 800px) {\n\n    #hamburger {\n        opacity: 100%;\n        padding: 1px;\n        margin-right: 5px;\n        transition: 0.3s;\n    }\n\n    #hamburger:hover {\n        cursor: pointer;\n        background-color: rgb(168, 206, 255);\n        border-radius: 5px;\n    }\n\n    #app-container {\n        display: flex;\n        width: 100vw;\n        height: 100vh;\n        margin-top: 50px;\n    }\n\n    #project-container {\n        display: none;\n        position: absolute;\n        width: 270px;\n        \n    }\n    \n\n    #todo-container {\n        min-width: 400px;\n        width: 100vw;\n    }\n\n}\n\n@media (min-width: 800px) {\n    #app-container {\n        display: grid;\n        width: 100vw;\n        height: 100vh;\n        max-width: 100%;\n        margin-top: 50px;\n    }\n\n    #project-container {\n        grid-column: 1 / 1;\n        height: 100vh;\n        width: 270px;\n        padding: 15px;\n        display: block;\n        display: flex;\n        flex-direction: column;\n        overflow: auto;\n        color: black;\n        background-color: rgb(168, 206, 255);\n    }\n\n    #todo-container {\n        display: flex;\n        flex-direction: column;\n        grid-column: 2 / 2;\n        background-color: rgb(238, 242, 255);\n        padding: 10px;\n        height: 100vh;\n    }\n    #project-parent {\n        overflow: auto;\n        padding-bottom: 200px;\n    }\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "body {\n    color: rgb(26, 26, 26);\n    margin: 0;\n    padding: 0;\n    overflow: hidden;\n    font-family: 'Arial';\n    font-size: 20px;\n}\n\n#header {\n    position: fixed;\n    overflow: hidden;\n    top: 0;\n    left: 0;\n    width: 100%;\n    background-color: #406ff1;\n    color: #ffffff;\n    height: 50px;\n    display: flex;\n    align-items: center;\n    padding-left: 10px;\n    padding: 2px;\n    z-index: 3;\n}\n\n#hamburger {\n    opacity: 0%;\n    padding: 1px;\n    margin-right: 5px;\n    transition: 0.3s;\n}\n\n#app-container {\n    display: grid;\n    grid-template-columns: 300px auto;\n    width: 100vw;\n    height: 100vh;\n    max-width: 100%;\n    margin-top: 50px;\n}\n\n\n#project-container {\n    grid-column: 1 / 1;\n    height: 100vh;\n    padding: 15px;\n    display: block;\n    display: flex;\n    flex-direction: column;\n    overflow: auto;\n    color: black;\n    background-color: rgb(168, 206, 255);\n    z-index: 2;\n}\n\n#project-interaction {\n    display: flex;\n    justify-content: space-between;\n    padding-bottom: 5px;\n    align-items: end;\n}\n\n.form-format {\n    font-size: 15px;\n    position: relative;\n    text-align: end;\n}\n\n.form-dropdown-format {\n    border: none;\n    padding: 10px;\n    padding-left: 20px;\n    -webkit-appearance: none;\n    -moz-appearance: none;\n    appearance: none;\n    background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\n    background-repeat: no-repeat;\n    background-size: 2em;\n    background-position: left center;\n}\n\n#project-filter{\n    background-color: rgb(168, 206, 255);\n}\n\n#todo-filter{\n    background-color: rgb(238, 242, 255);\n}\n\nlabel.wrap:after{\n    background-color: aqua;\n}\n\n\n.form-dropdown-format:hover {\n    cursor: pointer;\n}\n\n#project-parent {\n    overflow: auto;\n    padding-bottom: 200px;\n}\n\n#today, #next-week, #project-list-title {\n    padding: 5px 5px 5px 5px;\n    border-radius: 10px;\n    margin: 10px 10px 10px 0px;\n    \n}\n\n#today:hover, #next-week:hover {\n    cursor: pointer;\n    background-color:  rgb(211, 230, 255);\n}\n\n\n\n#todo-container {\n    display: flex;\n    flex-direction: column;\n    grid-column: 2 / 2;\n    background-color: rgb(238, 242, 255);\n    padding: 10px;\n    height: 100vh;\n}\n\n#todo-interactions {\n    display: flex;\n    flex-direction: row;\n    justify-content: space-between;\n    align-items: end;\n}\n\n#todo-nav{\n    display: grid;\n    grid-template-columns: auto 100px 150px 30px;\n    grid-template-areas: \"name priority date icons\";\n    \n    font-size: 15px;\n}\n\n#todo-header-priority {\n    grid-area: priority;\n    justify-self: end;\n    align-self: end;\n}\n\n#todo-title-duedate {\n    grid-area: date;\n    justify-self: end;\n    align-self: end;\n    position: relative;\n    right: 9px;\n}\n\n\n\n#completed-todo {\n    background-color: grey;\n    opacity: 50%;\n}\n\n\n\n.project-instance {\n    height: 50px;\n    display: grid;\n    grid-template-columns: 20px 40px 80px 30px;\n    grid-template-rows: 35px 15px;\n    grid-template-areas: \n        \"space bullet name name name\"\n        \"space date date info delete\";\n\n    /* border: solid rgb(187, 187, 187); */\n    \n    padding: 10px 10px 20px 0px;\n   \n    \n}\n\n.project-instance:hover {\n    cursor: pointer;\n    background-color:  rgb(136, 185, 255);\n    border-radius: 5px;\n    \n}\n\n#todo-bullet {\n    grid-area: bullet;\n    background-color: rgb(0, 27, 61);\n    color: white;\n    width: 30px;\n    height: 30px;\n    border-radius: 50%;\n    line-height: 30px;\n    text-align: center;\n    vertical-align: middle;\n}\n\n\n\n#project-name {\n    grid-area: name;\n    line-height: 30px;\n    \n    \n}\n\n#project-info-button {\n    grid-area: info;\n    max-width: 40px;\n    max-height: 20px;\n    align-self: start;\n    height: 10px;\n    border: none;\n    border-radius: 10%;\n    position: relative;\n    top: 2px;\n    left: 40px;\n    background-color: #406ff1;\n    color: white;\n    \n}\n#project-info-button:hover {\n    cursor: pointer;\n}\n\n#project-date {\n    grid-area: date;\n    font-size: 14px;\n    position: relative;\n    top: 5px;\n    width: 110px;\n    border-radius: 5px;\n}\n\n#project-date-input {\n    grid-area: date;\n    position: relative;\n    right: 5px;\n    width: 100px;\n    height: 10px;\n    font-size: 8px;\n    \n}\n\n#edit-date-button {\n    position: relative;\n    left: 130px;\n    top: 41px;\n}\n\n.projectdelete {\n    grid-area: delete;\n    justify-self: end;\n    align-self: end;\n    width: 20px;\n    position: relative;\n    top: 11px;\n    left: 10px;\n    padding: 5px;\n}\n\n#info-div{\n    max-width: 200px;\n    text-align: center;\n    position: relative;\n    left: 25px;\n    bottom: 0px;\n    border: solid rgb(59, 85, 201);\n    border-radius: 0 0 15px 15px;\n    padding: 5px;\n    border-top: none;\n    font-size: 15px;\n}\n.todo-instance {\n    border-bottom: 1px solid rgb(192, 207, 255);\n    width: 100%;\n    display: grid;\n    grid-template-columns: 40px auto 100px 150px 30px;\n    grid-template-areas: \"check name priority date calendar\";\n    padding: 2px 0px;\n    font-size: 18px;\n    line-height: 25px;\n}\n\n#checkbox {\n    grid-area: check;\n}\n\n#checkbox:hover {\n    cursor: pointer;\n}\n\n#todo-name {\n    grid-area: name;\n}\n\n#priority-select {\n    grid-area: priority;\n    justify-self: end;\n    text-align: center;\n    border: none;\n    border-radius: 5px;\n}\n\n\n#priority-select:hover {\n    cursor: pointer;\n}\n\n#modal-priority-select {\n    width: 100px;\n    text-align: center;\n}\n\n#todo-duedate {\n    grid-area: date;\n    justify-self: end;\n    position: relative;\n\n}\n\n#due-date-text {\n    grid-area: date;\n    justify-self: center;\n    align-self: center;\n    position: relative;\n    top: 3px;\n    \n}\n\n#todo-edit-date-button {\n    grid-area: calendar;\n    justify-self: center;\n    align-self: center;\n}\n\n#todo-edit-date-button:hover {\n    cursor: pointer;\n}\n\n#todo-edit-date-input {\n    grid-area: date;\n    position: fixed;\n    right: 30px;\n    font-size: 5px;\n    \n}\n\n\n.add-button {\n    background-color: #123efd;\n  border: none;\n  color: white;\n  padding: 10px;\n  text-align: center;\n  font-size: 16px;\n  opacity: 0.6;\n  display: inline-block;\n  text-decoration: none;\n  cursor: pointer;\n  border-radius: 10px;\n}\n\n.add-button:hover {\n    opacity: 1;\n    transition: 0.3s;\n}\n\n\n\n.project-modal {\n    display: flex;\n    flex-direction: column;\n    justify-content: space-between;\n    align-items: center;\n    color: black;\n    background-color: rgb(168, 206, 255);\n    position: fixed;\n    top: 50%;\n    left: 50%;\n    transform: translate(-50%, -50%);\n    padding: 10px;\n    height: 350px;\n    width: 300px;\n    border-radius: 20px;\n    z-index: 4;\n    \n    \n}\n\n.todo-modal {\n    display: flex;\n    flex-direction: column;\n    justify-content: space-between;\n    align-items: center;\n    color: black;\n    background-color: rgb(168, 206, 255);\n    position: fixed;\n    top: 50%;\n    left: 50%;\n    transform: translate(-50%, -50%);\n    padding: 10px;\n    height: 300px;\n    width: 300px;\n    border-radius: 20px;\n    z-index: 4;\n}\n\n.modal-form {\n    display: flex;\n    flex-direction: column;\n    justify-content: space-between;\n    align-items: center;\n    position: relative;\n    bottom: 30px;\n}\n\ninput[type=text] {\n    width: 200px;\n    \n}\n\nlabel{\n    margin-top: 10px;\n    margin-bottom: 2px;\n}\n\n#project-modal-title {\n    position: relative;\n    bottom: 20px;\n}\n\n#todo-modal-title {\n    position: relative;\n    bottom: 20px;\n}\n\n.modal-confirm {\n    margin-top: 10px;\n    padding: 0 10px;\n   \n}\n\n#confirm-todo {\n    margin-top: 18px;\n}\n\n#project-modal-close {\n    cursor: pointer;\n    border: none;\n    outline: none;\n    background: none;\n    font-weight: bold;\n    font-size: 1.5rem;\n    color: black;\n    padding-left: 10px;\n    position: absolute;\n    left: 280px;\n    bottom: 330px;\n}\n\n#todo-modal-close {\n    cursor: pointer;\n    border: none;\n    outline: none;\n    background: none;\n    font-weight: bold;\n    font-size: 1.5rem;\n    color: black;\n    padding-left: 10px;\n    position: absolute;\n    left: 280px;\n    bottom: 280px;\n}\n\n#project-description {\n    width: 200px;\n    padding-bottom: 30px;\n}\n\n.hide {\n    transform: scale(0%);\n    display: none;\n}\n\n#project-info-button {\n    width: 80px;\n    height: 30px;\n}\n\n#warning-text {\n    position: absolute;\n    z-index: 1;\n    background-color: rgba(0, 0, 0, 0.6);\n    visibility: hidden;\n    width: 130px;\n    text-align: center;\n    padding: 2px;\n    border-radius: 5px;\n    top: 20px;\n    color: white;\n}\n\n#todo-warning {\n    position: absolute;\n    z-index: 1;\n    background-color: rgba(0, 0, 0, 0.6);\n    visibility: hidden;\n    width: 130px;\n    text-align: center;\n    border-radius: 5px;\n    right: 100px;\n    font-size: 15px;\n    color: white;\n}\n\n#project-date:hover #warning-text {\n    visibility: visible;\n} \n\n#todo-duedate:hover #todo-warning {\n    visibility: visible;\n}\n\n#background {\n    position: fixed;\n    opacity: 0;\n    transition: 150ms ease-in-out;\n    top: 0;\n    left: 0;\n    right: 0;\n    bottom: 0;\n    background-color: rgba(0, 0, 0, .5);\n    pointer-events: none;\n    z-index: 2;\n  }\n\n  #background.active {\n    opacity: 1;\n    pointer-events: all;\n  }\n\n\n@media (max-width: 800px) {\n\n    #hamburger {\n        opacity: 100%;\n        padding: 1px;\n        margin-right: 5px;\n        transition: 0.3s;\n    }\n\n    #hamburger:hover {\n        cursor: pointer;\n        background-color: rgb(168, 206, 255);\n        border-radius: 5px;\n    }\n\n    #app-container {\n        display: flex;\n        width: 100vw;\n        height: 100vh;\n        margin-top: 50px;\n    }\n\n    #project-container {\n        display: none;\n        position: absolute;\n        width: 270px;\n        \n    }\n    \n\n    #todo-container {\n        min-width: 400px;\n        width: 100vw;\n    }\n\n}\n\n@media (min-width: 800px) {\n    #app-container {\n        display: grid;\n        width: 100vw;\n        height: 100vh;\n        max-width: 100%;\n        margin-top: 50px;\n    }\n\n    #project-container {\n        grid-column: 1 / 1;\n        height: 100vh;\n        width: 270px;\n        padding: 15px;\n        display: block;\n        display: flex;\n        flex-direction: column;\n        overflow: auto;\n        color: black;\n        background-color: rgb(168, 206, 255);\n    }\n\n    #todo-container {\n        display: flex;\n        flex-direction: column;\n        grid-column: 2 / 2;\n        background-color: rgb(238, 242, 255);\n        padding: 10px;\n        height: 100vh;\n    }\n    #project-parent {\n        overflow: auto;\n        padding-bottom: 200px;\n    }\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -552,7 +552,7 @@ const displayProjects = (function () {
 
             warningText.setAttribute('id', 'warning-text');
             if (_datacapture_js__WEBPACK_IMPORTED_MODULE_0__.projectCapture.myProjects[i].dueDate != '' && _datacapture_js__WEBPACK_IMPORTED_MODULE_0__.projectCapture.myProjects[i].dueDate < (0,date_fns__WEBPACK_IMPORTED_MODULE_3__.default)(new Date(), 'dd/MM/yyyy')) {
-            
+
                 projectDate.style.color = 'red';
                 projectDate.appendChild(warningText);
                 warningText.textContent = 'Project is overdue!'
@@ -563,7 +563,7 @@ const displayProjects = (function () {
                 warningText.textContent = 'Project is due today!'
             }
 
-            
+
 
 
 
@@ -659,17 +659,30 @@ const displayProjects = (function () {
             })
 
 
-
-            //Select current project
+            
             projectInstance.addEventListener('click', () => {
                 _datacapture_js__WEBPACK_IMPORTED_MODULE_0__.selectCurrentProject.currentProject = _datacapture_js__WEBPACK_IMPORTED_MODULE_0__.projectCapture.myProjects[i];
-                displayProjects.displayTodos();
+               
+                render();
+
             })
 
-
+           
 
         }
 
+        //Highlight current project
+        const instances = document.querySelectorAll('.project-instance');
+        let instanceArray = Array.from(instances);
+        let projIndex = _datacapture_js__WEBPACK_IMPORTED_MODULE_0__.projectCapture.myProjects.indexOf(_datacapture_js__WEBPACK_IMPORTED_MODULE_0__.selectCurrentProject.currentProject)
+        if (projIndex == 0) {
+            instanceArray[0].style.backgroundColor = 'rgb(211, 230, 255)'
+            instanceArray[0].style.borderRadius = '5px';
+        } else if (projIndex > 0) {
+            instanceArray[projIndex].style.backgroundColor = 'rgb(211, 230, 255)'
+            instanceArray[projIndex].style.borderRadius = '5px';
+        }
+      
     }
 
     //Create todo instances
@@ -810,14 +823,14 @@ const displayProjects = (function () {
                 todoWarningText.textContent = 'Todo is due today!'
             }
 
-            
-            
+
+
 
             let d1 = (0,_datacapture_js__WEBPACK_IMPORTED_MODULE_0__.dateOrder)(newDate)
             let d2 = (0,_datacapture_js__WEBPACK_IMPORTED_MODULE_0__.dateOrder)((0,date_fns__WEBPACK_IMPORTED_MODULE_3__.default)(new Date(), 'dd/MM/yyyy'))
-            
 
-            
+
+
             if (d1 < d2) {
                 dueDateText.style.color = 'Red';
                 dueDate.appendChild(todoWarningText);
@@ -1025,6 +1038,8 @@ const projectCapture = (function () {
 
 
 
+
+
 const selectCurrentProject = (function () {
 
     let currentProject = projectCapture.myProjects[0];
@@ -1065,6 +1080,18 @@ function todoCapture() {
 
     let newTodo = (0,_constructors_js__WEBPACK_IMPORTED_MODULE_0__.TodoInstance)(todoName, todoDueDate, todoPriority, todoCheckbox)
     selectCurrentProject.currentProject.todos.push(newTodo);
+
+    //Example todos
+    let vacuum = (0,_constructors_js__WEBPACK_IMPORTED_MODULE_0__.TodoInstance)('Hoover', (0,date_fns__WEBPACK_IMPORTED_MODULE_2__.default)(new Date(), 'dd/MM/yyyy'), 'low', false);
+    let dust = (0,_constructors_js__WEBPACK_IMPORTED_MODULE_0__.TodoInstance)('Dust', '13/04/2021', 'high', false);
+    projectCapture.myProjects.houseWork.todos.push(vacuum, dust);
+
+    let example = (0,_constructors_js__WEBPACK_IMPORTED_MODULE_0__.TodoInstance)('Example Task', (0,date_fns__WEBPACK_IMPORTED_MODULE_2__.default)(new Date(), 'dd/MM/yyyy'), 'low', false)
+    let example1 = (0,_constructors_js__WEBPACK_IMPORTED_MODULE_0__.TodoInstance)('Click me to edit task', '11/04/2024', 'medium', false)
+    let example2 = (0,_constructors_js__WEBPACK_IMPORTED_MODULE_0__.TodoInstance)('This is an overdue task', '11/02/2021', 'high', false)
+    projectCapture.myProjects.example.todos.push(example, example1, example2);
+
+
     projectCapture.saveProjects();
 
  
@@ -1083,20 +1110,7 @@ function dateOrder(date){
     return dateObject
 }
 
-// let example = TodoInstance('Example Task', format(new Date(), 'dd/MM/yyyy'), 'low', false)
-//  let example1 = TodoInstance('Click me to edit task', '11/04/2024', 'medium', false)
-//  let example2 = TodoInstance('This is an overdue task', '11/02/2021', 'high', false)
-//  projectCapture.myProjects[0].todos.push(example, example1, example2);
 
-//  //Example todos
-//  let vacuum = TodoInstance('Hoover', format(new Date(), 'dd/MM/yyyy'), 'low', false);
-//  let dust = TodoInstance('Dust', '13/04/2021', 'high', false);
-//  projectCapture.myProjects.houseWork.todos.push(vacuum, dust);
-
-//  let example = TodoInstance('Example Task', format(new Date(), 'dd/MM/yyyy'), 'low', false)
-//  let example1 = TodoInstance('Click me to edit task', '11/04/2024', 'medium', false)
-//  let example2 = TodoInstance('This is an overdue task', '11/02/2021', 'high', false)
-//  projectCapture.myProjects.example.todos.push(example, example1, example2);
 
 /***/ }),
 /* 9 */
@@ -4167,11 +4181,26 @@ const filterTodos = (function () {
         filteredProject.todos = daysFilter;
         _datacapture_js__WEBPACK_IMPORTED_MODULE_1__.selectCurrentProject.currentProject = filteredProject;
         (0,_domdisplay_js__WEBPACK_IMPORTED_MODULE_0__.render)();
-    })
 
+        
+
+
+        
+       
+
+    })
+    // const checkBox = document.getElementById('checkBox');
+    // checkBox.addEventListener('change', () => {
+    //     console.log('hi')
 
 
 })();
+
+
+
+
+
+
 
 const hamburger = (function () {
     const hamburger = document.getElementById('hamburger');

@@ -2,7 +2,7 @@
 import { projectCapture, selectCurrentProject, dateOrder } from './datacapture.js'
 import Calendar from '../icons/calendar.png'
 import Trash1 from '../icons/trash1.svg'
-import {format } from 'date-fns';
+import { format } from 'date-fns';
 
 
 export const displayProjects = (function () {
@@ -96,7 +96,7 @@ export const displayProjects = (function () {
 
             warningText.setAttribute('id', 'warning-text');
             if (projectCapture.myProjects[i].dueDate != '' && projectCapture.myProjects[i].dueDate < format(new Date(), 'dd/MM/yyyy')) {
-            
+
                 projectDate.style.color = 'red';
                 projectDate.appendChild(warningText);
                 warningText.textContent = 'Project is overdue!'
@@ -107,7 +107,7 @@ export const displayProjects = (function () {
                 warningText.textContent = 'Project is due today!'
             }
 
-            
+
 
 
 
@@ -203,17 +203,30 @@ export const displayProjects = (function () {
             })
 
 
-
-            //Select current project
+            
             projectInstance.addEventListener('click', () => {
                 selectCurrentProject.currentProject = projectCapture.myProjects[i];
-                displayProjects.displayTodos();
+               
+                render();
+
             })
 
-
+           
 
         }
 
+        //Highlight current project
+        const instances = document.querySelectorAll('.project-instance');
+        let instanceArray = Array.from(instances);
+        let projIndex = projectCapture.myProjects.indexOf(selectCurrentProject.currentProject)
+        if (projIndex == 0) {
+            instanceArray[0].style.backgroundColor = 'rgb(211, 230, 255)'
+            instanceArray[0].style.borderRadius = '5px';
+        } else if (projIndex > 0) {
+            instanceArray[projIndex].style.backgroundColor = 'rgb(211, 230, 255)'
+            instanceArray[projIndex].style.borderRadius = '5px';
+        }
+      
     }
 
     //Create todo instances
@@ -354,14 +367,14 @@ export const displayProjects = (function () {
                 todoWarningText.textContent = 'Todo is due today!'
             }
 
-            
-            
+
+
 
             let d1 = dateOrder(newDate)
             let d2 = dateOrder(format(new Date(), 'dd/MM/yyyy'))
-            
 
-            
+
+
             if (d1 < d2) {
                 dueDateText.style.color = 'Red';
                 dueDate.appendChild(todoWarningText);
@@ -419,15 +432,7 @@ export const displayProjects = (function () {
             let compTodos = selectCurrentProject.currentProject.completedTodos
 
             for (let i = 0; i < compTodos.length; i++) {
-
-                // let todoDate = todos[i].dueDate;
-                // let newDate;
-                // if (todoDate === '') {
-                //     newDate = '';
-                // } else {
-                //     newDate = todoDate
-                // }
-
+=
 
                 const newTodo = document.createElement('div');
                 completedParent.appendChild(newTodo);

@@ -180,7 +180,7 @@ label.wrap:after{
 
 .project-instance:hover {
     cursor: pointer;
-    background-color:  rgb(211, 230, 255);
+    background-color:  rgb(136, 185, 255);
     border-radius: 5px;
     
 }

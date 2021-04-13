@@ -2,7 +2,7 @@ import { displayProjects, render } from './domdisplay.js'
 import { projectCapture, todoCapture, selectCurrentProject, dateOrder } from './datacapture.js'
 import { format } from 'date-fns'
 import add from 'date-fns/add'
-import { ProjectInstance} from './constructors.js';
+import { ProjectInstance } from './constructors.js';
 
 export const modalEvents = (function () {
     const todoModal = document.getElementById('todo-modal');
@@ -245,11 +245,24 @@ const filterTodos = (function () {
         filteredProject.todos = daysFilter;
         selectCurrentProject.currentProject = filteredProject;
         render();
+
+        
+
+
+        
+       
+
     })
 
 
 
 })();
+
+
+
+
+
+
 
 const hamburger = (function () {
     const hamburger = document.getElementById('hamburger');
