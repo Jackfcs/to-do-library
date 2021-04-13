@@ -1,5 +1,8 @@
-To-Do List created using HTML CSS and Javascript.
+## To-Do List
+Created using HTML CSS and Javascript.
 
-Live demo available here https://jackfcs.github.io/to-do-library/
+[Click here for the live demo.](https://jackfcs.github.io/to-do-library/)
+
+
 
 Icons from icons8.com
