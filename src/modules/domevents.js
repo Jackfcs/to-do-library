@@ -189,7 +189,7 @@ export const filterTasks = (function () {
                 if (a.dueDate == '') {
                     return 1
                 } else {
-                    return parseFloat(a.dueDate) - parseFloat(b.dueDate);
+                    return dateOrder(a.dueDate) - dateOrder(b.dueDate);
                 }
             })
 
@@ -284,106 +284,3 @@ const hamburger = (function () {
 
 })();
 
-// const dateColor = (function () {
-//     let todos = selectCurrentProject.currentProject.todos
-//     let dueDateText = document.querySelectorAll('.due-date-text');
-
-//     const firstText = document.getElementsByClassName('due-date-text0')
-//     firstText.style.color = 'red'
-
-//     console.log(dueDateText)
-//     for (let i = 0; i < dueDateText.length; i++) {
-
-//         let todoDate = todos[i].dueDate;
-//         let newDate;
-//         if (todoDate === '') {
-//             newDate = '';
-//         } else {
-//             newDate = todoDate;
-//         }
-//         //Due Date Warning Text
-//         const todoWarningText = document.createElement('span');
-//         todoWarningText.setAttribute('id', 'todo-warning')
-
-//         if (newDate === format(new Date(), 'dd/MM/yyyy')) {
-//             dueDateText.style.color = 'Orange';
-//             dueDate.appendChild(todoWarningText);
-//             todoWarningText.textContent = 'Todo is due today!'
-//         }
-
-//         function process(date) {
-//             var parts = date.split("/");
-//             return new Date(parts[2], parts[1] - 1, parts[0]);
-//         }
-
-
-
-//         // let d1 = Date.parse(newDate)
-//         // let d2 = Date.parse(format(new Date(), 'dd/MM/yyyy'))
-
-//         let d1 = process(newDate)
-//         let d2 = process(format(new Date(), 'dd/MM/yyyy'))
-
-//         //if (newDate < ) {
-//         if (d1 < d2) {
-//             dueDateText.style.color = 'Red';
-//             dueDate.appendChild(todoWarningText);
-//             todoWarningText.textContent = 'Todo is overdue!';
-//         }
-
-//         console.log('d1 ' + [i] + ': ' + d1)
-//         console.log('d2: ' + [i] + ': ' + d2)
-
-//         console.log(newDate)
-//     }
-// })();
-
-
-
-// //     for (let i = 0; i < todos.length; i++) {
-
-
-// //         let todoDate = todos[i].dueDate;
-// //         let newDate;
-// //         if (todoDate === '') {
-// //             newDate = '';
-// //         } else {
-// //             newDate = todoDate;
-// //         }
-// //         //Due Date Warning Text
-// //         const todoWarningText = document.createElement('span');
-// //         todoWarningText.setAttribute('id', 'todo-warning')
-
-
-// //         if (newDate === format(new Date(), 'dd/MM/yyyy')) {
-// //             dueDateText.style.color = 'Orange';
-// //             dueDate.appendChild(todoWarningText);
-// //             todoWarningText.textContent = 'Todo is due today!'
-// //         }
-
-// //         function process(date){
-// //             var parts = date.split("/");
-// //             return new Date(parts[2], parts[1] - 1, parts[0]);
-// //          }
-
-
-
-// //         // let d1 = Date.parse(newDate)
-// //         // let d2 = Date.parse(format(new Date(), 'dd/MM/yyyy'))
-
-// //         let d1 = process(newDate)
-// //         let d2 = process(format(new Date(), 'dd/MM/yyyy'))
-
-// //         //if (newDate < ) {
-// //         if (d1 < d2) {
-// //             dueDateText.style.color = 'Red';
-// //             dueDate.appendChild(todoWarningText);
-// //             todoWarningText.textContent = 'Todo is overdue!';
-// //         }
-
-// //         console.log('d1 ' + [i] + ': ' + d1)
-// //         console.log('d2: ' + [i] + ': ' + d2)
-
-// //         console.log(newDate)
-// //     }
-// // })();

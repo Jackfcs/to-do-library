@@ -54,7 +54,6 @@ export const displayProjects = (function () {
 
             //Project date
             projectInstance.appendChild(projectDate);
-            //projectDate.classList.add('project-name');
             projectDate.setAttribute('id', 'project-date')
             const editDateButton = document.createElement('IMG');
             editDateButton.src = Calendar;
