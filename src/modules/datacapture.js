@@ -110,6 +110,7 @@ export function todoCapture() {
     selectCurrentProject.currentProject.todos.push(newTodo);
     projectCapture.saveProjects();
 
+ 
 
 
     return {
@@ -125,10 +126,15 @@ export function dateOrder(date){
     return dateObject
 }
 
+// let example = TodoInstance('Example Task', format(new Date(), 'dd/MM/yyyy'), 'low', false)
+//  let example1 = TodoInstance('Click me to edit task', '11/04/2024', 'medium', false)
+//  let example2 = TodoInstance('This is an overdue task', '11/02/2021', 'high', false)
+//  projectCapture.myProjects[0].todos.push(example, example1, example2);
+
 //  //Example todos
 //  let vacuum = TodoInstance('Hoover', format(new Date(), 'dd/MM/yyyy'), 'low', false);
 //  let dust = TodoInstance('Dust', '13/04/2021', 'high', false);
-//  projectCapture.myProjects.housework.todos.push(vacuum, dust);
+//  projectCapture.myProjects.houseWork.todos.push(vacuum, dust);
 
 //  let example = TodoInstance('Example Task', format(new Date(), 'dd/MM/yyyy'), 'low', false)
 //  let example1 = TodoInstance('Click me to edit task', '11/04/2024', 'medium', false)

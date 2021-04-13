@@ -420,13 +420,13 @@ export const displayProjects = (function () {
 
             for (let i = 0; i < compTodos.length; i++) {
 
-                let todoDate = todos[i].dueDate;
-                let newDate;
-                if (todoDate === '') {
-                    newDate = '';
-                } else {
-                    newDate = format(new Date(todoDate), 'P')
-                }
+                // let todoDate = todos[i].dueDate;
+                // let newDate;
+                // if (todoDate === '') {
+                //     newDate = '';
+                // } else {
+                //     newDate = todoDate
+                // }
 
 
                 const newTodo = document.createElement('div');

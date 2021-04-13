@@ -876,13 +876,13 @@ const displayProjects = (function () {
 
             for (let i = 0; i < compTodos.length; i++) {
 
-                let todoDate = todos[i].dueDate;
-                let newDate;
-                if (todoDate === '') {
-                    newDate = '';
-                } else {
-                    newDate = (0,date_fns__WEBPACK_IMPORTED_MODULE_3__.default)(new Date(todoDate), 'P')
-                }
+                // let todoDate = todos[i].dueDate;
+                // let newDate;
+                // if (todoDate === '') {
+                //     newDate = '';
+                // } else {
+                //     newDate = todoDate
+                // }
 
 
                 const newTodo = document.createElement('div');
@@ -1067,6 +1067,7 @@ function todoCapture() {
     selectCurrentProject.currentProject.todos.push(newTodo);
     projectCapture.saveProjects();
 
+ 
 
 
     return {
@@ -1082,10 +1083,15 @@ function dateOrder(date){
     return dateObject
 }
 
+// let example = TodoInstance('Example Task', format(new Date(), 'dd/MM/yyyy'), 'low', false)
+//  let example1 = TodoInstance('Click me to edit task', '11/04/2024', 'medium', false)
+//  let example2 = TodoInstance('This is an overdue task', '11/02/2021', 'high', false)
+//  projectCapture.myProjects[0].todos.push(example, example1, example2);
+
 //  //Example todos
 //  let vacuum = TodoInstance('Hoover', format(new Date(), 'dd/MM/yyyy'), 'low', false);
 //  let dust = TodoInstance('Dust', '13/04/2021', 'high', false);
-//  projectCapture.myProjects.housework.todos.push(vacuum, dust);
+//  projectCapture.myProjects.houseWork.todos.push(vacuum, dust);
 
 //  let example = TodoInstance('Example Task', format(new Date(), 'dd/MM/yyyy'), 'low', false)
 //  let example1 = TodoInstance('Click me to edit task', '11/04/2024', 'medium', false)
