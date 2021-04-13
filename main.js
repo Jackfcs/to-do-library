@@ -310,11 +310,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(4);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(51);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _icons_filter_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(50);
 // Imports
 
+
+
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
+var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_1___default()(_icons_filter_png__WEBPACK_IMPORTED_MODULE_2__);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "#header {\n    position: fixed;\n    overflow: hidden;\n    top: 0;\n    left: 0;\n    width: 100%;\n    background-color:  rgb(128, 183, 255);\n    color: rgb(0, 0, 0);\n    height: 50px;\n    display: flex;\n    align-items: center;\n}\n\nbody {\n    background: rgb(255, 0, 0);\n    color: rgb(26, 26, 26);\n    margin: 0;\n    padding: 0;\n    overflow: hidden;\n}\n\n#app-container {\n    display: grid;\n    grid-template-columns: 300px auto;\n    width: 100vw;\n    height: 100vh;\n    max-width: 100%;\n    margin-top: 50px;\n}\n\n#project-nav {\n    background-color: rgb(236, 236, 236);\n    \n}\n\n#project-container {\n    background-color: rgb(236, 236, 236);\n    grid-column: 1 / 1;\n    height: 100vh;\n    padding: 5px;\n    display: flex;\n    flex-direction: column;\n    overflow: auto;\n}\n\n#project-parent {\n    overflow: auto;\n    padding-bottom: 200px;\n}\n\n#todo-container {\n    display: flex;\n    flex-direction: column;\n    grid-column: 2 / 2;\n    background-color: rgb(255, 255, 255);\n    border: solid rgb(187, 187, 187);\n    padding: 10px;\n    height: 100vh;\n}\n\n#todo-interactions {\n    display: flex;\n    flex-direction: row;\n    justify-content: space-between;\n}\n\n#todo-nav{\n    display: grid;\n    grid-template-columns: auto 100px 150px 30px;\n    grid-template-areas: \"name priority date icons\";\n}\n\n#todo-header-priority {\n    grid-area: priority;\n    justify-self: end;\n}\n\n#todo-title-duedate {\n    grid-area: date;\n    justify-self: end;\n}\n\n\n\n#completed-todo {\n    background-color: grey;\n}\n\n\n\n.project-instance {\n    display: grid;\n    grid-template-columns: 200px 80px;\n    grid-template-rows: 40px 20px;\n    grid-template-areas: \n        \"name info\"\n        \"date delete\";\n\n    background-color: rgb(212, 212, 212);\n    border: solid rgb(187, 187, 187);\n    margin-bottom: 5px;\n    border-radius: 5px;\n    padding: 5px;\n    \n}\n\n#project-name {\n    grid-area: name;\n}\n\n#project-info-button {\n    grid-area: info;\n    justify-self: end;\n}\n\n#project-date {\n    grid-area: date;\n    font-size: 12px;\n    position: relative;\n    top: 5px;\n}\n\n#project-date-input {\n    grid-area: date;\n    position: relative;\n    left: 0px;\n    width: 100px;\n    height: 10px;\n    font-size: 8px;\n}\n\n#edit-date-button {\n    position: relative;\n    left: 110px;\n    bottom: 15px;\n}\n\n.projectdelete {\n    grid-area: delete;\n    justify-self: end;\n    align-self: end;\n    width: 20px;\n}\n\n.project-instance:hover {\n    cursor: pointer;\n    background-color:  rgb(163, 163, 163);\n}\n\n.todo-instance {\n    border-bottom: 1px solid rgb(182, 182, 182);\n    width: 100%;\n    display: grid;\n    grid-template-columns: 40px auto 100px 150px 30px;\n    grid-template-areas: \"check name priority date calendar\"\n}\n\n#checkbox {\n    grid-area: check;\n}\n\n#todo-name {\n    grid-area: name;\n}\n\n#priority-select {\n    grid-area: priority;\n    justify-self: end;\n}\n\n#todo-duedate {\n    grid-area: date;\n    justify-self: end;\n\n}\n\n#due-date-text {\n    grid-area: date;\n    justify-self: center;\n    align-self: center;\n    position: relative;\n    top: 2px;\n}\n\n#todo-edit-date-button {\n    grid-area: calendar;\n    justify-self: center;\n    align-self: center;\n}\n\n#todo-edit-date-input {\n    grid-area: date;\n    position: fixed;\n    right: 30px;\n    font-size: 5px;\n    \n}\n\nbutton {\n    color: red;\n    width: 150px;\n    \n}\n\n#add-project-button {\n    grid-column: 1 / 1;\n}\n\n#add-todo-button {\n    grid-column: 2 / 2;\n}\n\n\n\n.modal {\n    display: flex;\n    flex-direction: column;\n    justify-content: space-around;\n    align-items: center;\n    color: white;\n    background-color: rgb(0, 41, 41);\n    position: fixed;\n    top: 50%;\n    left: 50%;\n    transform: translate(-50%, -50%);\n    \n}\n\n.modal-form {\n    display: flex;\n    flex-direction: column;\n    justify-content: space-around;\n    align-items: center;\n    padding: 10px;\n}\n\n.hide {\n    transform: scale(0%);\n    display: none;\n}\n\n#project-info-button {\n    width: 80px;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "body {\n    color: rgb(26, 26, 26);\n    margin: 0;\n    padding: 0;\n    overflow: hidden;\n    font-family: 'Arial';\n    font-size: 20px;\n}\n\n#header {\n    position: fixed;\n    overflow: hidden;\n    top: 0;\n    left: 0;\n    width: 100%;\n    background-color: #406ff1;\n    color: #ffffff;\n    height: 50px;\n    display: flex;\n    align-items: center;\n    padding-left: 10px;\n    padding: 2px;\n    z-index: 3;\n}\n\n#hamburger {\n    opacity: 0%;\n    padding: 1px;\n    margin-right: 5px;\n    transition: 0.3s;\n}\n\n#app-container {\n    display: grid;\n    grid-template-columns: 300px auto;\n    width: 100vw;\n    height: 100vh;\n    max-width: 100%;\n    margin-top: 50px;\n}\n\n#project-nav {\n    \n}\n\n#project-container {\n    grid-column: 1 / 1;\n    height: 100vh;\n    padding: 15px;\n    display: block;\n    display: flex;\n    flex-direction: column;\n    overflow: auto;\n    color: black;\n    background-color: rgb(168, 206, 255);\n    z-index: 2;\n}\n\n#project-interaction {\n    display: flex;\n    justify-content: space-between;\n    padding-bottom: 5px;\n    align-items: end;\n}\n\n.form-format {\n    font-size: 15px;\n    position: relative;\n    text-align: end;\n}\n\n.form-dropdown-format {\n    border: none;\n    padding: 10px;\n    padding-left: 20px;\n    -webkit-appearance: none;\n    -moz-appearance: none;\n    appearance: none;\n    background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\n    background-repeat: no-repeat;\n    background-size: 2em;\n    background-position: left center;\n}\n\n#project-filter{\n    background-color: rgb(168, 206, 255);\n}\n\n#todo-filter{\n    background-color: rgb(238, 242, 255);\n}\n\nlabel.wrap:after{\n    background-color: aqua;\n}\n\n\n.form-dropdown-format:hover {\n    cursor: pointer;\n}\n\n#project-parent {\n    overflow: auto;\n    padding-bottom: 200px;\n}\n\n#today, #next-week, #project-list-title {\n    padding: 5px 5px 5px 5px;\n    border-radius: 10px;\n    margin: 10px 10px 10px 0px;\n    \n}\n\n#today:hover, #next-week:hover {\n    cursor: pointer;\n    background-color:  rgb(211, 230, 255);\n}\n\n\n\n#todo-container {\n    display: flex;\n    flex-direction: column;\n    grid-column: 2 / 2;\n    background-color: rgb(238, 242, 255);\n    padding: 10px;\n    height: 100vh;\n}\n\n#todo-interactions {\n    display: flex;\n    flex-direction: row;\n    justify-content: space-between;\n    align-items: end;\n}\n\n#todo-nav{\n    display: grid;\n    grid-template-columns: auto 100px 150px 30px;\n    grid-template-areas: \"name priority date icons\";\n    \n    font-size: 15px;\n}\n\n#todo-header-priority {\n    grid-area: priority;\n    justify-self: end;\n    align-self: end;\n}\n\n#todo-title-duedate {\n    grid-area: date;\n    justify-self: end;\n    align-self: end;\n    position: relative;\n    right: 9px;\n}\n\n\n\n#completed-todo {\n    background-color: grey;\n    opacity: 50%;\n}\n\n\n\n.project-instance {\n    height: 50px;\n    display: grid;\n    grid-template-columns: 20px 40px 80px 30px;\n    grid-template-rows: 35px 15px;\n    grid-template-areas: \n        \"space bullet name name name\"\n        \"space date date info delete\";\n\n    /* border: solid rgb(187, 187, 187); */\n    \n    padding: 10px 10px 20px 0px;\n   \n    \n}\n\n.project-instance:hover {\n    cursor: pointer;\n    background-color:  rgb(211, 230, 255);\n    border-radius: 5px;\n    \n}\n\n#todo-bullet {\n    grid-area: bullet;\n    background-color: rgb(0, 27, 61);\n    color: white;\n    width: 30px;\n    height: 30px;\n    border-radius: 50%;\n    line-height: 30px;\n    text-align: center;\n    vertical-align: middle;\n}\n\n\n\n#project-name {\n    grid-area: name;\n    line-height: 30px;\n    \n    \n}\n\n#project-info-button {\n    grid-area: info;\n    max-width: 40px;\n    max-height: 20px;\n    align-self: start;\n    height: 10px;\n    border: none;\n    border-radius: 10%;\n    position: relative;\n    top: 2px;\n    left: 40px;\n    background-color: #406ff1;\n    color: white;\n    \n}\n#project-info-button:hover {\n    cursor: pointer;\n}\n\n#project-date {\n    grid-area: date;\n    font-size: 14px;\n    position: relative;\n    top: 5px;\n    width: 110px;\n    border-radius: 5px;\n}\n\n#project-date-input {\n    grid-area: date;\n    position: relative;\n    right: 5px;\n    width: 100px;\n    height: 10px;\n    font-size: 8px;\n    \n}\n\n#edit-date-button {\n    position: relative;\n    left: 130px;\n    top: 41px;\n}\n\n.projectdelete {\n    grid-area: delete;\n    justify-self: end;\n    align-self: end;\n    width: 20px;\n    position: relative;\n    top: 11px;\n    left: 10px;\n    padding: 5px;\n}\n\n#info-div{\n    max-width: 200px;\n    text-align: center;\n    position: relative;\n    left: 25px;\n    bottom: 0px;\n    border: solid rgb(59, 85, 201);\n    border-radius: 0 0 15px 15px;\n    padding: 5px;\n    border-top: none;\n    font-size: 15px;\n}\n.todo-instance {\n    border-bottom: 1px solid rgb(192, 207, 255);\n    width: 100%;\n    display: grid;\n    grid-template-columns: 40px auto 100px 150px 30px;\n    grid-template-areas: \"check name priority date calendar\";\n    padding: 2px 0px;\n    font-size: 18px;\n    line-height: 25px;\n}\n\n#checkbox {\n    grid-area: check;\n}\n\n#checkbox:hover {\n    cursor: pointer;\n}\n\n#todo-name {\n    grid-area: name;\n}\n\n#priority-select {\n    grid-area: priority;\n    justify-self: end;\n    text-align: center;\n    border: none;\n    border-radius: 5px;\n}\n\n\n#priority-select:hover {\n    cursor: pointer;\n}\n\n#modal-priority-select {\n    width: 100px;\n    text-align: center;\n}\n\n#todo-duedate {\n    grid-area: date;\n    justify-self: end;\n    position: relative;\n\n}\n\n#due-date-text {\n    grid-area: date;\n    justify-self: center;\n    align-self: center;\n    position: relative;\n    top: 3px;\n    \n}\n\n#todo-edit-date-button {\n    grid-area: calendar;\n    justify-self: center;\n    align-self: center;\n}\n\n#todo-edit-date-button:hover {\n    cursor: pointer;\n}\n\n#todo-edit-date-input {\n    grid-area: date;\n    position: fixed;\n    right: 30px;\n    font-size: 5px;\n    \n}\n\n\n.add-button {\n    background-color: #123efd;\n  border: none;\n  color: white;\n  padding: 10px;\n  text-align: center;\n  font-size: 16px;\n  opacity: 0.6;\n  display: inline-block;\n  text-decoration: none;\n  cursor: pointer;\n  border-radius: 10px;\n}\n\n.add-button:hover {\n    opacity: 1;\n    transition: 0.3s;\n}\n\n\n\n.project-modal {\n    display: flex;\n    flex-direction: column;\n    justify-content: space-between;\n    align-items: center;\n    color: black;\n    background-color: rgb(168, 206, 255);\n    position: fixed;\n    top: 50%;\n    left: 50%;\n    transform: translate(-50%, -50%);\n    padding: 10px;\n    height: 350px;\n    width: 300px;\n    border-radius: 20px;\n    z-index: 4;\n    \n    \n}\n\n.todo-modal {\n    display: flex;\n    flex-direction: column;\n    justify-content: space-between;\n    align-items: center;\n    color: black;\n    background-color: rgb(168, 206, 255);\n    position: fixed;\n    top: 50%;\n    left: 50%;\n    transform: translate(-50%, -50%);\n    padding: 10px;\n    height: 300px;\n    width: 300px;\n    border-radius: 20px;\n    z-index: 4;\n}\n\n.modal-form {\n    display: flex;\n    flex-direction: column;\n    justify-content: space-between;\n    align-items: center;\n    position: relative;\n    bottom: 30px;\n}\n\ninput[type=text] {\n    width: 200px;\n    \n}\n\nlabel{\n    margin-top: 10px;\n    margin-bottom: 2px;\n}\n\n#project-modal-title {\n    position: relative;\n    bottom: 20px;\n}\n\n#todo-modal-title {\n    position: relative;\n    bottom: 20px;\n}\n\n.modal-confirm {\n    margin-top: 10px;\n    padding: 0 10px;\n   \n}\n\n#confirm-todo {\n    margin-top: 18px;\n}\n\n#project-modal-close {\n    cursor: pointer;\n    border: none;\n    outline: none;\n    background: none;\n    font-weight: bold;\n    font-size: 1.5rem;\n    color: black;\n    padding-left: 10px;\n    position: absolute;\n    left: 280px;\n    bottom: 330px;\n}\n\n#todo-modal-close {\n    cursor: pointer;\n    border: none;\n    outline: none;\n    background: none;\n    font-weight: bold;\n    font-size: 1.5rem;\n    color: black;\n    padding-left: 10px;\n    position: absolute;\n    left: 280px;\n    bottom: 280px;\n}\n\n#project-description {\n    width: 200px;\n    padding-bottom: 30px;\n}\n\n.hide {\n    transform: scale(0%);\n    display: none;\n}\n\n#project-info-button {\n    width: 80px;\n    height: 30px;\n}\n\n#warning-text {\n    position: absolute;\n    z-index: 1;\n    background-color: rgba(0, 0, 0, 0.6);\n    visibility: hidden;\n    width: 130px;\n    text-align: center;\n    padding: 2px;\n    border-radius: 5px;\n    top: 20px;\n    color: white;\n}\n\n#todo-warning {\n    position: absolute;\n    z-index: 1;\n    background-color: rgba(0, 0, 0, 0.6);\n    visibility: hidden;\n    width: 130px;\n    text-align: center;\n    border-radius: 5px;\n    right: 100px;\n    font-size: 15px;\n    color: white;\n}\n\n#project-date:hover #warning-text {\n    visibility: visible;\n} \n\n#todo-duedate:hover #todo-warning {\n    visibility: visible;\n}\n\n#background {\n    position: fixed;\n    opacity: 0;\n    transition: 150ms ease-in-out;\n    top: 0;\n    left: 0;\n    right: 0;\n    bottom: 0;\n    background-color: rgba(0, 0, 0, .5);\n    pointer-events: none;\n    z-index: 2;\n  }\n\n  #background.active {\n    opacity: 1;\n    pointer-events: all;\n  }\n\n\n@media (max-width: 800px) {\n\n    #hamburger {\n        opacity: 100%;\n        padding: 1px;\n        margin-right: 5px;\n        transition: 0.3s;\n    }\n\n    #hamburger:hover {\n        cursor: pointer;\n        background-color: rgb(168, 206, 255);\n        border-radius: 5px;\n    }\n\n    #app-container {\n        display: flex;\n        width: 100vw;\n        height: 100vh;\n        margin-top: 50px;\n    }\n\n    #project-container {\n        display: none;\n        position: absolute;\n        width: 270px;\n        \n    }\n    \n\n    #todo-container {\n        min-width: 400px;\n        width: 100vw;\n    }\n\n    #header {\n        \n    }\n\n    .proj-display {\n    }\n}\n\n@media (min-width: 800px) {\n    #app-container {\n        display: grid;\n        width: 100vw;\n        height: 100vh;\n        max-width: 100%;\n        margin-top: 50px;\n    }\n\n    #project-container {\n        grid-column: 1 / 1;\n        height: 100vh;\n        width: 270px;\n        padding: 15px;\n        display: block;\n        display: flex;\n        flex-direction: column;\n        overflow: auto;\n        color: black;\n        background-color: rgb(168, 206, 255);\n    }\n\n    #todo-container {\n        display: flex;\n        flex-direction: column;\n        grid-column: 2 / 2;\n        background-color: rgb(238, 242, 255);\n        padding: 10px;\n        height: 100vh;\n    }\n    #project-parent {\n        overflow: auto;\n        padding-bottom: 200px;\n    }\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -400,15 +406,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "render": () => (/* binding */ render)
 /* harmony export */ });
 /* harmony import */ var _datacapture_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6);
-/* harmony import */ var _domevents_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(40);
-/* harmony import */ var date_fns__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(8);
-/* harmony import */ var _icons_calendar_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(41);
-/* harmony import */ var _icons_trash_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(42);
-/* harmony import */ var _icons_trash1_svg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(43);
-/* harmony import */ var _constructors_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(7);
-
-
-
+/* harmony import */ var _icons_calendar_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(47);
+/* harmony import */ var _icons_trash1_svg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(48);
+/* harmony import */ var date_fns__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(8);
 
 
 
@@ -440,6 +440,14 @@ const displayProjects = (function () {
             projectInstance.setAttribute('id', 'project' + i);
             projectInstance.classList.add('project-instance');
 
+            //Create Number of to-dos
+            const todoBullet = document.createElement('div');
+            projectInstance.appendChild(todoBullet);
+            todoBullet.setAttribute('id', 'todo-bullet')
+            todoBullet.textContent = _datacapture_js__WEBPACK_IMPORTED_MODULE_0__.projectCapture.myProjects[i].todos.length;
+
+
+
             //Project Name
             projectInstance.appendChild(projectName);
             projectName.textContent = _datacapture_js__WEBPACK_IMPORTED_MODULE_0__.projectCapture.myProjects[i].name + ' ';
@@ -460,11 +468,11 @@ const displayProjects = (function () {
             //projectDate.classList.add('project-name');
             projectDate.setAttribute('id', 'project-date')
             const editDateButton = document.createElement('IMG');
-            editDateButton.src = _icons_calendar_png__WEBPACK_IMPORTED_MODULE_2__;
+            editDateButton.src = _icons_calendar_png__WEBPACK_IMPORTED_MODULE_1__;
             editDateButton.width = '15'
             editDateButton.setAttribute('id', 'edit-date-button');
             editDateButton.classList.add('hide')
-           
+
 
             const editDate = document.createElement('INPUT');
             editDate.setAttribute('id', 'project-date-input')
@@ -482,50 +490,88 @@ const displayProjects = (function () {
                 projectDate.textContent = _datacapture_js__WEBPACK_IMPORTED_MODULE_0__.projectCapture.myProjects[i].dueDate;
             } else {
                 projectDate.textContent = 'Due: ' + _datacapture_js__WEBPACK_IMPORTED_MODULE_0__.projectCapture.myProjects[i].dueDate;
-                
+
             }
 
-            
+
 
             editDate.addEventListener('input', () => {
-                _datacapture_js__WEBPACK_IMPORTED_MODULE_0__.projectCapture.myProjects[i].dueDate = (0,date_fns__WEBPACK_IMPORTED_MODULE_6__.default)(new Date(editDate.value), 'dd/MM/yyyy');
+                _datacapture_js__WEBPACK_IMPORTED_MODULE_0__.projectCapture.myProjects[i].dueDate = (0,date_fns__WEBPACK_IMPORTED_MODULE_3__.default)(new Date(editDate.value), 'dd/MM/yyyy');
                 projectDate.textContent = 'Due: ' + _datacapture_js__WEBPACK_IMPORTED_MODULE_0__.projectCapture.myProjects[i].dueDate;
                 editDate.classList.add('hide');
                 _datacapture_js__WEBPACK_IMPORTED_MODULE_0__.projectCapture.saveProjects();
                 render();
-                
+
             })
+            //Warning colour and text for late project
+            const warningText = document.createElement('span');
+
+            warningText.setAttribute('id', 'warning-text');
+            if (_datacapture_js__WEBPACK_IMPORTED_MODULE_0__.projectCapture.myProjects[i].dueDate != '' && _datacapture_js__WEBPACK_IMPORTED_MODULE_0__.projectCapture.myProjects[i].dueDate < (0,date_fns__WEBPACK_IMPORTED_MODULE_3__.default)(new Date(), 'dd/MM/yyyy')) {
             
+                projectDate.style.color = 'red';
+                projectDate.appendChild(warningText);
+                warningText.textContent = 'Project is overdue!'
+            }
+            if (_datacapture_js__WEBPACK_IMPORTED_MODULE_0__.projectCapture.myProjects[i].dueDate == (0,date_fns__WEBPACK_IMPORTED_MODULE_3__.default)(new Date(), 'dd/MM/yyyy')) {
+                projectDate.style.color = 'rgb(216, 68, 0)';
+                projectDate.appendChild(warningText);
+                warningText.textContent = 'Project is due today!'
+            }
+
+            
+
+
+
             projectInstance.addEventListener('mouseover', () => {
-                
+
                 editDateButton.classList.remove('hide')
             })
             projectInstance.addEventListener('mouseleave', () => {
-                
+
                 editDateButton.classList.add('hide')
             })
-          
+
 
 
             //More info button
             const info = document.createElement('button');
             projectInstance.appendChild(info);
-            info.innerHTML = 'Details';
+            info.innerHTML = 'Info';
             info.setAttribute('id', 'project-info-button')
 
             const infoDiv = document.createElement('div');
+            infoDiv.setAttribute('id', 'info-div')
             infoDiv.textContent = _datacapture_js__WEBPACK_IMPORTED_MODULE_0__.projectCapture.myProjects[i].moreInfo;
             projectParent.appendChild(infoDiv);
             infoDiv.classList.add('hide');
 
+
+
             info.addEventListener('click', () => {
+
                 infoDiv.classList.toggle('hide')
-                if (info.innerHTML === 'Details') {
+                if (info.innerHTML === 'Info') {
                     info.innerHTML = 'Hide'
                 } else {
-                    info.innerHTML = 'Details'
+                    info.innerHTML = 'Info'
                 }
 
+                if (infoDiv.textContent == '') {
+                    infoDiv.textContent = 'Edit Description'
+                }
+
+            })
+
+            //Edit Description
+
+
+            infoDiv.addEventListener('click', () => {
+                infoDiv.setAttribute('contentEditable', 'true')
+            })
+            infoDiv.addEventListener('input', () => {
+                _datacapture_js__WEBPACK_IMPORTED_MODULE_0__.projectCapture.myProjects[i].moreInfo = infoDiv.textContent;
+                _datacapture_js__WEBPACK_IMPORTED_MODULE_0__.projectCapture.saveProjects();
             })
 
             //Delete icon
@@ -533,29 +579,42 @@ const displayProjects = (function () {
             deleteBtn.setAttribute('id', 'delete' + i);
             deleteBtn.setAttribute('class', 'projectdelete');
             deleteBtn.classList.add('hide');
-            deleteBtn.src = _icons_trash1_svg__WEBPACK_IMPORTED_MODULE_4__;
+            deleteBtn.src = _icons_trash1_svg__WEBPACK_IMPORTED_MODULE_2__;
             deleteBtn.width = '30'
 
             deleteBtn.addEventListener('click', () => {
+                if (_datacapture_js__WEBPACK_IMPORTED_MODULE_0__.selectCurrentProject.currentProject.todos.length > 0) {
+                    if (confirm(`There are incomplete tasks for ${_datacapture_js__WEBPACK_IMPORTED_MODULE_0__.projectCapture.myProjects[i].name}.\nAre you sure you want to delete this project?`) == true) {
+                        _datacapture_js__WEBPACK_IMPORTED_MODULE_0__.projectCapture.myProjects.splice(i, 1);
+                        _datacapture_js__WEBPACK_IMPORTED_MODULE_0__.selectCurrentProject.currentProject = _datacapture_js__WEBPACK_IMPORTED_MODULE_0__.projectCapture.myProjects[0];
+                        _datacapture_js__WEBPACK_IMPORTED_MODULE_0__.projectCapture.saveProjects();
+                        render();
+                    } else {
+                        _datacapture_js__WEBPACK_IMPORTED_MODULE_0__.selectCurrentProject.currentProject = _datacapture_js__WEBPACK_IMPORTED_MODULE_0__.projectCapture.myProjects[0];
+                        _datacapture_js__WEBPACK_IMPORTED_MODULE_0__.projectCapture.saveProjects();
+                        render();
+                    }
+                } else {
+                    _datacapture_js__WEBPACK_IMPORTED_MODULE_0__.projectCapture.myProjects.splice(i, 1);
+                    _datacapture_js__WEBPACK_IMPORTED_MODULE_0__.selectCurrentProject.currentProject = _datacapture_js__WEBPACK_IMPORTED_MODULE_0__.projectCapture.myProjects[0];
+                    _datacapture_js__WEBPACK_IMPORTED_MODULE_0__.projectCapture.saveProjects();
+                    render();
+                }
 
-                _datacapture_js__WEBPACK_IMPORTED_MODULE_0__.projectCapture.myProjects.splice(i, 1);
-                _datacapture_js__WEBPACK_IMPORTED_MODULE_0__.selectCurrentProject.currentProject = _datacapture_js__WEBPACK_IMPORTED_MODULE_0__.projectCapture.myProjects[0];
-                _datacapture_js__WEBPACK_IMPORTED_MODULE_0__.projectCapture.saveProjects();
-                render();
 
 
             })
 
             projectInstance.addEventListener('mouseover', () => {
-                
+
                 deleteBtn.classList.remove('hide')
             })
             projectInstance.addEventListener('mouseleave', () => {
-                
+
                 deleteBtn.classList.add('hide')
             })
 
-            
+
 
             //Select current project
             projectInstance.addEventListener('click', () => {
@@ -591,7 +650,7 @@ const displayProjects = (function () {
         const todoHeader = document.getElementById('todo-header');
 
         //Todo title
-        todoHeader.textContent = `${_datacapture_js__WEBPACK_IMPORTED_MODULE_0__.selectCurrentProject.currentProject.name} To-dos`
+        todoHeader.textContent = `${_datacapture_js__WEBPACK_IMPORTED_MODULE_0__.selectCurrentProject.currentProject.name}`
 
 
 
@@ -662,24 +721,24 @@ const displayProjects = (function () {
             // display priority colour
             select.value = todos[i].priority;
             if (select.value == 'low') {
-                select.style.background = 'green'
+                select.style.background = '#5cc542'
             }
             if (select.value == 'medium') {
-                select.style.background = 'orange'
+                select.style.background = '#fca037'
             }
             if (select.value == 'high') {
-                select.style.background = 'red'
+                select.style.background = '#eb4646'
             }
             select.addEventListener('change', (event) => {
                 todos[i].priority = select.value;
                 if (select.value == 'low') {
-                    event.target.style.background = 'green'
+                    event.target.style.background = '#5cc542'
                 }
                 if (select.value == 'medium') {
-                    event.target.style.background = 'orange'
+                    event.target.style.background = '#fca037'
                 }
                 if (select.value == 'high') {
-                    event.target.style.background = 'red'
+                    event.target.style.background = '#eb4646'
                 }
                 _datacapture_js__WEBPACK_IMPORTED_MODULE_0__.projectCapture.saveProjects();
             });
@@ -693,15 +752,39 @@ const displayProjects = (function () {
 
             const dueDateText = document.createElement('div');
             dueDateText.setAttribute('id', 'due-date-text');
+            dueDateText.setAttribute('class', 'due-date-text' + [i]);
             dueDateText.textContent = newDate;
-            if (newDate <= (0,date_fns__WEBPACK_IMPORTED_MODULE_6__.default)(new Date(), 'dd/MM/yyyy')) {
-                dueDate.style.background = 'red';
+
+            //Due Date Warning Text
+            const todoWarningText = document.createElement('span');
+            todoWarningText.setAttribute('id', 'todo-warning')
+
+
+            if (newDate === (0,date_fns__WEBPACK_IMPORTED_MODULE_3__.default)(new Date(), 'dd/MM/yyyy')) {
+                dueDateText.style.color = 'Orange';
+                dueDate.appendChild(todoWarningText);
+                todoWarningText.textContent = 'Todo is due today!'
             }
+
+            
+            
+
+            let d1 = (0,_datacapture_js__WEBPACK_IMPORTED_MODULE_0__.dateOrder)(newDate)
+            let d2 = (0,_datacapture_js__WEBPACK_IMPORTED_MODULE_0__.dateOrder)((0,date_fns__WEBPACK_IMPORTED_MODULE_3__.default)(new Date(), 'dd/MM/yyyy'))
+            
+
+            
+            if (d1 < d2) {
+                dueDateText.style.color = 'Red';
+                dueDate.appendChild(todoWarningText);
+                todoWarningText.textContent = 'Todo is overdue!';
+            }
+
 
             dueDate.appendChild(dueDateText);
 
             const editDateButton = document.createElement('IMG');
-            editDateButton.src = _icons_calendar_png__WEBPACK_IMPORTED_MODULE_2__;
+            editDateButton.src = _icons_calendar_png__WEBPACK_IMPORTED_MODULE_1__;
             editDateButton.width = '15'
             editDateButton.classList.add('hide');
             editDateButton.setAttribute('id', 'todo-edit-date-button');
@@ -719,9 +802,9 @@ const displayProjects = (function () {
 
             })
 
-            
+
             editDate.addEventListener('input', () => {
-                todos[i].dueDate = (0,date_fns__WEBPACK_IMPORTED_MODULE_6__.default)(new Date(editDate.value), 'dd/MM/yyyy');
+                todos[i].dueDate = (0,date_fns__WEBPACK_IMPORTED_MODULE_3__.default)(new Date(editDate.value), 'dd/MM/yyyy');
                 editDate.classList.add('hide');
                 render();
                 _datacapture_js__WEBPACK_IMPORTED_MODULE_0__.projectCapture.saveProjects();
@@ -730,11 +813,11 @@ const displayProjects = (function () {
 
 
             newTodo.addEventListener('mouseover', () => {
-                
+
                 editDateButton.classList.remove('hide')
             })
             newTodo.addEventListener('mouseleave', () => {
-                
+
                 editDateButton.classList.add('hide')
             })
 
@@ -749,12 +832,12 @@ const displayProjects = (function () {
 
             for (let i = 0; i < compTodos.length; i++) {
 
-                let todoDate = compTodos[i].dueDate;
+                let todoDate = todos[i].dueDate;
                 let newDate;
                 if (todoDate === '') {
                     newDate = '';
                 } else {
-                    newDate = (0,date_fns__WEBPACK_IMPORTED_MODULE_6__.default)(new Date(todoDate), 'P')
+                    newDate = (0,date_fns__WEBPACK_IMPORTED_MODULE_3__.default)(new Date(todoDate), 'P')
                 }
 
 
@@ -822,7 +905,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "projectCapture": () => (/* binding */ projectCapture),
 /* harmony export */   "selectCurrentProject": () => (/* binding */ selectCurrentProject),
-/* harmony export */   "todoCapture": () => (/* binding */ todoCapture)
+/* harmony export */   "todoCapture": () => (/* binding */ todoCapture),
+/* harmony export */   "dateOrder": () => (/* binding */ dateOrder)
 /* harmony export */ });
 /* harmony import */ var _constructors_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7);
 /* harmony import */ var _domdisplay_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(5);
@@ -836,14 +920,20 @@ const projectCapture = (function () {
 
     const confirmProjectButton = document.getElementById('confirm-project');
 
-    let houseWork = (0,_constructors_js__WEBPACK_IMPORTED_MODULE_0__.ProjectInstance)('House Work', '06/12/22', 'Need to clean the whole house');
+    let houseWork = (0,_constructors_js__WEBPACK_IMPORTED_MODULE_0__.ProjectInstance)('House Work', '28/04/2022', 'Need to clean the whole house');
+    let example = (0,_constructors_js__WEBPACK_IMPORTED_MODULE_0__.ProjectInstance)('Example Project Title', (0,date_fns__WEBPACK_IMPORTED_MODULE_2__.default)(new Date(), 'dd/MM/yyyy'), 'Description goes here, click to edit.')
+    
+    
 
-    let myProjects = [houseWork];
+    let myProjects = [example, houseWork];
+
+   
+
 
     //Create new project and add to array
     confirmProjectButton.addEventListener('click', () => {
         let projectName;
-        if (document.getElementById('project-name-input').value === ''){
+        if (document.getElementById('project-name-input').value === '') {
             return
         } else {
             projectName = document.getElementById('project-name-input').value;
@@ -856,16 +946,16 @@ const projectCapture = (function () {
             projectDueDate = (0,date_fns__WEBPACK_IMPORTED_MODULE_2__.default)(new Date(document.getElementById('project-due-date').value), 'dd/MM/yyyy');
         }
         const projectDescription = document.getElementById('project-description').value;
-        
+
         let newProject = (0,_constructors_js__WEBPACK_IMPORTED_MODULE_0__.ProjectInstance)(projectName, projectDueDate, projectDescription);
-        
+
         myProjects.push(newProject);
         selectCurrentProject.currentProject = newProject;
         saveProjects();
         (0,_domdisplay_js__WEBPACK_IMPORTED_MODULE_1__.render)();
 
     });
-''
+
 
 
     //Saves project array
@@ -904,8 +994,8 @@ const selectCurrentProject = (function () {
 
 //Capture Priority Select value 
 const todoPriorityValue = (function () {
-    const todoPriority = document.getElementById('priority-select')
-  
+    const todoPriority = document.getElementById('modal-priority-select')
+
     return todoPriority
 })();
 
@@ -924,6 +1014,7 @@ function todoCapture() {
         todoDueDate = ''
     } else {
         todoDueDate = (0,date_fns__WEBPACK_IMPORTED_MODULE_2__.default)(new Date(document.getElementById('todo-due-date').value), 'dd/MM/yyyy');
+        
     }
     const todoPriority = todoPriorityValue.value;
     const todoCheckbox = false;
@@ -932,12 +1023,30 @@ function todoCapture() {
     selectCurrentProject.currentProject.todos.push(newTodo);
     projectCapture.saveProjects();
 
+
+
     return {
         todoName
     }
 
 };
 
+function dateOrder(date){
+    let dateString = date;
+    let dateParts = dateString.split("/");
+    let dateObject = new Date(+dateParts[2], dateParts[1] - 1, +dateParts[0]);
+    return dateObject
+}
+
+ //Example todos
+ let vacuum = (0,_constructors_js__WEBPACK_IMPORTED_MODULE_0__.TodoInstance)('Hoover', (0,date_fns__WEBPACK_IMPORTED_MODULE_2__.default)(new Date(), 'dd/MM/yyyy'), 'low', false);
+ let dust = (0,_constructors_js__WEBPACK_IMPORTED_MODULE_0__.TodoInstance)('Dust', '13/04/2021', 'high', false);
+ projectCapture.myProjects[1].todos.push(vacuum, dust);
+
+ let example = (0,_constructors_js__WEBPACK_IMPORTED_MODULE_0__.TodoInstance)('Example Task', (0,date_fns__WEBPACK_IMPORTED_MODULE_2__.default)(new Date(), 'dd/MM/yyyy'), 'low', false)
+ let example1 = (0,_constructors_js__WEBPACK_IMPORTED_MODULE_0__.TodoInstance)('Click me to edit task', '11/04/2024', 'medium', false)
+ let example2 = (0,_constructors_js__WEBPACK_IMPORTED_MODULE_0__.TodoInstance)('This is an overdue task', '11/02/2021', 'high', false)
+ projectCapture.myProjects[0].todos.push(example, example1, example2);
 
 /***/ }),
 /* 7 */
@@ -3746,7 +3855,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _domdisplay_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(5);
 /* harmony import */ var _datacapture_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(6);
 /* harmony import */ var date_fns__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(8);
-/* harmony import */ var date_fns_add__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(44);
+/* harmony import */ var date_fns_add__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(41);
 /* harmony import */ var date_fns_add__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(date_fns_add__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _constructors_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(7);
 
@@ -3769,13 +3878,36 @@ const modalEvents = (function () {
     const confirmProjectButton = document.getElementById('confirm-project');
     const editTodoButton = document.getElementById('confirm-edit-todo');
 
+    const background = document.getElementById('background')
+    const closeProjBtn = document.getElementById('project-modal-close');
+    const closeTodoBtn = document.getElementById('todo-modal-close');
+
     function hideModal(element) {
         element.classList.add('hide');
     };
 
     function displayModal(element) {
+        background
         element.classList.remove('hide');
+        background.classList.add('active');
     };
+
+    background.addEventListener('click', () => {
+        hideModal(todoModal);
+        hideModal(projectModal);
+        background.classList.remove('active');
+    })
+
+    closeProjBtn.addEventListener('click', () => {
+        hideModal(projectModal);
+        background.classList.remove('active');
+    })
+
+    closeTodoBtn.addEventListener('click', () => {
+        hideModal(todoModal);
+        background.classList.remove('active');
+    })
+
 
     //Display new project input
     newProjectButton.addEventListener('click', () => {
@@ -3784,7 +3916,7 @@ const modalEvents = (function () {
         projectForm.reset();
 
     });
-    
+
     //confirm new project
     confirmProjectButton.addEventListener('click', () => {
         const projectName = document.getElementById('project-name-input').value;
@@ -3794,6 +3926,7 @@ const modalEvents = (function () {
         } else {
             hideModal(projectModal);
             _domdisplay_js__WEBPACK_IMPORTED_MODULE_0__.displayProjects.addToDom();
+            background.classList.remove('active');
         }
     });
 
@@ -3819,6 +3952,7 @@ const modalEvents = (function () {
             hideModal(todoModal);
             (0,_datacapture_js__WEBPACK_IMPORTED_MODULE_1__.todoCapture)();
             _domdisplay_js__WEBPACK_IMPORTED_MODULE_0__.displayProjects.displayTodos();
+            background.classList.remove('active');
 
         }
     });
@@ -3829,6 +3963,8 @@ const modalEvents = (function () {
 
 
 const filterTasks = (function () {
+
+    //Filter Todos
     const todoFilter = document.getElementById('todo-filter');
 
     todoFilter.addEventListener('change', () => {
@@ -3847,6 +3983,7 @@ const filterTasks = (function () {
             })
         }
 
+
         //Filter by Date
         if (todoFilter.value == 'date') {
 
@@ -3854,7 +3991,7 @@ const filterTasks = (function () {
                 if (a.dueDate == '') {
                     return 1
                 } else {
-                    return parseFloat(a.dueDate) - parseFloat(b.dueDate);
+                    return (0,_datacapture_js__WEBPACK_IMPORTED_MODULE_1__.dateOrder)(a.dueDate) - (0,_datacapture_js__WEBPACK_IMPORTED_MODULE_1__.dateOrder)(b.dueDate);
                 }
             })
 
@@ -3886,14 +4023,50 @@ const filterTasks = (function () {
         _datacapture_js__WEBPACK_IMPORTED_MODULE_1__.projectCapture.saveProjects();
     });
 
+    //Filter Projects
+    const projectFilter = document.getElementById('project-filter');
+
+    projectFilter.addEventListener('change', () => {
+        //Filter by Name
+        if (projectFilter.value == 'name') {
+            _datacapture_js__WEBPACK_IMPORTED_MODULE_1__.projectCapture.myProjects.sort(function (a, b) {
+                let nameA = a.name.toUpperCase();
+                let nameB = b.name.toUpperCase();
+                if (nameA < nameB) {
+                    return -1;
+                }
+                if (nameA > nameB) {
+                    return 1;
+                }
+                return 0;
+            })
+        }
+
+        //Filter by Date
+        if (projectFilter.value == 'date') {
+
+            _datacapture_js__WEBPACK_IMPORTED_MODULE_1__.projectCapture.myProjects.sort(function (a, b) {
+                if (a.dueDate == '') {
+                    return 1
+                } else {
+                    return parseFloat(a.dueDate) - parseFloat(b.dueDate);
+                }
+            })
+
+        }
+
+        (0,_domdisplay_js__WEBPACK_IMPORTED_MODULE_0__.render)();
+        _datacapture_js__WEBPACK_IMPORTED_MODULE_1__.projectCapture.saveProjects();
+    })
+
 
 
 })();
 
 const filterTodos = (function () {
     const todayBtn = document.getElementById('today');
-    const fiveDayBtn = document.getElementById('next-week');
-    
+    const weekBtn = document.getElementById('next-week');
+
 
     todayBtn.addEventListener('click', () => {
         let todayFilter = []
@@ -3913,16 +4086,16 @@ const filterTodos = (function () {
 
 
 
-    fiveDayBtn.addEventListener('click', () => {
+    weekBtn.addEventListener('click', () => {
         let daysFilter = []
         let futureTime = date_fns_add__WEBPACK_IMPORTED_MODULE_4___default()(new Date(), {
-            weeks:1
+            weeks: 1
         })
 
         for (let parent of _datacapture_js__WEBPACK_IMPORTED_MODULE_1__.projectCapture.myProjects) {
             for (let todos of parent.todos) {
                 if (todos.dueDate != '' && todos.dueDate < (0,date_fns__WEBPACK_IMPORTED_MODULE_3__.default)(new Date(futureTime), 'dd/MM/yyyy'))
-                
+
                     daysFilter.push(todos)
             }
         }
@@ -3938,28 +4111,146 @@ const filterTodos = (function () {
 
 })();
 
+const hamburger = (function () {
+    const hamburger = document.getElementById('hamburger');
+    const projContainer = document.getElementById('project-container');
+    const mediaWidthMax = window.matchMedia('(max-width: 800px)');
+    const mediaWidthMin = window.matchMedia('(min-width: 800px)');
+
+
+    hamburger.addEventListener('click', () => {
+        if (mediaWidthMax.matches) {
+            if (projContainer.style.display === 'none') {
+                projContainer.style.display = 'block';
+            } else if (projContainer.style.display = 'block') {
+
+                projContainer.style.display = 'none'
+            }
+        }
+
+    })
+
+    function increaseSize() {
+        if (mediaWidthMin.matches) {
+            projContainer.style.display = 'block';
+            projContainer.style.width = '270px';
+        }
+        if (mediaWidthMax.matches) {
+            projContainer.style.display = 'none';
+        }
+
+    }
+    window.onresize = increaseSize;
+
+})();
+
+// const dateColor = (function () {
+//     let todos = selectCurrentProject.currentProject.todos
+//     let dueDateText = document.querySelectorAll('.due-date-text');
+
+//     const firstText = document.getElementsByClassName('due-date-text0')
+//     firstText.style.color = 'red'
+
+//     console.log(dueDateText)
+//     for (let i = 0; i < dueDateText.length; i++) {
+
+//         let todoDate = todos[i].dueDate;
+//         let newDate;
+//         if (todoDate === '') {
+//             newDate = '';
+//         } else {
+//             newDate = todoDate;
+//         }
+//         //Due Date Warning Text
+//         const todoWarningText = document.createElement('span');
+//         todoWarningText.setAttribute('id', 'todo-warning')
+
+//         if (newDate === format(new Date(), 'dd/MM/yyyy')) {
+//             dueDateText.style.color = 'Orange';
+//             dueDate.appendChild(todoWarningText);
+//             todoWarningText.textContent = 'Todo is due today!'
+//         }
+
+//         function process(date) {
+//             var parts = date.split("/");
+//             return new Date(parts[2], parts[1] - 1, parts[0]);
+//         }
+
+
+
+//         // let d1 = Date.parse(newDate)
+//         // let d2 = Date.parse(format(new Date(), 'dd/MM/yyyy'))
+
+//         let d1 = process(newDate)
+//         let d2 = process(format(new Date(), 'dd/MM/yyyy'))
+
+//         //if (newDate < ) {
+//         if (d1 < d2) {
+//             dueDateText.style.color = 'Red';
+//             dueDate.appendChild(todoWarningText);
+//             todoWarningText.textContent = 'Todo is overdue!';
+//         }
+
+//         console.log('d1 ' + [i] + ': ' + d1)
+//         console.log('d2: ' + [i] + ': ' + d2)
+
+//         console.log(newDate)
+//     }
+// })();
+
+
+
+// //     for (let i = 0; i < todos.length; i++) {
+
+
+// //         let todoDate = todos[i].dueDate;
+// //         let newDate;
+// //         if (todoDate === '') {
+// //             newDate = '';
+// //         } else {
+// //             newDate = todoDate;
+// //         }
+// //         //Due Date Warning Text
+// //         const todoWarningText = document.createElement('span');
+// //         todoWarningText.setAttribute('id', 'todo-warning')
+
+
+// //         if (newDate === format(new Date(), 'dd/MM/yyyy')) {
+// //             dueDateText.style.color = 'Orange';
+// //             dueDate.appendChild(todoWarningText);
+// //             todoWarningText.textContent = 'Todo is due today!'
+// //         }
+
+// //         function process(date){
+// //             var parts = date.split("/");
+// //             return new Date(parts[2], parts[1] - 1, parts[0]);
+// //          }
+
+
+
+// //         // let d1 = Date.parse(newDate)
+// //         // let d2 = Date.parse(format(new Date(), 'dd/MM/yyyy'))
+
+// //         let d1 = process(newDate)
+// //         let d2 = process(format(new Date(), 'dd/MM/yyyy'))
+
+// //         //if (newDate < ) {
+// //         if (d1 < d2) {
+// //             dueDateText.style.color = 'Red';
+// //             dueDate.appendChild(todoWarningText);
+// //             todoWarningText.textContent = 'Todo is overdue!';
+// //         }
+
+// //         console.log('d1 ' + [i] + ': ' + d1)
+// //         console.log('d2: ' + [i] + ': ' + d2)
+
+// //         console.log(newDate)
+// //     }
+// // })();
 
 
 /***/ }),
 /* 41 */
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-module.exports = __webpack_require__.p + "b762feea3fdf0fe30076.png";
-
-/***/ }),
-/* 42 */
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-module.exports = __webpack_require__.p + "74fe181d458e882d235d.png";
-
-/***/ }),
-/* 43 */
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-module.exports = __webpack_require__.p + "308643b513ad18d39bff.svg";
-
-/***/ }),
-/* 44 */
 /***/ ((module, exports, __webpack_require__) => {
 
 
@@ -3969,15 +4260,15 @@ Object.defineProperty(exports, "__esModule", ({
 }));
 exports.default = add;
 
-var _index = _interopRequireDefault(__webpack_require__(45));
+var _index = _interopRequireDefault(__webpack_require__(42));
 
-var _index2 = _interopRequireDefault(__webpack_require__(49));
+var _index2 = _interopRequireDefault(__webpack_require__(46));
 
-var _index3 = _interopRequireDefault(__webpack_require__(47));
+var _index3 = _interopRequireDefault(__webpack_require__(44));
 
-var _index4 = _interopRequireDefault(__webpack_require__(48));
+var _index4 = _interopRequireDefault(__webpack_require__(45));
 
-var _index5 = _interopRequireDefault(__webpack_require__(46));
+var _index5 = _interopRequireDefault(__webpack_require__(43));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -4046,7 +4337,7 @@ function add(dirtyDate, duration) {
 module.exports = exports.default;
 
 /***/ }),
-/* 45 */
+/* 42 */
 /***/ ((module, exports, __webpack_require__) => {
 
 
@@ -4056,11 +4347,11 @@ Object.defineProperty(exports, "__esModule", ({
 }));
 exports.default = addDays;
 
-var _index = _interopRequireDefault(__webpack_require__(46));
+var _index = _interopRequireDefault(__webpack_require__(43));
 
-var _index2 = _interopRequireDefault(__webpack_require__(47));
+var _index2 = _interopRequireDefault(__webpack_require__(44));
 
-var _index3 = _interopRequireDefault(__webpack_require__(48));
+var _index3 = _interopRequireDefault(__webpack_require__(45));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -4107,7 +4398,7 @@ function addDays(dirtyDate, dirtyAmount) {
 module.exports = exports.default;
 
 /***/ }),
-/* 46 */
+/* 43 */
 /***/ ((module, exports) => {
 
 
@@ -4134,7 +4425,7 @@ function toInteger(dirtyNumber) {
 module.exports = exports.default;
 
 /***/ }),
-/* 47 */
+/* 44 */
 /***/ ((module, exports, __webpack_require__) => {
 
 
@@ -4144,7 +4435,7 @@ Object.defineProperty(exports, "__esModule", ({
 }));
 exports.default = toDate;
 
-var _index = _interopRequireDefault(__webpack_require__(48));
+var _index = _interopRequireDefault(__webpack_require__(45));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -4202,7 +4493,7 @@ function toDate(argument) {
 module.exports = exports.default;
 
 /***/ }),
-/* 48 */
+/* 45 */
 /***/ ((module, exports) => {
 
 
@@ -4221,7 +4512,7 @@ function requiredArgs(required, args) {
 module.exports = exports.default;
 
 /***/ }),
-/* 49 */
+/* 46 */
 /***/ ((module, exports, __webpack_require__) => {
 
 
@@ -4231,11 +4522,11 @@ Object.defineProperty(exports, "__esModule", ({
 }));
 exports.default = addMonths;
 
-var _index = _interopRequireDefault(__webpack_require__(46));
+var _index = _interopRequireDefault(__webpack_require__(43));
 
-var _index2 = _interopRequireDefault(__webpack_require__(47));
+var _index2 = _interopRequireDefault(__webpack_require__(44));
 
-var _index3 = _interopRequireDefault(__webpack_require__(48));
+var _index3 = _interopRequireDefault(__webpack_require__(45));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -4306,6 +4597,64 @@ function addMonths(dirtyDate, dirtyAmount) {
 }
 
 module.exports = exports.default;
+
+/***/ }),
+/* 47 */
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "b762feea3fdf0fe30076.png";
+
+/***/ }),
+/* 48 */
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "308643b513ad18d39bff.svg";
+
+/***/ }),
+/* 49 */,
+/* 50 */
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "08fcb31af7181141e413.png";
+
+/***/ }),
+/* 51 */
+/***/ ((module) => {
+
+
+
+module.exports = function (url, options) {
+  if (!options) {
+    // eslint-disable-next-line no-param-reassign
+    options = {};
+  } // eslint-disable-next-line no-underscore-dangle, no-param-reassign
+
+
+  url = url && url.__esModule ? url.default : url;
+
+  if (typeof url !== "string") {
+    return url;
+  } // If url is already wrapped in quotes, remove them
+
+
+  if (/^['"].*['"]$/.test(url)) {
+    // eslint-disable-next-line no-param-reassign
+    url = url.slice(1, -1);
+  }
+
+  if (options.hash) {
+    // eslint-disable-next-line no-param-reassign
+    url += options.hash;
+  } // Should url be wrapped?
+  // See https://drafts.csswg.org/css-values-3/#urls
+
+
+  if (/["'() \t\n]/.test(url) || options.needQuotes) {
+    return "\"".concat(url.replace(/"/g, '\\"').replace(/\n/g, "\\n"), "\"");
+  }
+
+  return url;
+};
 
 /***/ })
 /******/ 	]);
@@ -4417,7 +4766,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_constructors_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(7);
 /* harmony import */ var _modules_domevents_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(40);
 /* harmony import */ var _modules_datacapture_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(6);
-/* harmony import */ var _icons_trash_png__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(42);
 
 
 
