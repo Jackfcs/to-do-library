@@ -310,9 +310,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(4);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(51);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(5);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _icons_filter_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(50);
+/* harmony import */ var _icons_filter_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(6);
 // Imports
 
 
@@ -320,7 +320,7 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_1___default()(_icons_filter_png__WEBPACK_IMPORTED_MODULE_2__);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "body {\n    color: rgb(26, 26, 26);\n    margin: 0;\n    padding: 0;\n    overflow: hidden;\n    font-family: 'Arial';\n    font-size: 20px;\n}\n\n#header {\n    position: fixed;\n    overflow: hidden;\n    top: 0;\n    left: 0;\n    width: 100%;\n    background-color: #406ff1;\n    color: #ffffff;\n    height: 50px;\n    display: flex;\n    align-items: center;\n    padding-left: 10px;\n    padding: 2px;\n    z-index: 3;\n}\n\n#hamburger {\n    opacity: 0%;\n    padding: 1px;\n    margin-right: 5px;\n    transition: 0.3s;\n}\n\n#app-container {\n    display: grid;\n    grid-template-columns: 300px auto;\n    width: 100vw;\n    height: 100vh;\n    max-width: 100%;\n    margin-top: 50px;\n}\n\n#project-nav {\n    \n}\n\n#project-container {\n    grid-column: 1 / 1;\n    height: 100vh;\n    padding: 15px;\n    display: block;\n    display: flex;\n    flex-direction: column;\n    overflow: auto;\n    color: black;\n    background-color: rgb(168, 206, 255);\n    z-index: 2;\n}\n\n#project-interaction {\n    display: flex;\n    justify-content: space-between;\n    padding-bottom: 5px;\n    align-items: end;\n}\n\n.form-format {\n    font-size: 15px;\n    position: relative;\n    text-align: end;\n}\n\n.form-dropdown-format {\n    border: none;\n    padding: 10px;\n    padding-left: 20px;\n    -webkit-appearance: none;\n    -moz-appearance: none;\n    appearance: none;\n    background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\n    background-repeat: no-repeat;\n    background-size: 2em;\n    background-position: left center;\n}\n\n#project-filter{\n    background-color: rgb(168, 206, 255);\n}\n\n#todo-filter{\n    background-color: rgb(238, 242, 255);\n}\n\nlabel.wrap:after{\n    background-color: aqua;\n}\n\n\n.form-dropdown-format:hover {\n    cursor: pointer;\n}\n\n#project-parent {\n    overflow: auto;\n    padding-bottom: 200px;\n}\n\n#today, #next-week, #project-list-title {\n    padding: 5px 5px 5px 5px;\n    border-radius: 10px;\n    margin: 10px 10px 10px 0px;\n    \n}\n\n#today:hover, #next-week:hover {\n    cursor: pointer;\n    background-color:  rgb(211, 230, 255);\n}\n\n\n\n#todo-container {\n    display: flex;\n    flex-direction: column;\n    grid-column: 2 / 2;\n    background-color: rgb(238, 242, 255);\n    padding: 10px;\n    height: 100vh;\n}\n\n#todo-interactions {\n    display: flex;\n    flex-direction: row;\n    justify-content: space-between;\n    align-items: end;\n}\n\n#todo-nav{\n    display: grid;\n    grid-template-columns: auto 100px 150px 30px;\n    grid-template-areas: \"name priority date icons\";\n    \n    font-size: 15px;\n}\n\n#todo-header-priority {\n    grid-area: priority;\n    justify-self: end;\n    align-self: end;\n}\n\n#todo-title-duedate {\n    grid-area: date;\n    justify-self: end;\n    align-self: end;\n    position: relative;\n    right: 9px;\n}\n\n\n\n#completed-todo {\n    background-color: grey;\n    opacity: 50%;\n}\n\n\n\n.project-instance {\n    height: 50px;\n    display: grid;\n    grid-template-columns: 20px 40px 80px 30px;\n    grid-template-rows: 35px 15px;\n    grid-template-areas: \n        \"space bullet name name name\"\n        \"space date date info delete\";\n\n    /* border: solid rgb(187, 187, 187); */\n    \n    padding: 10px 10px 20px 0px;\n   \n    \n}\n\n.project-instance:hover {\n    cursor: pointer;\n    background-color:  rgb(211, 230, 255);\n    border-radius: 5px;\n    \n}\n\n#todo-bullet {\n    grid-area: bullet;\n    background-color: rgb(0, 27, 61);\n    color: white;\n    width: 30px;\n    height: 30px;\n    border-radius: 50%;\n    line-height: 30px;\n    text-align: center;\n    vertical-align: middle;\n}\n\n\n\n#project-name {\n    grid-area: name;\n    line-height: 30px;\n    \n    \n}\n\n#project-info-button {\n    grid-area: info;\n    max-width: 40px;\n    max-height: 20px;\n    align-self: start;\n    height: 10px;\n    border: none;\n    border-radius: 10%;\n    position: relative;\n    top: 2px;\n    left: 40px;\n    background-color: #406ff1;\n    color: white;\n    \n}\n#project-info-button:hover {\n    cursor: pointer;\n}\n\n#project-date {\n    grid-area: date;\n    font-size: 14px;\n    position: relative;\n    top: 5px;\n    width: 110px;\n    border-radius: 5px;\n}\n\n#project-date-input {\n    grid-area: date;\n    position: relative;\n    right: 5px;\n    width: 100px;\n    height: 10px;\n    font-size: 8px;\n    \n}\n\n#edit-date-button {\n    position: relative;\n    left: 130px;\n    top: 41px;\n}\n\n.projectdelete {\n    grid-area: delete;\n    justify-self: end;\n    align-self: end;\n    width: 20px;\n    position: relative;\n    top: 11px;\n    left: 10px;\n    padding: 5px;\n}\n\n#info-div{\n    max-width: 200px;\n    text-align: center;\n    position: relative;\n    left: 25px;\n    bottom: 0px;\n    border: solid rgb(59, 85, 201);\n    border-radius: 0 0 15px 15px;\n    padding: 5px;\n    border-top: none;\n    font-size: 15px;\n}\n.todo-instance {\n    border-bottom: 1px solid rgb(192, 207, 255);\n    width: 100%;\n    display: grid;\n    grid-template-columns: 40px auto 100px 150px 30px;\n    grid-template-areas: \"check name priority date calendar\";\n    padding: 2px 0px;\n    font-size: 18px;\n    line-height: 25px;\n}\n\n#checkbox {\n    grid-area: check;\n}\n\n#checkbox:hover {\n    cursor: pointer;\n}\n\n#todo-name {\n    grid-area: name;\n}\n\n#priority-select {\n    grid-area: priority;\n    justify-self: end;\n    text-align: center;\n    border: none;\n    border-radius: 5px;\n}\n\n\n#priority-select:hover {\n    cursor: pointer;\n}\n\n#modal-priority-select {\n    width: 100px;\n    text-align: center;\n}\n\n#todo-duedate {\n    grid-area: date;\n    justify-self: end;\n    position: relative;\n\n}\n\n#due-date-text {\n    grid-area: date;\n    justify-self: center;\n    align-self: center;\n    position: relative;\n    top: 3px;\n    \n}\n\n#todo-edit-date-button {\n    grid-area: calendar;\n    justify-self: center;\n    align-self: center;\n}\n\n#todo-edit-date-button:hover {\n    cursor: pointer;\n}\n\n#todo-edit-date-input {\n    grid-area: date;\n    position: fixed;\n    right: 30px;\n    font-size: 5px;\n    \n}\n\n\n.add-button {\n    background-color: #123efd;\n  border: none;\n  color: white;\n  padding: 10px;\n  text-align: center;\n  font-size: 16px;\n  opacity: 0.6;\n  display: inline-block;\n  text-decoration: none;\n  cursor: pointer;\n  border-radius: 10px;\n}\n\n.add-button:hover {\n    opacity: 1;\n    transition: 0.3s;\n}\n\n\n\n.project-modal {\n    display: flex;\n    flex-direction: column;\n    justify-content: space-between;\n    align-items: center;\n    color: black;\n    background-color: rgb(168, 206, 255);\n    position: fixed;\n    top: 50%;\n    left: 50%;\n    transform: translate(-50%, -50%);\n    padding: 10px;\n    height: 350px;\n    width: 300px;\n    border-radius: 20px;\n    z-index: 4;\n    \n    \n}\n\n.todo-modal {\n    display: flex;\n    flex-direction: column;\n    justify-content: space-between;\n    align-items: center;\n    color: black;\n    background-color: rgb(168, 206, 255);\n    position: fixed;\n    top: 50%;\n    left: 50%;\n    transform: translate(-50%, -50%);\n    padding: 10px;\n    height: 300px;\n    width: 300px;\n    border-radius: 20px;\n    z-index: 4;\n}\n\n.modal-form {\n    display: flex;\n    flex-direction: column;\n    justify-content: space-between;\n    align-items: center;\n    position: relative;\n    bottom: 30px;\n}\n\ninput[type=text] {\n    width: 200px;\n    \n}\n\nlabel{\n    margin-top: 10px;\n    margin-bottom: 2px;\n}\n\n#project-modal-title {\n    position: relative;\n    bottom: 20px;\n}\n\n#todo-modal-title {\n    position: relative;\n    bottom: 20px;\n}\n\n.modal-confirm {\n    margin-top: 10px;\n    padding: 0 10px;\n   \n}\n\n#confirm-todo {\n    margin-top: 18px;\n}\n\n#project-modal-close {\n    cursor: pointer;\n    border: none;\n    outline: none;\n    background: none;\n    font-weight: bold;\n    font-size: 1.5rem;\n    color: black;\n    padding-left: 10px;\n    position: absolute;\n    left: 280px;\n    bottom: 330px;\n}\n\n#todo-modal-close {\n    cursor: pointer;\n    border: none;\n    outline: none;\n    background: none;\n    font-weight: bold;\n    font-size: 1.5rem;\n    color: black;\n    padding-left: 10px;\n    position: absolute;\n    left: 280px;\n    bottom: 280px;\n}\n\n#project-description {\n    width: 200px;\n    padding-bottom: 30px;\n}\n\n.hide {\n    transform: scale(0%);\n    display: none;\n}\n\n#project-info-button {\n    width: 80px;\n    height: 30px;\n}\n\n#warning-text {\n    position: absolute;\n    z-index: 1;\n    background-color: rgba(0, 0, 0, 0.6);\n    visibility: hidden;\n    width: 130px;\n    text-align: center;\n    padding: 2px;\n    border-radius: 5px;\n    top: 20px;\n    color: white;\n}\n\n#todo-warning {\n    position: absolute;\n    z-index: 1;\n    background-color: rgba(0, 0, 0, 0.6);\n    visibility: hidden;\n    width: 130px;\n    text-align: center;\n    border-radius: 5px;\n    right: 100px;\n    font-size: 15px;\n    color: white;\n}\n\n#project-date:hover #warning-text {\n    visibility: visible;\n} \n\n#todo-duedate:hover #todo-warning {\n    visibility: visible;\n}\n\n#background {\n    position: fixed;\n    opacity: 0;\n    transition: 150ms ease-in-out;\n    top: 0;\n    left: 0;\n    right: 0;\n    bottom: 0;\n    background-color: rgba(0, 0, 0, .5);\n    pointer-events: none;\n    z-index: 2;\n  }\n\n  #background.active {\n    opacity: 1;\n    pointer-events: all;\n  }\n\n\n@media (max-width: 800px) {\n\n    #hamburger {\n        opacity: 100%;\n        padding: 1px;\n        margin-right: 5px;\n        transition: 0.3s;\n    }\n\n    #hamburger:hover {\n        cursor: pointer;\n        background-color: rgb(168, 206, 255);\n        border-radius: 5px;\n    }\n\n    #app-container {\n        display: flex;\n        width: 100vw;\n        height: 100vh;\n        margin-top: 50px;\n    }\n\n    #project-container {\n        display: none;\n        position: absolute;\n        width: 270px;\n        \n    }\n    \n\n    #todo-container {\n        min-width: 400px;\n        width: 100vw;\n    }\n\n    #header {\n        \n    }\n\n    .proj-display {\n    }\n}\n\n@media (min-width: 800px) {\n    #app-container {\n        display: grid;\n        width: 100vw;\n        height: 100vh;\n        max-width: 100%;\n        margin-top: 50px;\n    }\n\n    #project-container {\n        grid-column: 1 / 1;\n        height: 100vh;\n        width: 270px;\n        padding: 15px;\n        display: block;\n        display: flex;\n        flex-direction: column;\n        overflow: auto;\n        color: black;\n        background-color: rgb(168, 206, 255);\n    }\n\n    #todo-container {\n        display: flex;\n        flex-direction: column;\n        grid-column: 2 / 2;\n        background-color: rgb(238, 242, 255);\n        padding: 10px;\n        height: 100vh;\n    }\n    #project-parent {\n        overflow: auto;\n        padding-bottom: 200px;\n    }\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "body {\n    color: rgb(26, 26, 26);\n    margin: 0;\n    padding: 0;\n    overflow: hidden;\n    font-family: 'Arial';\n    font-size: 20px;\n}\n\n#header {\n    position: fixed;\n    overflow: hidden;\n    top: 0;\n    left: 0;\n    width: 100%;\n    background-color: #406ff1;\n    color: #ffffff;\n    height: 50px;\n    display: flex;\n    align-items: center;\n    padding-left: 10px;\n    padding: 2px;\n    z-index: 3;\n}\n\n#hamburger {\n    opacity: 0%;\n    padding: 1px;\n    margin-right: 5px;\n    transition: 0.3s;\n}\n\n#app-container {\n    display: grid;\n    grid-template-columns: 300px auto;\n    width: 100vw;\n    height: 100vh;\n    max-width: 100%;\n    margin-top: 50px;\n}\n\n\n#project-container {\n    grid-column: 1 / 1;\n    height: 100vh;\n    padding: 15px;\n    display: block;\n    display: flex;\n    flex-direction: column;\n    overflow: auto;\n    color: black;\n    background-color: rgb(168, 206, 255);\n    z-index: 2;\n}\n\n#project-interaction {\n    display: flex;\n    justify-content: space-between;\n    padding-bottom: 5px;\n    align-items: end;\n}\n\n.form-format {\n    font-size: 15px;\n    position: relative;\n    text-align: end;\n}\n\n.form-dropdown-format {\n    border: none;\n    padding: 10px;\n    padding-left: 20px;\n    -webkit-appearance: none;\n    -moz-appearance: none;\n    appearance: none;\n    background-image: url(" + ___CSS_LOADER_URL_REPLACEMENT_0___ + ");\n    background-repeat: no-repeat;\n    background-size: 2em;\n    background-position: left center;\n}\n\n#project-filter{\n    background-color: rgb(168, 206, 255);\n}\n\n#todo-filter{\n    background-color: rgb(238, 242, 255);\n}\n\nlabel.wrap:after{\n    background-color: aqua;\n}\n\n\n.form-dropdown-format:hover {\n    cursor: pointer;\n}\n\n#project-parent {\n    overflow: auto;\n    padding-bottom: 200px;\n}\n\n#today, #next-week, #project-list-title {\n    padding: 5px 5px 5px 5px;\n    border-radius: 10px;\n    margin: 10px 10px 10px 0px;\n    \n}\n\n#today:hover, #next-week:hover {\n    cursor: pointer;\n    background-color:  rgb(211, 230, 255);\n}\n\n\n\n#todo-container {\n    display: flex;\n    flex-direction: column;\n    grid-column: 2 / 2;\n    background-color: rgb(238, 242, 255);\n    padding: 10px;\n    height: 100vh;\n}\n\n#todo-interactions {\n    display: flex;\n    flex-direction: row;\n    justify-content: space-between;\n    align-items: end;\n}\n\n#todo-nav{\n    display: grid;\n    grid-template-columns: auto 100px 150px 30px;\n    grid-template-areas: \"name priority date icons\";\n    \n    font-size: 15px;\n}\n\n#todo-header-priority {\n    grid-area: priority;\n    justify-self: end;\n    align-self: end;\n}\n\n#todo-title-duedate {\n    grid-area: date;\n    justify-self: end;\n    align-self: end;\n    position: relative;\n    right: 9px;\n}\n\n\n\n#completed-todo {\n    background-color: grey;\n    opacity: 50%;\n}\n\n\n\n.project-instance {\n    height: 50px;\n    display: grid;\n    grid-template-columns: 20px 40px 80px 30px;\n    grid-template-rows: 35px 15px;\n    grid-template-areas: \n        \"space bullet name name name\"\n        \"space date date info delete\";\n\n    /* border: solid rgb(187, 187, 187); */\n    \n    padding: 10px 10px 20px 0px;\n   \n    \n}\n\n.project-instance:hover {\n    cursor: pointer;\n    background-color:  rgb(211, 230, 255);\n    border-radius: 5px;\n    \n}\n\n#todo-bullet {\n    grid-area: bullet;\n    background-color: rgb(0, 27, 61);\n    color: white;\n    width: 30px;\n    height: 30px;\n    border-radius: 50%;\n    line-height: 30px;\n    text-align: center;\n    vertical-align: middle;\n}\n\n\n\n#project-name {\n    grid-area: name;\n    line-height: 30px;\n    \n    \n}\n\n#project-info-button {\n    grid-area: info;\n    max-width: 40px;\n    max-height: 20px;\n    align-self: start;\n    height: 10px;\n    border: none;\n    border-radius: 10%;\n    position: relative;\n    top: 2px;\n    left: 40px;\n    background-color: #406ff1;\n    color: white;\n    \n}\n#project-info-button:hover {\n    cursor: pointer;\n}\n\n#project-date {\n    grid-area: date;\n    font-size: 14px;\n    position: relative;\n    top: 5px;\n    width: 110px;\n    border-radius: 5px;\n}\n\n#project-date-input {\n    grid-area: date;\n    position: relative;\n    right: 5px;\n    width: 100px;\n    height: 10px;\n    font-size: 8px;\n    \n}\n\n#edit-date-button {\n    position: relative;\n    left: 130px;\n    top: 41px;\n}\n\n.projectdelete {\n    grid-area: delete;\n    justify-self: end;\n    align-self: end;\n    width: 20px;\n    position: relative;\n    top: 11px;\n    left: 10px;\n    padding: 5px;\n}\n\n#info-div{\n    max-width: 200px;\n    text-align: center;\n    position: relative;\n    left: 25px;\n    bottom: 0px;\n    border: solid rgb(59, 85, 201);\n    border-radius: 0 0 15px 15px;\n    padding: 5px;\n    border-top: none;\n    font-size: 15px;\n}\n.todo-instance {\n    border-bottom: 1px solid rgb(192, 207, 255);\n    width: 100%;\n    display: grid;\n    grid-template-columns: 40px auto 100px 150px 30px;\n    grid-template-areas: \"check name priority date calendar\";\n    padding: 2px 0px;\n    font-size: 18px;\n    line-height: 25px;\n}\n\n#checkbox {\n    grid-area: check;\n}\n\n#checkbox:hover {\n    cursor: pointer;\n}\n\n#todo-name {\n    grid-area: name;\n}\n\n#priority-select {\n    grid-area: priority;\n    justify-self: end;\n    text-align: center;\n    border: none;\n    border-radius: 5px;\n}\n\n\n#priority-select:hover {\n    cursor: pointer;\n}\n\n#modal-priority-select {\n    width: 100px;\n    text-align: center;\n}\n\n#todo-duedate {\n    grid-area: date;\n    justify-self: end;\n    position: relative;\n\n}\n\n#due-date-text {\n    grid-area: date;\n    justify-self: center;\n    align-self: center;\n    position: relative;\n    top: 3px;\n    \n}\n\n#todo-edit-date-button {\n    grid-area: calendar;\n    justify-self: center;\n    align-self: center;\n}\n\n#todo-edit-date-button:hover {\n    cursor: pointer;\n}\n\n#todo-edit-date-input {\n    grid-area: date;\n    position: fixed;\n    right: 30px;\n    font-size: 5px;\n    \n}\n\n\n.add-button {\n    background-color: #123efd;\n  border: none;\n  color: white;\n  padding: 10px;\n  text-align: center;\n  font-size: 16px;\n  opacity: 0.6;\n  display: inline-block;\n  text-decoration: none;\n  cursor: pointer;\n  border-radius: 10px;\n}\n\n.add-button:hover {\n    opacity: 1;\n    transition: 0.3s;\n}\n\n\n\n.project-modal {\n    display: flex;\n    flex-direction: column;\n    justify-content: space-between;\n    align-items: center;\n    color: black;\n    background-color: rgb(168, 206, 255);\n    position: fixed;\n    top: 50%;\n    left: 50%;\n    transform: translate(-50%, -50%);\n    padding: 10px;\n    height: 350px;\n    width: 300px;\n    border-radius: 20px;\n    z-index: 4;\n    \n    \n}\n\n.todo-modal {\n    display: flex;\n    flex-direction: column;\n    justify-content: space-between;\n    align-items: center;\n    color: black;\n    background-color: rgb(168, 206, 255);\n    position: fixed;\n    top: 50%;\n    left: 50%;\n    transform: translate(-50%, -50%);\n    padding: 10px;\n    height: 300px;\n    width: 300px;\n    border-radius: 20px;\n    z-index: 4;\n}\n\n.modal-form {\n    display: flex;\n    flex-direction: column;\n    justify-content: space-between;\n    align-items: center;\n    position: relative;\n    bottom: 30px;\n}\n\ninput[type=text] {\n    width: 200px;\n    \n}\n\nlabel{\n    margin-top: 10px;\n    margin-bottom: 2px;\n}\n\n#project-modal-title {\n    position: relative;\n    bottom: 20px;\n}\n\n#todo-modal-title {\n    position: relative;\n    bottom: 20px;\n}\n\n.modal-confirm {\n    margin-top: 10px;\n    padding: 0 10px;\n   \n}\n\n#confirm-todo {\n    margin-top: 18px;\n}\n\n#project-modal-close {\n    cursor: pointer;\n    border: none;\n    outline: none;\n    background: none;\n    font-weight: bold;\n    font-size: 1.5rem;\n    color: black;\n    padding-left: 10px;\n    position: absolute;\n    left: 280px;\n    bottom: 330px;\n}\n\n#todo-modal-close {\n    cursor: pointer;\n    border: none;\n    outline: none;\n    background: none;\n    font-weight: bold;\n    font-size: 1.5rem;\n    color: black;\n    padding-left: 10px;\n    position: absolute;\n    left: 280px;\n    bottom: 280px;\n}\n\n#project-description {\n    width: 200px;\n    padding-bottom: 30px;\n}\n\n.hide {\n    transform: scale(0%);\n    display: none;\n}\n\n#project-info-button {\n    width: 80px;\n    height: 30px;\n}\n\n#warning-text {\n    position: absolute;\n    z-index: 1;\n    background-color: rgba(0, 0, 0, 0.6);\n    visibility: hidden;\n    width: 130px;\n    text-align: center;\n    padding: 2px;\n    border-radius: 5px;\n    top: 20px;\n    color: white;\n}\n\n#todo-warning {\n    position: absolute;\n    z-index: 1;\n    background-color: rgba(0, 0, 0, 0.6);\n    visibility: hidden;\n    width: 130px;\n    text-align: center;\n    border-radius: 5px;\n    right: 100px;\n    font-size: 15px;\n    color: white;\n}\n\n#project-date:hover #warning-text {\n    visibility: visible;\n} \n\n#todo-duedate:hover #todo-warning {\n    visibility: visible;\n}\n\n#background {\n    position: fixed;\n    opacity: 0;\n    transition: 150ms ease-in-out;\n    top: 0;\n    left: 0;\n    right: 0;\n    bottom: 0;\n    background-color: rgba(0, 0, 0, .5);\n    pointer-events: none;\n    z-index: 2;\n  }\n\n  #background.active {\n    opacity: 1;\n    pointer-events: all;\n  }\n\n\n@media (max-width: 800px) {\n\n    #hamburger {\n        opacity: 100%;\n        padding: 1px;\n        margin-right: 5px;\n        transition: 0.3s;\n    }\n\n    #hamburger:hover {\n        cursor: pointer;\n        background-color: rgb(168, 206, 255);\n        border-radius: 5px;\n    }\n\n    #app-container {\n        display: flex;\n        width: 100vw;\n        height: 100vh;\n        margin-top: 50px;\n    }\n\n    #project-container {\n        display: none;\n        position: absolute;\n        width: 270px;\n        \n    }\n    \n\n    #todo-container {\n        min-width: 400px;\n        width: 100vw;\n    }\n\n}\n\n@media (min-width: 800px) {\n    #app-container {\n        display: grid;\n        width: 100vw;\n        height: 100vh;\n        max-width: 100%;\n        margin-top: 50px;\n    }\n\n    #project-container {\n        grid-column: 1 / 1;\n        height: 100vh;\n        width: 270px;\n        padding: 15px;\n        display: block;\n        display: flex;\n        flex-direction: column;\n        overflow: auto;\n        color: black;\n        background-color: rgb(168, 206, 255);\n    }\n\n    #todo-container {\n        display: flex;\n        flex-direction: column;\n        grid-column: 2 / 2;\n        background-color: rgb(238, 242, 255);\n        padding: 10px;\n        height: 100vh;\n    }\n    #project-parent {\n        overflow: auto;\n        padding-bottom: 200px;\n    }\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -398,6 +398,51 @@ module.exports = function (cssWithMappingToString) {
 
 /***/ }),
 /* 5 */
+/***/ ((module) => {
+
+
+
+module.exports = function (url, options) {
+  if (!options) {
+    // eslint-disable-next-line no-param-reassign
+    options = {};
+  } // eslint-disable-next-line no-underscore-dangle, no-param-reassign
+
+
+  url = url && url.__esModule ? url.default : url;
+
+  if (typeof url !== "string") {
+    return url;
+  } // If url is already wrapped in quotes, remove them
+
+
+  if (/^['"].*['"]$/.test(url)) {
+    // eslint-disable-next-line no-param-reassign
+    url = url.slice(1, -1);
+  }
+
+  if (options.hash) {
+    // eslint-disable-next-line no-param-reassign
+    url += options.hash;
+  } // Should url be wrapped?
+  // See https://drafts.csswg.org/css-values-3/#urls
+
+
+  if (/["'() \t\n]/.test(url) || options.needQuotes) {
+    return "\"".concat(url.replace(/"/g, '\\"').replace(/\n/g, "\\n"), "\"");
+  }
+
+  return url;
+};
+
+/***/ }),
+/* 6 */
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "08fcb31af7181141e413.png";
+
+/***/ }),
+/* 7 */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -405,10 +450,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "displayProjects": () => (/* binding */ displayProjects),
 /* harmony export */   "render": () => (/* binding */ render)
 /* harmony export */ });
-/* harmony import */ var _datacapture_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6);
-/* harmony import */ var _icons_calendar_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(47);
-/* harmony import */ var _icons_trash1_svg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(48);
-/* harmony import */ var date_fns__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(8);
+/* harmony import */ var _datacapture_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(8);
+/* harmony import */ var _icons_calendar_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(42);
+/* harmony import */ var _icons_trash1_svg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(43);
+/* harmony import */ var date_fns__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(10);
 
 
 
@@ -465,7 +510,6 @@ const displayProjects = (function () {
 
             //Project date
             projectInstance.appendChild(projectDate);
-            //projectDate.classList.add('project-name');
             projectDate.setAttribute('id', 'project-date')
             const editDateButton = document.createElement('IMG');
             editDateButton.src = _icons_calendar_png__WEBPACK_IMPORTED_MODULE_1__;
@@ -898,7 +942,7 @@ function render() {
 }
 
 /***/ }),
-/* 6 */
+/* 8 */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -908,9 +952,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "todoCapture": () => (/* binding */ todoCapture),
 /* harmony export */   "dateOrder": () => (/* binding */ dateOrder)
 /* harmony export */ });
-/* harmony import */ var _constructors_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7);
-/* harmony import */ var _domdisplay_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(5);
-/* harmony import */ var date_fns__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(8);
+/* harmony import */ var _constructors_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(9);
+/* harmony import */ var _domdisplay_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(7);
+/* harmony import */ var date_fns__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(10);
 
 
 
@@ -1038,18 +1082,18 @@ function dateOrder(date){
     return dateObject
 }
 
- //Example todos
- let vacuum = (0,_constructors_js__WEBPACK_IMPORTED_MODULE_0__.TodoInstance)('Hoover', (0,date_fns__WEBPACK_IMPORTED_MODULE_2__.default)(new Date(), 'dd/MM/yyyy'), 'low', false);
- let dust = (0,_constructors_js__WEBPACK_IMPORTED_MODULE_0__.TodoInstance)('Dust', '13/04/2021', 'high', false);
- projectCapture.myProjects[1].todos.push(vacuum, dust);
+//  //Example todos
+//  let vacuum = TodoInstance('Hoover', format(new Date(), 'dd/MM/yyyy'), 'low', false);
+//  let dust = TodoInstance('Dust', '13/04/2021', 'high', false);
+//  projectCapture.myProjects.housework.todos.push(vacuum, dust);
 
- let example = (0,_constructors_js__WEBPACK_IMPORTED_MODULE_0__.TodoInstance)('Example Task', (0,date_fns__WEBPACK_IMPORTED_MODULE_2__.default)(new Date(), 'dd/MM/yyyy'), 'low', false)
- let example1 = (0,_constructors_js__WEBPACK_IMPORTED_MODULE_0__.TodoInstance)('Click me to edit task', '11/04/2024', 'medium', false)
- let example2 = (0,_constructors_js__WEBPACK_IMPORTED_MODULE_0__.TodoInstance)('This is an overdue task', '11/02/2021', 'high', false)
- projectCapture.myProjects[0].todos.push(example, example1, example2);
+//  let example = TodoInstance('Example Task', format(new Date(), 'dd/MM/yyyy'), 'low', false)
+//  let example1 = TodoInstance('Click me to edit task', '11/04/2024', 'medium', false)
+//  let example2 = TodoInstance('This is an overdue task', '11/02/2021', 'high', false)
+//  projectCapture.myProjects.example.todos.push(example, example1, example2);
 
 /***/ }),
-/* 7 */
+/* 9 */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -1073,23 +1117,23 @@ const TodoInstance = (name, dueDate, priority, checkBox) => {
 
 
 /***/ }),
-/* 8 */
+/* 10 */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ format)
 /* harmony export */ });
-/* harmony import */ var _isValid_index_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(22);
-/* harmony import */ var _locale_en_US_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(10);
-/* harmony import */ var _subMilliseconds_index_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(24);
-/* harmony import */ var _toDate_index_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(21);
-/* harmony import */ var _lib_format_formatters_index_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(27);
-/* harmony import */ var _lib_format_longFormatters_index_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(26);
-/* harmony import */ var _lib_getTimezoneOffsetInMilliseconds_index_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(23);
-/* harmony import */ var _lib_protectedTokens_index_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(39);
-/* harmony import */ var _lib_toInteger_index_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(20);
-/* harmony import */ var _lib_requiredArgs_index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(9);
+/* harmony import */ var _isValid_index_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(24);
+/* harmony import */ var _locale_en_US_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(12);
+/* harmony import */ var _subMilliseconds_index_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(26);
+/* harmony import */ var _toDate_index_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(23);
+/* harmony import */ var _lib_format_formatters_index_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(29);
+/* harmony import */ var _lib_format_longFormatters_index_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(28);
+/* harmony import */ var _lib_getTimezoneOffsetInMilliseconds_index_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(25);
+/* harmony import */ var _lib_protectedTokens_index_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(41);
+/* harmony import */ var _lib_toInteger_index_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(22);
+/* harmony import */ var _lib_requiredArgs_index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(11);
 
 
 
@@ -1525,7 +1569,7 @@ function cleanEscapedString(input) {
 }
 
 /***/ }),
-/* 9 */
+/* 11 */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -1539,18 +1583,18 @@ function requiredArgs(required, args) {
 }
 
 /***/ }),
-/* 10 */
+/* 12 */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _lib_formatDistance_index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(11);
-/* harmony import */ var _lib_formatLong_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(12);
-/* harmony import */ var _lib_formatRelative_index_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(14);
-/* harmony import */ var _lib_localize_index_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(15);
-/* harmony import */ var _lib_match_index_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(17);
+/* harmony import */ var _lib_formatDistance_index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(13);
+/* harmony import */ var _lib_formatLong_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(14);
+/* harmony import */ var _lib_formatRelative_index_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(16);
+/* harmony import */ var _lib_localize_index_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(17);
+/* harmony import */ var _lib_match_index_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(19);
 
 
 
@@ -1583,7 +1627,7 @@ var locale = {
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (locale);
 
 /***/ }),
-/* 11 */
+/* 13 */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -1677,14 +1721,14 @@ function formatDistance(token, count, options) {
 }
 
 /***/ }),
-/* 12 */
+/* 14 */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _lib_buildFormatLongFn_index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(13);
+/* harmony import */ var _lib_buildFormatLongFn_index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(15);
 
 var dateFormats = {
   full: 'EEEE, MMMM do, y',
@@ -1721,7 +1765,7 @@ var formatLong = {
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (formatLong);
 
 /***/ }),
-/* 13 */
+/* 15 */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -1738,7 +1782,7 @@ function buildFormatLongFn(args) {
 }
 
 /***/ }),
-/* 14 */
+/* 16 */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -1758,14 +1802,14 @@ function formatRelative(token, _date, _baseDate, _options) {
 }
 
 /***/ }),
-/* 15 */
+/* 17 */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _lib_buildLocalizeFn_index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(16);
+/* harmony import */ var _lib_buildLocalizeFn_index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(18);
 
 var eraValues = {
   narrow: ['B', 'A'],
@@ -1917,7 +1961,7 @@ var localize = {
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (localize);
 
 /***/ }),
-/* 16 */
+/* 18 */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -1948,15 +1992,15 @@ function buildLocalizeFn(args) {
 }
 
 /***/ }),
-/* 17 */
+/* 19 */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _lib_buildMatchPatternFn_index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(18);
-/* harmony import */ var _lib_buildMatchFn_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(19);
+/* harmony import */ var _lib_buildMatchPatternFn_index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(20);
+/* harmony import */ var _lib_buildMatchFn_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(21);
 
 
 var matchOrdinalNumberPattern = /^(\d+)(th|st|nd|rd)?/i;
@@ -2057,7 +2101,7 @@ var match = {
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (match);
 
 /***/ }),
-/* 18 */
+/* 20 */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -2091,7 +2135,7 @@ function buildMatchPatternFn(args) {
 }
 
 /***/ }),
-/* 19 */
+/* 21 */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -2150,7 +2194,7 @@ function findIndex(array, predicate) {
 }
 
 /***/ }),
-/* 20 */
+/* 22 */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -2172,14 +2216,14 @@ function toInteger(dirtyNumber) {
 }
 
 /***/ }),
-/* 21 */
+/* 23 */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ toDate)
 /* harmony export */ });
-/* harmony import */ var _lib_requiredArgs_index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(9);
+/* harmony import */ var _lib_requiredArgs_index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(11);
 
 /**
  * @name toDate
@@ -2234,15 +2278,15 @@ function toDate(argument) {
 }
 
 /***/ }),
-/* 22 */
+/* 24 */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ isValid)
 /* harmony export */ });
-/* harmony import */ var _toDate_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(21);
-/* harmony import */ var _lib_requiredArgs_index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(9);
+/* harmony import */ var _toDate_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(23);
+/* harmony import */ var _lib_requiredArgs_index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(11);
 
 
 /**
@@ -2310,7 +2354,7 @@ function isValid(dirtyDate) {
 }
 
 /***/ }),
-/* 23 */
+/* 25 */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -2335,16 +2379,16 @@ function getTimezoneOffsetInMilliseconds(date) {
 }
 
 /***/ }),
-/* 24 */
+/* 26 */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ subMilliseconds)
 /* harmony export */ });
-/* harmony import */ var _lib_toInteger_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(20);
-/* harmony import */ var _addMilliseconds_index_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(25);
-/* harmony import */ var _lib_requiredArgs_index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(9);
+/* harmony import */ var _lib_toInteger_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(22);
+/* harmony import */ var _addMilliseconds_index_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(27);
+/* harmony import */ var _lib_requiredArgs_index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(11);
 
 
 
@@ -2378,16 +2422,16 @@ function subMilliseconds(dirtyDate, dirtyAmount) {
 }
 
 /***/ }),
-/* 25 */
+/* 27 */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ addMilliseconds)
 /* harmony export */ });
-/* harmony import */ var _lib_toInteger_index_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(20);
-/* harmony import */ var _toDate_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(21);
-/* harmony import */ var _lib_requiredArgs_index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(9);
+/* harmony import */ var _lib_toInteger_index_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(22);
+/* harmony import */ var _toDate_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(23);
+/* harmony import */ var _lib_requiredArgs_index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(11);
 
 
 
@@ -2422,7 +2466,7 @@ function addMilliseconds(dirtyDate, dirtyAmount) {
 }
 
 /***/ }),
-/* 26 */
+/* 28 */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -2527,20 +2571,20 @@ var longFormatters = {
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (longFormatters);
 
 /***/ }),
-/* 27 */
+/* 29 */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _lightFormatters_index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(28);
-/* harmony import */ var _lib_getUTCDayOfYear_index_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(38);
-/* harmony import */ var _lib_getUTCISOWeek_index_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(36);
-/* harmony import */ var _lib_getUTCISOWeekYear_index_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(32);
-/* harmony import */ var _lib_getUTCWeek_index_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(34);
-/* harmony import */ var _lib_getUTCWeekYear_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(30);
-/* harmony import */ var _addLeadingZeros_index_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(29);
+/* harmony import */ var _lightFormatters_index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(30);
+/* harmony import */ var _lib_getUTCDayOfYear_index_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(40);
+/* harmony import */ var _lib_getUTCISOWeek_index_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(38);
+/* harmony import */ var _lib_getUTCISOWeekYear_index_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(34);
+/* harmony import */ var _lib_getUTCWeek_index_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(36);
+/* harmony import */ var _lib_getUTCWeekYear_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(32);
+/* harmony import */ var _addLeadingZeros_index_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(31);
 
 
 
@@ -3409,14 +3453,14 @@ function formatTimezone(offset, dirtyDelimiter) {
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (formatters);
 
 /***/ }),
-/* 28 */
+/* 30 */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _addLeadingZeros_index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(29);
+/* harmony import */ var _addLeadingZeros_index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(31);
 
 /*
  * |     | Unit                           |     | Unit                           |
@@ -3503,7 +3547,7 @@ var formatters = {
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (formatters);
 
 /***/ }),
-/* 29 */
+/* 31 */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -3522,17 +3566,17 @@ function addLeadingZeros(number, targetLength) {
 }
 
 /***/ }),
-/* 30 */
+/* 32 */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ getUTCWeekYear)
 /* harmony export */ });
-/* harmony import */ var _toInteger_index_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(20);
-/* harmony import */ var _toDate_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(21);
-/* harmony import */ var _startOfUTCWeek_index_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(31);
-/* harmony import */ var _requiredArgs_index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(9);
+/* harmony import */ var _toInteger_index_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(22);
+/* harmony import */ var _toDate_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(23);
+/* harmony import */ var _startOfUTCWeek_index_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(33);
+/* harmony import */ var _requiredArgs_index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(11);
 
 
 
@@ -3572,16 +3616,16 @@ function getUTCWeekYear(dirtyDate, dirtyOptions) {
 }
 
 /***/ }),
-/* 31 */
+/* 33 */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ startOfUTCWeek)
 /* harmony export */ });
-/* harmony import */ var _toInteger_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(20);
-/* harmony import */ var _toDate_index_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(21);
-/* harmony import */ var _requiredArgs_index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(9);
+/* harmony import */ var _toInteger_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(22);
+/* harmony import */ var _toDate_index_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(23);
+/* harmony import */ var _requiredArgs_index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(11);
 
 
  // This function will be a part of public API when UTC function will be implemented.
@@ -3608,16 +3652,16 @@ function startOfUTCWeek(dirtyDate, dirtyOptions) {
 }
 
 /***/ }),
-/* 32 */
+/* 34 */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ getUTCISOWeekYear)
 /* harmony export */ });
-/* harmony import */ var _toDate_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(21);
-/* harmony import */ var _startOfUTCISOWeek_index_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(33);
-/* harmony import */ var _requiredArgs_index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(9);
+/* harmony import */ var _toDate_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(23);
+/* harmony import */ var _startOfUTCISOWeek_index_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(35);
+/* harmony import */ var _requiredArgs_index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(11);
 
 
  // This function will be a part of public API when UTC function will be implemented.
@@ -3646,15 +3690,15 @@ function getUTCISOWeekYear(dirtyDate) {
 }
 
 /***/ }),
-/* 33 */
+/* 35 */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ startOfUTCISOWeek)
 /* harmony export */ });
-/* harmony import */ var _toDate_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(21);
-/* harmony import */ var _requiredArgs_index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(9);
+/* harmony import */ var _toDate_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(23);
+/* harmony import */ var _requiredArgs_index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(11);
 
  // This function will be a part of public API when UTC function will be implemented.
 // See issue: https://github.com/date-fns/date-fns/issues/376
@@ -3671,17 +3715,17 @@ function startOfUTCISOWeek(dirtyDate) {
 }
 
 /***/ }),
-/* 34 */
+/* 36 */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ getUTCWeek)
 /* harmony export */ });
-/* harmony import */ var _toDate_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(21);
-/* harmony import */ var _startOfUTCWeek_index_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(31);
-/* harmony import */ var _startOfUTCWeekYear_index_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(35);
-/* harmony import */ var _requiredArgs_index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(9);
+/* harmony import */ var _toDate_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(23);
+/* harmony import */ var _startOfUTCWeek_index_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(33);
+/* harmony import */ var _startOfUTCWeekYear_index_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(37);
+/* harmony import */ var _requiredArgs_index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(11);
 
 
 
@@ -3700,17 +3744,17 @@ function getUTCWeek(dirtyDate, options) {
 }
 
 /***/ }),
-/* 35 */
+/* 37 */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ startOfUTCWeekYear)
 /* harmony export */ });
-/* harmony import */ var _toInteger_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(20);
-/* harmony import */ var _getUTCWeekYear_index_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(30);
-/* harmony import */ var _startOfUTCWeek_index_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(31);
-/* harmony import */ var _requiredArgs_index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(9);
+/* harmony import */ var _toInteger_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(22);
+/* harmony import */ var _getUTCWeekYear_index_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(32);
+/* harmony import */ var _startOfUTCWeek_index_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(33);
+/* harmony import */ var _requiredArgs_index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(11);
 
 
 
@@ -3733,17 +3777,17 @@ function startOfUTCWeekYear(dirtyDate, dirtyOptions) {
 }
 
 /***/ }),
-/* 36 */
+/* 38 */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ getUTCISOWeek)
 /* harmony export */ });
-/* harmony import */ var _toDate_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(21);
-/* harmony import */ var _startOfUTCISOWeek_index_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(33);
-/* harmony import */ var _startOfUTCISOWeekYear_index_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(37);
-/* harmony import */ var _requiredArgs_index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(9);
+/* harmony import */ var _toDate_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(23);
+/* harmony import */ var _startOfUTCISOWeek_index_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(35);
+/* harmony import */ var _startOfUTCISOWeekYear_index_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(39);
+/* harmony import */ var _requiredArgs_index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(11);
 
 
 
@@ -3762,16 +3806,16 @@ function getUTCISOWeek(dirtyDate) {
 }
 
 /***/ }),
-/* 37 */
+/* 39 */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ startOfUTCISOWeekYear)
 /* harmony export */ });
-/* harmony import */ var _getUTCISOWeekYear_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(32);
-/* harmony import */ var _startOfUTCISOWeek_index_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(33);
-/* harmony import */ var _requiredArgs_index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(9);
+/* harmony import */ var _getUTCISOWeekYear_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(34);
+/* harmony import */ var _startOfUTCISOWeek_index_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(35);
+/* harmony import */ var _requiredArgs_index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(11);
 
 
  // This function will be a part of public API when UTC function will be implemented.
@@ -3788,15 +3832,15 @@ function startOfUTCISOWeekYear(dirtyDate) {
 }
 
 /***/ }),
-/* 38 */
+/* 40 */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ getUTCDayOfYear)
 /* harmony export */ });
-/* harmony import */ var _toDate_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(21);
-/* harmony import */ var _requiredArgs_index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(9);
+/* harmony import */ var _toDate_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(23);
+/* harmony import */ var _requiredArgs_index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(11);
 
 
 var MILLISECONDS_IN_DAY = 86400000; // This function will be a part of public API when UTC function will be implemented.
@@ -3814,7 +3858,7 @@ function getUTCDayOfYear(dirtyDate) {
 }
 
 /***/ }),
-/* 39 */
+/* 41 */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -3844,7 +3888,19 @@ function throwProtectedError(token, format, input) {
 }
 
 /***/ }),
-/* 40 */
+/* 42 */
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "b762feea3fdf0fe30076.png";
+
+/***/ }),
+/* 43 */
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "308643b513ad18d39bff.svg";
+
+/***/ }),
+/* 44 */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -3852,12 +3908,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "modalEvents": () => (/* binding */ modalEvents),
 /* harmony export */   "filterTasks": () => (/* binding */ filterTasks)
 /* harmony export */ });
-/* harmony import */ var _domdisplay_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(5);
-/* harmony import */ var _datacapture_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(6);
-/* harmony import */ var date_fns__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(8);
-/* harmony import */ var date_fns_add__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(41);
+/* harmony import */ var _domdisplay_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7);
+/* harmony import */ var _datacapture_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(8);
+/* harmony import */ var date_fns__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(10);
+/* harmony import */ var date_fns_add__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(45);
 /* harmony import */ var date_fns_add__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(date_fns_add__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _constructors_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(7);
+/* harmony import */ var _constructors_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(9);
 
 
 
@@ -4049,7 +4105,7 @@ const filterTasks = (function () {
                 if (a.dueDate == '') {
                     return 1
                 } else {
-                    return parseFloat(a.dueDate) - parseFloat(b.dueDate);
+                    return (0,_datacapture_js__WEBPACK_IMPORTED_MODULE_1__.dateOrder)(a.dueDate) - (0,_datacapture_js__WEBPACK_IMPORTED_MODULE_1__.dateOrder)(b.dueDate);
                 }
             })
 
@@ -4144,113 +4200,10 @@ const hamburger = (function () {
 
 })();
 
-// const dateColor = (function () {
-//     let todos = selectCurrentProject.currentProject.todos
-//     let dueDateText = document.querySelectorAll('.due-date-text');
-
-//     const firstText = document.getElementsByClassName('due-date-text0')
-//     firstText.style.color = 'red'
-
-//     console.log(dueDateText)
-//     for (let i = 0; i < dueDateText.length; i++) {
-
-//         let todoDate = todos[i].dueDate;
-//         let newDate;
-//         if (todoDate === '') {
-//             newDate = '';
-//         } else {
-//             newDate = todoDate;
-//         }
-//         //Due Date Warning Text
-//         const todoWarningText = document.createElement('span');
-//         todoWarningText.setAttribute('id', 'todo-warning')
-
-//         if (newDate === format(new Date(), 'dd/MM/yyyy')) {
-//             dueDateText.style.color = 'Orange';
-//             dueDate.appendChild(todoWarningText);
-//             todoWarningText.textContent = 'Todo is due today!'
-//         }
-
-//         function process(date) {
-//             var parts = date.split("/");
-//             return new Date(parts[2], parts[1] - 1, parts[0]);
-//         }
-
-
-
-//         // let d1 = Date.parse(newDate)
-//         // let d2 = Date.parse(format(new Date(), 'dd/MM/yyyy'))
-
-//         let d1 = process(newDate)
-//         let d2 = process(format(new Date(), 'dd/MM/yyyy'))
-
-//         //if (newDate < ) {
-//         if (d1 < d2) {
-//             dueDateText.style.color = 'Red';
-//             dueDate.appendChild(todoWarningText);
-//             todoWarningText.textContent = 'Todo is overdue!';
-//         }
-
-//         console.log('d1 ' + [i] + ': ' + d1)
-//         console.log('d2: ' + [i] + ': ' + d2)
-
-//         console.log(newDate)
-//     }
-// })();
-
-
-
-// //     for (let i = 0; i < todos.length; i++) {
-
-
-// //         let todoDate = todos[i].dueDate;
-// //         let newDate;
-// //         if (todoDate === '') {
-// //             newDate = '';
-// //         } else {
-// //             newDate = todoDate;
-// //         }
-// //         //Due Date Warning Text
-// //         const todoWarningText = document.createElement('span');
-// //         todoWarningText.setAttribute('id', 'todo-warning')
-
-
-// //         if (newDate === format(new Date(), 'dd/MM/yyyy')) {
-// //             dueDateText.style.color = 'Orange';
-// //             dueDate.appendChild(todoWarningText);
-// //             todoWarningText.textContent = 'Todo is due today!'
-// //         }
-
-// //         function process(date){
-// //             var parts = date.split("/");
-// //             return new Date(parts[2], parts[1] - 1, parts[0]);
-// //          }
-
-
-
-// //         // let d1 = Date.parse(newDate)
-// //         // let d2 = Date.parse(format(new Date(), 'dd/MM/yyyy'))
-
-// //         let d1 = process(newDate)
-// //         let d2 = process(format(new Date(), 'dd/MM/yyyy'))
-
-// //         //if (newDate < ) {
-// //         if (d1 < d2) {
-// //             dueDateText.style.color = 'Red';
-// //             dueDate.appendChild(todoWarningText);
-// //             todoWarningText.textContent = 'Todo is overdue!';
-// //         }
-
-// //         console.log('d1 ' + [i] + ': ' + d1)
-// //         console.log('d2: ' + [i] + ': ' + d2)
-
-// //         console.log(newDate)
-// //     }
-// // })();
 
 
 /***/ }),
-/* 41 */
+/* 45 */
 /***/ ((module, exports, __webpack_require__) => {
 
 
@@ -4260,15 +4213,15 @@ Object.defineProperty(exports, "__esModule", ({
 }));
 exports.default = add;
 
-var _index = _interopRequireDefault(__webpack_require__(42));
+var _index = _interopRequireDefault(__webpack_require__(46));
 
-var _index2 = _interopRequireDefault(__webpack_require__(46));
+var _index2 = _interopRequireDefault(__webpack_require__(50));
 
-var _index3 = _interopRequireDefault(__webpack_require__(44));
+var _index3 = _interopRequireDefault(__webpack_require__(48));
 
-var _index4 = _interopRequireDefault(__webpack_require__(45));
+var _index4 = _interopRequireDefault(__webpack_require__(49));
 
-var _index5 = _interopRequireDefault(__webpack_require__(43));
+var _index5 = _interopRequireDefault(__webpack_require__(47));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -4337,7 +4290,7 @@ function add(dirtyDate, duration) {
 module.exports = exports.default;
 
 /***/ }),
-/* 42 */
+/* 46 */
 /***/ ((module, exports, __webpack_require__) => {
 
 
@@ -4347,11 +4300,11 @@ Object.defineProperty(exports, "__esModule", ({
 }));
 exports.default = addDays;
 
-var _index = _interopRequireDefault(__webpack_require__(43));
+var _index = _interopRequireDefault(__webpack_require__(47));
 
-var _index2 = _interopRequireDefault(__webpack_require__(44));
+var _index2 = _interopRequireDefault(__webpack_require__(48));
 
-var _index3 = _interopRequireDefault(__webpack_require__(45));
+var _index3 = _interopRequireDefault(__webpack_require__(49));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -4398,7 +4351,7 @@ function addDays(dirtyDate, dirtyAmount) {
 module.exports = exports.default;
 
 /***/ }),
-/* 43 */
+/* 47 */
 /***/ ((module, exports) => {
 
 
@@ -4425,7 +4378,7 @@ function toInteger(dirtyNumber) {
 module.exports = exports.default;
 
 /***/ }),
-/* 44 */
+/* 48 */
 /***/ ((module, exports, __webpack_require__) => {
 
 
@@ -4435,7 +4388,7 @@ Object.defineProperty(exports, "__esModule", ({
 }));
 exports.default = toDate;
 
-var _index = _interopRequireDefault(__webpack_require__(45));
+var _index = _interopRequireDefault(__webpack_require__(49));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -4493,7 +4446,7 @@ function toDate(argument) {
 module.exports = exports.default;
 
 /***/ }),
-/* 45 */
+/* 49 */
 /***/ ((module, exports) => {
 
 
@@ -4512,7 +4465,7 @@ function requiredArgs(required, args) {
 module.exports = exports.default;
 
 /***/ }),
-/* 46 */
+/* 50 */
 /***/ ((module, exports, __webpack_require__) => {
 
 
@@ -4522,11 +4475,11 @@ Object.defineProperty(exports, "__esModule", ({
 }));
 exports.default = addMonths;
 
-var _index = _interopRequireDefault(__webpack_require__(43));
+var _index = _interopRequireDefault(__webpack_require__(47));
 
-var _index2 = _interopRequireDefault(__webpack_require__(44));
+var _index2 = _interopRequireDefault(__webpack_require__(48));
 
-var _index3 = _interopRequireDefault(__webpack_require__(45));
+var _index3 = _interopRequireDefault(__webpack_require__(49));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -4597,64 +4550,6 @@ function addMonths(dirtyDate, dirtyAmount) {
 }
 
 module.exports = exports.default;
-
-/***/ }),
-/* 47 */
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-module.exports = __webpack_require__.p + "b762feea3fdf0fe30076.png";
-
-/***/ }),
-/* 48 */
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-module.exports = __webpack_require__.p + "308643b513ad18d39bff.svg";
-
-/***/ }),
-/* 49 */,
-/* 50 */
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-module.exports = __webpack_require__.p + "08fcb31af7181141e413.png";
-
-/***/ }),
-/* 51 */
-/***/ ((module) => {
-
-
-
-module.exports = function (url, options) {
-  if (!options) {
-    // eslint-disable-next-line no-param-reassign
-    options = {};
-  } // eslint-disable-next-line no-underscore-dangle, no-param-reassign
-
-
-  url = url && url.__esModule ? url.default : url;
-
-  if (typeof url !== "string") {
-    return url;
-  } // If url is already wrapped in quotes, remove them
-
-
-  if (/^['"].*['"]$/.test(url)) {
-    // eslint-disable-next-line no-param-reassign
-    url = url.slice(1, -1);
-  }
-
-  if (options.hash) {
-    // eslint-disable-next-line no-param-reassign
-    url += options.hash;
-  } // Should url be wrapped?
-  // See https://drafts.csswg.org/css-values-3/#urls
-
-
-  if (/["'() \t\n]/.test(url) || options.needQuotes) {
-    return "\"".concat(url.replace(/"/g, '\\"').replace(/\n/g, "\\n"), "\"");
-  }
-
-  return url;
-};
 
 /***/ })
 /******/ 	]);
@@ -4762,10 +4657,10 @@ var __webpack_exports__ = {};
 (() => {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
-/* harmony import */ var _modules_domdisplay_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(5);
-/* harmony import */ var _modules_constructors_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(7);
-/* harmony import */ var _modules_domevents_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(40);
-/* harmony import */ var _modules_datacapture_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(6);
+/* harmony import */ var _modules_domdisplay_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(7);
+/* harmony import */ var _modules_constructors_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(9);
+/* harmony import */ var _modules_domevents_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(44);
+/* harmony import */ var _modules_datacapture_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(8);
 
 
 
