@@ -1,12 +1,9 @@
 
-import { projectCapture, selectCurrentProject, todoCapture } from './datacapture.js'
-import { modalEvents } from './domevents.js'
-import { format } from 'date-fns'
+import { projectCapture, selectCurrentProject, dateOrder } from './datacapture.js'
 import Calendar from '../icons/calendar.png'
-import Trash from '../icons/trash.png'
 import Trash1 from '../icons/trash1.svg'
-import { ProjectInstance } from './constructors.js'
-import { intlFormat } from 'date-fns/esm'
+import {format } from 'date-fns';
+
 
 export const displayProjects = (function () {
     const projectParent = document.getElementById('project-parent');
@@ -32,6 +29,14 @@ export const displayProjects = (function () {
             projectInstance.setAttribute('id', 'project' + i);
             projectInstance.classList.add('project-instance');
 
+            //Create Number of to-dos
+            const todoBullet = document.createElement('div');
+            projectInstance.appendChild(todoBullet);
+            todoBullet.setAttribute('id', 'todo-bullet')
+            todoBullet.textContent = projectCapture.myProjects[i].todos.length;
+
+
+
             //Project Name
             projectInstance.appendChild(projectName);
             projectName.textContent = projectCapture.myProjects[i].name + ' ';
@@ -56,7 +61,7 @@ export const displayProjects = (function () {
             editDateButton.width = '15'
             editDateButton.setAttribute('id', 'edit-date-button');
             editDateButton.classList.add('hide')
-           
+
 
             const editDate = document.createElement('INPUT');
             editDate.setAttribute('id', 'project-date-input')
@@ -74,10 +79,10 @@ export const displayProjects = (function () {
                 projectDate.textContent = projectCapture.myProjects[i].dueDate;
             } else {
                 projectDate.textContent = 'Due: ' + projectCapture.myProjects[i].dueDate;
-                
+
             }
 
-            
+
 
             editDate.addEventListener('input', () => {
                 projectCapture.myProjects[i].dueDate = format(new Date(editDate.value), 'dd/MM/yyyy');
@@ -85,39 +90,77 @@ export const displayProjects = (function () {
                 editDate.classList.add('hide');
                 projectCapture.saveProjects();
                 render();
-                
+
             })
+            //Warning colour and text for late project
+            const warningText = document.createElement('span');
+
+            warningText.setAttribute('id', 'warning-text');
+            if (projectCapture.myProjects[i].dueDate != '' && projectCapture.myProjects[i].dueDate < format(new Date(), 'dd/MM/yyyy')) {
             
+                projectDate.style.color = 'red';
+                projectDate.appendChild(warningText);
+                warningText.textContent = 'Project is overdue!'
+            }
+            if (projectCapture.myProjects[i].dueDate == format(new Date(), 'dd/MM/yyyy')) {
+                projectDate.style.color = 'rgb(216, 68, 0)';
+                projectDate.appendChild(warningText);
+                warningText.textContent = 'Project is due today!'
+            }
+
+            
+
+
+
             projectInstance.addEventListener('mouseover', () => {
-                
+
                 editDateButton.classList.remove('hide')
             })
             projectInstance.addEventListener('mouseleave', () => {
-                
+
                 editDateButton.classList.add('hide')
             })
-          
+
 
 
             //More info button
             const info = document.createElement('button');
             projectInstance.appendChild(info);
-            info.innerHTML = 'Details';
+            info.innerHTML = 'Info';
             info.setAttribute('id', 'project-info-button')
 
             const infoDiv = document.createElement('div');
+            infoDiv.setAttribute('id', 'info-div')
             infoDiv.textContent = projectCapture.myProjects[i].moreInfo;
             projectParent.appendChild(infoDiv);
             infoDiv.classList.add('hide');
 
+
+
             info.addEventListener('click', () => {
+
                 infoDiv.classList.toggle('hide')
-                if (info.innerHTML === 'Details') {
+                if (info.innerHTML === 'Info') {
                     info.innerHTML = 'Hide'
                 } else {
-                    info.innerHTML = 'Details'
+                    info.innerHTML = 'Info'
                 }
 
+                if (infoDiv.textContent == '') {
+                    infoDiv.textContent = 'Edit Description'
+                }
+
+            })
+
+            //Edit Description
+
+
+            infoDiv.addEventListener('click', () => {
+                infoDiv.setAttribute('contentEditable', 'true')
+            })
+            infoDiv.addEventListener('input', () => {
+                projectCapture.myProjects[i].moreInfo = infoDiv.textContent;
+                projectCapture.saveProjects();
             })
 
             //Delete icon
@@ -129,25 +172,38 @@ export const displayProjects = (function () {
             deleteBtn.width = '30'
 
             deleteBtn.addEventListener('click', () => {
+                if (selectCurrentProject.currentProject.todos.length > 0) {
+                    if (confirm(`There are incomplete tasks for ${projectCapture.myProjects[i].name}.\nAre you sure you want to delete this project?`) == true) {
+                        projectCapture.myProjects.splice(i, 1);
+                        selectCurrentProject.currentProject = projectCapture.myProjects[0];
+                        projectCapture.saveProjects();
+                        render();
+                    } else {
+                        selectCurrentProject.currentProject = projectCapture.myProjects[0];
+                        projectCapture.saveProjects();
+                        render();
+                    }
+                } else {
+                    projectCapture.myProjects.splice(i, 1);
+                    selectCurrentProject.currentProject = projectCapture.myProjects[0];
+                    projectCapture.saveProjects();
+                    render();
+                }
 
-                projectCapture.myProjects.splice(i, 1);
-                selectCurrentProject.currentProject = projectCapture.myProjects[0];
-                projectCapture.saveProjects();
-                render();
 
 
             })
 
             projectInstance.addEventListener('mouseover', () => {
-                
+
                 deleteBtn.classList.remove('hide')
             })
             projectInstance.addEventListener('mouseleave', () => {
-                
+
                 deleteBtn.classList.add('hide')
             })
 
-            
+
 
             //Select current project
             projectInstance.addEventListener('click', () => {
@@ -183,7 +239,7 @@ export const displayProjects = (function () {
         const todoHeader = document.getElementById('todo-header');
 
         //Todo title
-        todoHeader.textContent = `${selectCurrentProject.currentProject.name} To-dos`
+        todoHeader.textContent = `${selectCurrentProject.currentProject.name}`
 
 
 
@@ -254,24 +310,24 @@ export const displayProjects = (function () {
             // display priority colour
             select.value = todos[i].priority;
             if (select.value == 'low') {
-                select.style.background = 'green'
+                select.style.background = '#5cc542'
             }
             if (select.value == 'medium') {
-                select.style.background = 'orange'
+                select.style.background = '#fca037'
             }
             if (select.value == 'high') {
-                select.style.background = 'red'
+                select.style.background = '#eb4646'
             }
             select.addEventListener('change', (event) => {
                 todos[i].priority = select.value;
                 if (select.value == 'low') {
-                    event.target.style.background = 'green'
+                    event.target.style.background = '#5cc542'
                 }
                 if (select.value == 'medium') {
-                    event.target.style.background = 'orange'
+                    event.target.style.background = '#fca037'
                 }
                 if (select.value == 'high') {
-                    event.target.style.background = 'red'
+                    event.target.style.background = '#eb4646'
                 }
                 projectCapture.saveProjects();
             });
@@ -285,10 +341,34 @@ export const displayProjects = (function () {
 
             const dueDateText = document.createElement('div');
             dueDateText.setAttribute('id', 'due-date-text');
+            dueDateText.setAttribute('class', 'due-date-text' + [i]);
             dueDateText.textContent = newDate;
-            if (newDate <= format(new Date(), 'dd/MM/yyyy')) {
-                dueDate.style.background = 'red';
+
+            //Due Date Warning Text
+            const todoWarningText = document.createElement('span');
+            todoWarningText.setAttribute('id', 'todo-warning')
+
+
+            if (newDate === format(new Date(), 'dd/MM/yyyy')) {
+                dueDateText.style.color = 'Orange';
+                dueDate.appendChild(todoWarningText);
+                todoWarningText.textContent = 'Todo is due today!'
             }
+
+            
+            
+
+            let d1 = dateOrder(newDate)
+            let d2 = dateOrder(format(new Date(), 'dd/MM/yyyy'))
+            
+
+            
+            if (d1 < d2) {
+                dueDateText.style.color = 'Red';
+                dueDate.appendChild(todoWarningText);
+                todoWarningText.textContent = 'Todo is overdue!';
+            }
+
 
             dueDate.appendChild(dueDateText);
 
@@ -311,7 +391,7 @@ export const displayProjects = (function () {
 
             })
 
-            
+
             editDate.addEventListener('input', () => {
                 todos[i].dueDate = format(new Date(editDate.value), 'dd/MM/yyyy');
                 editDate.classList.add('hide');
@@ -322,11 +402,11 @@ export const displayProjects = (function () {
 
 
             newTodo.addEventListener('mouseover', () => {
-                
+
                 editDateButton.classList.remove('hide')
             })
             newTodo.addEventListener('mouseleave', () => {
-                
+
                 editDateButton.classList.add('hide')
             })
 
@@ -341,7 +421,7 @@ export const displayProjects = (function () {
 
             for (let i = 0; i < compTodos.length; i++) {
 
-                let todoDate = compTodos[i].dueDate;
+                let todoDate = todos[i].dueDate;
                 let newDate;
                 if (todoDate === '') {
                     newDate = '';

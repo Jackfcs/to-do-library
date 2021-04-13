@@ -10,7 +10,8 @@
 
 <body>
     <div id="header">
-        <h1>My To-do</h1>
+        <img src="8318d021728f898a12da.png" id="hamburger">
+        <h1>My To-Do List</h1>
     </div>
 
     <div id="app-container">
@@ -22,13 +23,24 @@
 
         <div id="project-container">
             <div id="project-nav">
-            <h3 id="today">Today</h3>
-            <h3 id="next-week">Week</h3>
-            <button id="add-project-button">Add Project</button>
-            <h3>Project List</h3>
+                <h3 id="today">Today</h3>
+                <h3 id="next-week">This Week</h3>
+                <h3 id="project-list-title">Projects:</h3>
+
+                <div id="project-interaction">
+                    <button id="add-project-button" class="add-button">Add Project</button>
+                    <form class="form-format">
+                        <label for="project-filter" class="wrap"></label>
+                        <select name="project-filter" id="project-filter" class="form-dropdown-format">
+                            <option value="name">Name</option>
+                            <option value="date">Due Date</option>
+                        </select>
+                    </form>
+                </div>
+
             </div>
             <div id="project-parent">
-                
+
             </div>
         </div>
 
@@ -36,63 +48,65 @@
 
         <div id="todo-container">
             <div id="todo-interactions">
-            <button id="add-todo-button">Add Todo</button>
-            <form>
-                <label for="todo-filter">Filter</label>
-                <select name="todo-filter" id="todo-filter">
-                    <option value="name">Name</option>
-                    <option value="date">Due Date</option>
-                    <option value="priority">Priority</option>
-                    
-                </select>
-            </form>
-        </div>
+                <button id="add-todo-button" class="add-button">Add Todo</button>
+                <form class="form-format">
+                    <label for="todo-filter"></label>
+                    <select name="todo-filter" id="todo-filter" class="form-dropdown-format">
+                        <option value="name">Name</option>
+                        <option value="date">Due Date</option>
+                        <option value="priority">Priority</option>
+
+                    </select>
+                </form>
+            </div>
             <div id="todo-nav">
                 <h3 id="todo-header"></h3>
                 <h3 id="todo-header-priority">Priority</h3>
                 <h3 id="todo-title-duedate">Due Date</h3>
             </div>
             <div id="todo-parent">
-               
+
             </div>
             <div id="completed-todo"></div>
 
         </div>
 
-        <div id="project-modal" class="modal hide">
-            <span>Add new Project</span>
-            <form class="modal-form" id="project-form" onsubmit="return false">
+        <div id="project-modal" class="project-modal hide">
+            <button  id="project-modal-close" class="close-button">&times;</button>
+            <h4 id="project-modal-title">Add new Project</h4>
+            <form class="modal-form" id="project-form" onsubmit="return false" autocomplete="off">
                 <label for="project-name">Project Name</label>
                 <input type="text" id="project-name-input" name="todo-name">
                 <label for="due-date">Due Date</label>
                 <input type="date" id="project-due-date" name="project-due-date">
                 <label for="project-info">Description</label>
-                <input type="text" id="project-description" name="project-description">
+                <textarea type="text" id="project-description" name="project-description"></textarea>
 
-                <input id="confirm-project" type="submit" value="Add">
+                <input id="confirm-project" class="modal-confirm" type="submit" value="Add">
             </form>
         </div>
 
 
-        <div id="todo-modal" class="modal hide">
-            <span>Add new to-do</span>
-            <form class="modal-form" id="todo-form" onsubmit="return false">
-                <label for="todo-name">Task</label>
+        <div id="todo-modal" class="todo-modal hide">
+            <button id="todo-modal-close"class="close-button">&times;</button>
+            <h4 id="todo-modal-title">Add New To-Do</h4>
+            <form class="modal-form" id="todo-form" onsubmit="return false" autocomplete="off">
+                <label for="todo-name">Task Name</label>
                 <input type="text" id="todo-name-input" name="todo-name">
                 <label for="due-date">Due Date</label>
                 <input type="date" id="todo-due-date" name="todo-due-date">
                 <label for="priority">Priority</label>
-                <select name="priority-select" id="priority-select">
-                    <option value="low">Low</option>
-                    <option value="medium">Medium</option>
+                <select name="priority-select" id="modal-priority-select">
+                    <option value="low" id="P1">Low</option>
+                    <option value="medium" id="P2">Medium</option>
                     <option value="high">High</option>
                 </select>
-               
-                <input id="confirm-todo" type="submit" value="Add">
+
+                <input id="confirm-todo" class="modal-confirm" type="submit" value="Add">
             </form>
         </div>
 
-        
+        <div id="background"></div>
 
         <script src="main.js"></script>
 

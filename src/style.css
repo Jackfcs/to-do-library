@@ -1,22 +1,33 @@
+body {
+    color: rgb(26, 26, 26);
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: 'Arial';
+    font-size: 20px;
+}
+
 #header {
     position: fixed;
     overflow: hidden;
     top: 0;
     left: 0;
     width: 100%;
-    background-color:  rgb(128, 183, 255);
-    color: rgb(0, 0, 0);
+    background-color: #406ff1;
+    color: #ffffff;
     height: 50px;
     display: flex;
     align-items: center;
+    padding-left: 10px;
+    padding: 2px;
+    z-index: 3;
 }
 
-body {
-    background: rgb(255, 0, 0);
-    color: rgb(26, 26, 26);
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
+#hamburger {
+    opacity: 0%;
+    padding: 1px;
+    margin-right: 5px;
+    transition: 0.3s;
 }
 
 #app-container {
@@ -29,18 +40,63 @@ body {
 }
 
 #project-nav {
-    background-color: rgb(236, 236, 236);
     
 }
 
 #project-container {
-    background-color: rgb(236, 236, 236);
     grid-column: 1 / 1;
     height: 100vh;
-    padding: 5px;
+    padding: 15px;
+    display: block;
     display: flex;
     flex-direction: column;
     overflow: auto;
+    color: black;
+    background-color: rgb(168, 206, 255);
+    z-index: 2;
+}
+
+#project-interaction {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 5px;
+    align-items: end;
+}
+
+.form-format {
+    font-size: 15px;
+    position: relative;
+    text-align: end;
+}
+
+.form-dropdown-format {
+    border: none;
+    padding: 10px;
+    padding-left: 20px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url("icons/filter.png");
+    background-repeat: no-repeat;
+    background-size: 2em;
+    background-position: left center;
+}
+
+#project-filter{
+    background-color: rgb(168, 206, 255);
+}
+
+#todo-filter{
+    background-color: rgb(238, 242, 255);
+}
+
+label.wrap:after{
+    background-color: aqua;
+}
+
+
+.form-dropdown-format:hover {
+    cursor: pointer;
 }
 
 #project-parent {
@@ -48,12 +104,25 @@ body {
     padding-bottom: 200px;
 }
 
+#today, #next-week, #project-list-title {
+    padding: 5px 5px 5px 5px;
+    border-radius: 10px;
+    margin: 10px 10px 10px 0px;
+    
+}
+
+#today:hover, #next-week:hover {
+    cursor: pointer;
+    background-color:  rgb(211, 230, 255);
+}
+
+
+
 #todo-container {
     display: flex;
     flex-direction: column;
     grid-column: 2 / 2;
-    background-color: rgb(255, 255, 255);
-    border: solid rgb(187, 187, 187);
+    background-color: rgb(238, 242, 255);
     padding: 10px;
     height: 100vh;
 }
@@ -62,77 +131,126 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: end;
 }
 
 #todo-nav{
     display: grid;
     grid-template-columns: auto 100px 150px 30px;
     grid-template-areas: "name priority date icons";
+    
+    font-size: 15px;
 }
 
 #todo-header-priority {
     grid-area: priority;
     justify-self: end;
+    align-self: end;
 }
 
 #todo-title-duedate {
     grid-area: date;
     justify-self: end;
+    align-self: end;
+    position: relative;
+    right: 9px;
 }
 
 
 
 #completed-todo {
     background-color: grey;
+    opacity: 50%;
 }
 
 
 
 .project-instance {
+    height: 50px;
     display: grid;
-    grid-template-columns: 200px 80px;
-    grid-template-rows: 40px 20px;
+    grid-template-columns: 20px 40px 80px 30px;
+    grid-template-rows: 35px 15px;
     grid-template-areas: 
-        "name info"
-        "date delete";
+        "space bullet name name name"
+        "space date date info delete";
 
-    background-color: rgb(212, 212, 212);
-    border: solid rgb(187, 187, 187);
-    margin-bottom: 5px;
-    border-radius: 5px;
-    padding: 5px;
+    /* border: solid rgb(187, 187, 187); */
+    
+    padding: 10px 10px 20px 0px;
+   
     
 }
 
+.project-instance:hover {
+    cursor: pointer;
+    background-color:  rgb(211, 230, 255);
+    border-radius: 5px;
+    
+}
+
+#todo-bullet {
+    grid-area: bullet;
+    background-color: rgb(0, 27, 61);
+    color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    line-height: 30px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+
+
 #project-name {
     grid-area: name;
+    line-height: 30px;
+    
+    
 }
 
 #project-info-button {
     grid-area: info;
-    justify-self: end;
+    max-width: 40px;
+    max-height: 20px;
+    align-self: start;
+    height: 10px;
+    border: none;
+    border-radius: 10%;
+    position: relative;
+    top: 2px;
+    left: 40px;
+    background-color: #406ff1;
+    color: white;
+    
+}
+#project-info-button:hover {
+    cursor: pointer;
 }
 
 #project-date {
     grid-area: date;
-    font-size: 12px;
+    font-size: 14px;
     position: relative;
     top: 5px;
+    width: 110px;
+    border-radius: 5px;
 }
 
 #project-date-input {
     grid-area: date;
     position: relative;
-    left: 0px;
+    right: 5px;
     width: 100px;
     height: 10px;
     font-size: 8px;
+    
 }
 
 #edit-date-button {
     position: relative;
-    left: 110px;
-    bottom: 15px;
+    left: 130px;
+    top: 41px;
 }
 
 .projectdelete {
@@ -140,23 +258,41 @@ body {
     justify-self: end;
     align-self: end;
     width: 20px;
+    position: relative;
+    top: 11px;
+    left: 10px;
+    padding: 5px;
 }
 
-.project-instance:hover {
-    cursor: pointer;
-    background-color:  rgb(163, 163, 163);
+#info-div{
+    max-width: 200px;
+    text-align: center;
+    position: relative;
+    left: 25px;
+    bottom: 0px;
+    border: solid rgb(59, 85, 201);
+    border-radius: 0 0 15px 15px;
+    padding: 5px;
+    border-top: none;
+    font-size: 15px;
 }
-
 .todo-instance {
-    border-bottom: 1px solid rgb(182, 182, 182);
+    border-bottom: 1px solid rgb(192, 207, 255);
     width: 100%;
     display: grid;
     grid-template-columns: 40px auto 100px 150px 30px;
-    grid-template-areas: "check name priority date calendar"
+    grid-template-areas: "check name priority date calendar";
+    padding: 2px 0px;
+    font-size: 18px;
+    line-height: 25px;
 }
 
 #checkbox {
     grid-area: check;
+}
+
+#checkbox:hover {
+    cursor: pointer;
 }
 
 #todo-name {
@@ -166,11 +302,25 @@ body {
 #priority-select {
     grid-area: priority;
     justify-self: end;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+}
+
+
+#priority-select:hover {
+    cursor: pointer;
+}
+
+#modal-priority-select {
+    width: 100px;
+    text-align: center;
 }
 
 #todo-duedate {
     grid-area: date;
     justify-self: end;
+    position: relative;
 
 }
 
@@ -179,13 +329,18 @@ body {
     justify-self: center;
     align-self: center;
     position: relative;
-    top: 2px;
+    top: 3px;
+    
 }
 
 #todo-edit-date-button {
     grid-area: calendar;
     justify-self: center;
     align-self: center;
+}
+
+#todo-edit-date-button:hover {
+    cursor: pointer;
 }
 
 #todo-edit-date-input {
@@ -196,42 +351,136 @@ body {
     
 }
 
-button {
-    color: red;
-    width: 150px;
-    
+
+.add-button {
+    background-color: #123efd;
+  border: none;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  font-size: 16px;
+  opacity: 0.6;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 10px;
 }
 
-#add-project-button {
-    grid-column: 1 / 1;
-}
-
-#add-todo-button {
-    grid-column: 2 / 2;
+.add-button:hover {
+    opacity: 1;
+    transition: 0.3s;
 }
 
 
 
-.modal {
+.project-modal {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    color: white;
-    background-color: rgb(0, 41, 41);
+    color: black;
+    background-color: rgb(168, 206, 255);
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    padding: 10px;
+    height: 350px;
+    width: 300px;
+    border-radius: 20px;
+    z-index: 4;
     
+    
+}
+
+.todo-modal {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    color: black;
+    background-color: rgb(168, 206, 255);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    height: 300px;
+    width: 300px;
+    border-radius: 20px;
+    z-index: 4;
 }
 
 .modal-form {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    padding: 10px;
+    position: relative;
+    bottom: 30px;
+}
+
+input[type=text] {
+    width: 200px;
+    
+}
+
+label{
+    margin-top: 10px;
+    margin-bottom: 2px;
+}
+
+#project-modal-title {
+    position: relative;
+    bottom: 20px;
+}
+
+#todo-modal-title {
+    position: relative;
+    bottom: 20px;
+}
+
+.modal-confirm {
+    margin-top: 10px;
+    padding: 0 10px;
+   
+}
+
+#confirm-todo {
+    margin-top: 18px;
+}
+
+#project-modal-close {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: black;
+    padding-left: 10px;
+    position: absolute;
+    left: 280px;
+    bottom: 330px;
+}
+
+#todo-modal-close {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: black;
+    padding-left: 10px;
+    position: absolute;
+    left: 280px;
+    bottom: 280px;
+}
+
+#project-description {
+    width: 200px;
+    padding-bottom: 30px;
 }
 
 .hide {
@@ -241,4 +490,137 @@ button {
 
 #project-info-button {
     width: 80px;
+    height: 30px;
+}
+
+#warning-text {
+    position: absolute;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.6);
+    visibility: hidden;
+    width: 130px;
+    text-align: center;
+    padding: 2px;
+    border-radius: 5px;
+    top: 20px;
+    color: white;
+}
+
+#todo-warning {
+    position: absolute;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.6);
+    visibility: hidden;
+    width: 130px;
+    text-align: center;
+    border-radius: 5px;
+    right: 100px;
+    font-size: 15px;
+    color: white;
+}
+
+#project-date:hover #warning-text {
+    visibility: visible;
+} 
+
+#todo-duedate:hover #todo-warning {
+    visibility: visible;
+}
+
+#background {
+    position: fixed;
+    opacity: 0;
+    transition: 150ms ease-in-out;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .5);
+    pointer-events: none;
+    z-index: 2;
+  }
+
+  #background.active {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+
+@media (max-width: 800px) {
+
+    #hamburger {
+        opacity: 100%;
+        padding: 1px;
+        margin-right: 5px;
+        transition: 0.3s;
+    }
+
+    #hamburger:hover {
+        cursor: pointer;
+        background-color: rgb(168, 206, 255);
+        border-radius: 5px;
+    }
+
+    #app-container {
+        display: flex;
+        width: 100vw;
+        height: 100vh;
+        margin-top: 50px;
+    }
+
+    #project-container {
+        display: none;
+        position: absolute;
+        width: 270px;
+        
+    }
+    
+
+    #todo-container {
+        min-width: 400px;
+        width: 100vw;
+    }
+
+    #header {
+        
+    }
+
+    .proj-display {
+    }
+}
+
+@media (min-width: 800px) {
+    #app-container {
+        display: grid;
+        width: 100vw;
+        height: 100vh;
+        max-width: 100%;
+        margin-top: 50px;
+    }
+
+    #project-container {
+        grid-column: 1 / 1;
+        height: 100vh;
+        width: 270px;
+        padding: 15px;
+        display: block;
+        display: flex;
+        flex-direction: column;
+        overflow: auto;
+        color: black;
+        background-color: rgb(168, 206, 255);
+    }
+
+    #todo-container {
+        display: flex;
+        flex-direction: column;
+        grid-column: 2 / 2;
+        background-color: rgb(238, 242, 255);
+        padding: 10px;
+        height: 100vh;
+    }
+    #project-parent {
+        overflow: auto;
+        padding-bottom: 200px;
+    }
 }
